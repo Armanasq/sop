@@ -16,6 +16,6 @@ Google Drive folder links may contain multiple SOPs per applicant; recovered var
 
 ## Counts
 
-The initial bulk import archived 186 PDFs from 216 Notion records. Manual follow-up recovered 8 more PDFs from four additional applicants using Google Drive folder listings. The verified repository contains 194 PDFs for 190 applicants; 26 records remain unresolved.
+The initial bulk import archived 186 PDFs from 216 Notion records. Manual follow-up recovered 8 more PDFs from four additional applicants using Google Drive folder listings. An additional 20 author-hosted SOP PDFs were imported from Sai Siddartha Maram's public GitHub repository. The verified repository contains 214 PDFs for 191 applicants; 25 records remain unresolved.
 
 The original source site attributes SOP copyrights to the respective authors and states that website content uses CC BY-NC-SA. Keep author attribution and original source links. Do not presume that an external sharing link independently confers republication rights.
