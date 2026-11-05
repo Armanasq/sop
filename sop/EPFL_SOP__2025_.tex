@@ -1,0 +1,169 @@
+\documentclass[a4,10pt]{article}
+
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[10pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.2cm]
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=1.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{0,0,0}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0.4cm}
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+{{\huge \scshape Statement of Purpose}}\\
+\large{Arman Asgharpoor Golroudbari} \hfill 
+\href{https://ArmanAsq.github.io}{\textbf{\small{https://ArmanAsq.github.io}}} \\ % \hfill { \small \textbf{10 March 2023}} \\
+%\hfill {Aeronautics and Astronautics}\\
+\Vrulefill{-.05in}{-}
+%\rule{10cm}{0.1em}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\justifying
+\begin{large} 
+
+Dear Admission Committee, \par
+\vspace{-0.25cm} \quad Designing intelligent systems that integrate low-power hardware and machine learning to address critical challenges in healthcare has been at the center of my academic and research journey. From advancing energy-efficient circuit design for biomedical devices to developing interpretable AI models for real-time signal processing, my work has consistently focused on bridging theory with impactful applications. The prospect of contributing to the development of next-generation neural interfaces, such as those pioneered in \textbf{Prof. Mahsa Shoaran’s Integrated Neurotechnologies Laboratory (INL)}, presents an unparalleled opportunity to extend this focus into transformative solutions for neurological and neuropsychiatric disorders.
+
+\par
+\vspace{-0.25cm} \quad During my BEng in Avionics, I gained hands-on experience in PCB design using Altium Designer and Proteus, working on wireless power transmission for cardiac pacemaker batteries using Class C Power Amplifiers. Through circuit modeling and analysis using Ansys HFSS, ADS, and CST, I developed expertise in high-frequency circuit design and energy efficiency optimization. This project sparked my interest in biomedical signal processing, leading me to study advanced filtering techniques including Fourier Transform and Kalman Filtering. I implemented various filtering methods (Butterworth, band-pass) in MATLAB to process raw sensory data, skills that became instrumental during my MSc research.
+\par
+\vspace{-0.25cm} \quad In my MSc research, I focused on improving IMU measurement processing through an innovative approach combining deep neural networks with extended Kalman filters. This work, published in \textbf{Measurement journal (IF: 5.2) }\cite{golroudbari2023generalizable}, achieved significant reduction in orientation error compared to classical methods. However, the black-box nature of neural networks in this safety-critical application raised concerns about trustworthiness and interpretability, leading me to explore physics-informed neural networks (PINNs). I developed a transformer-based architecture incorporating quaternion kinematics and rigid-body dynamics, with custom loss terms derived from rotational dynamics - work currently under review at \textbf{ICLR 2025} \cite{golroudbari2024te}. This physics-guided approach yielded more stable predictions under high sensor noise, demonstrating the benefits of embedding first-principles knowledge into learning pipelines.
+\par
+\vspace{-0.25cm} \quad My journey into large language models began at the \textbf{Oxford Machine Learning Summer School (OxML) 2023}, where I participated in vision-language integration projects. After achieving \textbf{first place} in vision-based classification (82\% F1 score), my lower ranking in the LLM track motivated deeper exploration of language models' capabilities. I conducted self-directed projects with LLaMA 2, implementing Retrieval-Augmented Generation (RAG) systems and integrating embeddings, vector databases, and external APIs for a customer support chatbot. This experience revealed LLMs' strengths in contextual reasoning but limitations in domain-specific inference and numerical accuracy, sparking my interest in hybrid architectures combining classical algorithms with language models.
+\par
+\vspace{-0.25cm} \quad Building on this LLM expertise, I explored medical applications using the MIMIC-III clinical dataset, developing theoretical frameworks that combine unstructured clinical notes with structured medical knowledge. I experimented with multi-agent retrieval architectures for cross-referencing validated medical literature, learning to balance LLM-driven interpretability with domain-specific logic for safety and reliability. This experience reinforced my appreciation for layered reasoning processes where LLMs supply interpretability and adaptability while domain-specific logic ensures safety.
+\par
+\vspace{-0.25cm} \quad My expertise in transformer architectures proved valuable in medical imaging, where I led development of a U-Net Transformer for MS lesion detection and segmentation from fMRI data. By integrating attention mechanisms and multi-head self-attention from my LLM experience, we enhanced the model's ability to capture long-range dependencies across fMRI data. I optimized the training pipeline using adaptive learning rate scheduling, weighted loss functions for imbalanced datasets, and mixed precision training, creating a robust system outputting high-resolution lesion masks in 3D NIfTI format for clinical use. The project successfully addressed challenges such as irregular shapes, sparse distribution, and varying intensities of MS lesions.
+\par
+
+\vspace{-0.25cm} \quad At the\textbf{ MIT IAIFI Summer School Hackathon}, I addressed critical challenges in medical imaging by designing a \textbf{Vision Transformer-based} system for severity analysis, integrating probabilistic diagnosis through Sequential Neural Posterior Estimation (SNPE). The framework utilized advanced Bayesian methods to infer underlying disease states, providing uncertainty estimates crucial for robust clinical decision-making. To enhance the reliability of predictions, I developed a noise-injection mechanism that simulates real-world imaging variability, ensuring the model's resilience to noisy or incomplete data. This project demonstrated the potential of simulation-based inference in combining interpretability with diagnostic precision, highlighting my commitment to advancing machine learning methodologies in healthcare. \par
+
+
+\vspace{-0.25cm} \quad I've contributed significantly to the OpenSLAM community by implementing a sensor processing module that integrates inertial, visual, and LiDAR data in a unified framework. This experience in robust sensor fusion and signal processing aligns with INL's work on compressive sensing for high-density ECoG recording and efficient neural data acquisition systems. Through continuous engagement with emerging research via workshops and journal reviews, I maintain a commitment to rigor and reproducibility.
+\par
+\vspace{-0.25cm} \quad My research trajectory directly complements INL's focus areas. Prof. Shoaran's work on the NeuralTree chip, capable of classifying neural signals from 256 channels and performing symptom detection, represents the hardware-ML intersection I aim to explore. Her research in developing low-power, miniaturized system-on-chips for neural recording and real-time dysfunction detection parallels my interest in hardware-efficient AI implementations. My experience with PINNs and sensor fusion could advance INL's research in hardware-efficient EMG decoders for robotic prosthetic hands and closed-loop neurostimulation devices, particularly in developing interpretable and robust neural decoding algorithms while maintaining hardware efficiency.
+\par
+\vspace{-0.25cm} \quad As an Iranian scholar, I recognize the importance of promoting diversity and equality in academic environments. I am committed to sharing experiences and knowledge with scholars in Iran, working to promote inclusivity in the AI field. This commitment to diversity, combined with my technical background spanning electrical engineering, machine learning, signal processing, and LLMs, positions me to contribute meaningfully to INL's research while fostering an inclusive research environment.
+\par
+\vspace{-0.25cm} \quad My breadth of experience across multiple domains - from signal processing and PINNs to LLM-based reasoning and medical data exploration - provides a unique perspective for developing novel AI-driven medical solutions. Rather than fragmentation, I view this as a deliberate assembly of tools and perspectives that has sharpened my understanding of building truly intelligent systems. I am confident that \textbf{EPFL's EDEE program}, with its focus on advanced electrical engineering and interdisciplinary research, provides the ideal environment to develop methods balancing performance, robustness, and interpretability in medical applications.
+\par
+\vspace{-0.25cm} \quad Through the program, I aim to conduct cutting-edge research in AI applications for neuroimaging and publish impactful results. The opportunity to work on innovative projects with renowned scientists in a multicultural environment will enhance my skills in artificial intelligence and computer vision. My background in Deep Learning and Electrical Engineering, combined with my skills in estimation theory and programming (Python, MATLAB, and C++), positions me well to achieve these goals and contribute meaningfully to the field. \par
+\quad Lastly, I can assure you that my research and leadership experience will be the key to my success in the program. I am confident that I will achieve my academic and career goals with your program. \par
+In advance, I appreciate your time and consideration. \par
+\vspace{-0.4cm} Sincerely Yours, \par
+\vspace{-0.4cm}Arman Asgharpoor Golroudbari \par
+\end{large}
+\small
+\bibliographystyle{unsrt}
+\bibliography{refs}
+\end{document}

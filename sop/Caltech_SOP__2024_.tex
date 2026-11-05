@@ -1,0 +1,174 @@
+\documentclass[a4,20pt]{article}
+
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.4cm]
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=1.75cm, top=1.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{0,0,0}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0.2cm}
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+{{\huge \scshape Statement of Purpose }} %\footnote{Parts of this document were grammatically prepared with the assistance of a generative artificial intelligence tool. The content, however, remains truthful, accurate, and in my own words.}
+\hfill { \small \textbf{10 Dec. 2023}} \\
+%\hfill {Aeronautics and Astronautics}\\
+\Vrulefill{-.05in}{-}
+%\rule{10cm}{0.1em}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\justifying
+
+\begin{large} 
+Dear Admissions Committee,
+
+My main passion lies in AI-based autonomy and leveraging deep learning to advance navigation and perception for robotic exploration in unstructured environments. I am particularly interested in enhancing the reliability of autonomous navigation under uncertainty for extraterrestrial rovers and search and rescue robots. My aim is to develop autonomous robots that can navigate and perform meaningful tasks in extreme environments, such as extraterrestrial locations and disaster areas, to generate 3D maps in real-time and navigate autonomously through the environment. Several labs within CMS could support me in this research.
+
+
+During undergrad, I focused on AI for autonomous navigation where I utilized sensor fusion and attitude estimation techniques (EKF, UKF, Madgwick) for drone navigation. I focused on inertial-aided state estimation for GPS-denied environments. My involvement in the CanSat competition further solidified my expertise in visual navigation, by utilizing ORB and SURF for pattern recognition. Furthermore, I implemented a multi-modal sensing system for underground exploration, enhancing my expertise in developing resilient solutions for navigating and searching in subterranean environments by utilizing LiDAR, RGB-D Camera, and SLAM techniques. To deepen my knowledge, I delved into the KITTI dataset, where I fused LiDAR, camera, and inertial data for 3D mapping and depth estimation. This project introduced me to odometry techniques and sparked my interest in visual odometry. I developed CNN-based models for visual odometry, integrating IMU measurements for enhanced robustness and establishing a solid foundation in INS mechanization.
+
+In my MSc studies, I aimed to tackle the challenge of search and rescue missions in unpredictable environments, mirroring the SubT DARPA challenge. Focusing on inertial navigation, I addressed issues related to the absence of external resources and variable lighting conditions. I developed three RCNN models for inertial attitude estimation, handling varying sampling rate which achieved up to 40\% accuracy improvement over conventional methods. I extended these models through a UC Boulder internship by employing Physics-Informed Neural Networks (PINN) for inertial odometry to capture the data distribution's structure and dynamics while harnessing the underlying physical governing equations which could enhance navigation accuracy in challenging environments.
+
+Imagine a search and rescue robot that not only navigates autonomously but also learns from each interaction with its environment, improving its performance over time. This is where my experience with sensor fusion and attitude estimation techniques could come into play. By integrating these techniques with Dr. Yue’s interactive machine learning methods, we could develop a system that continually refines its navigation capabilities based on real-time feedback. Moreover, Dr. Yue’s research on AI for Autonomy addresses key technical bottlenecks such as data-driven safety guarantees. My work on inertial-aided state estimation for GPS-denied environments could contribute to this area. By combining our expertise, we could develop autonomous systems that not only navigate challenging environments but also do so with an unprecedented level of safety and reliability.
+
+
+In my research plans at Caltech, I aim to contribute to projects led by Dr. Ames and Yue in robot learning. I'll extend PINNs by integrating them with Cooperative Inverse Reinforcement Learning (CIRL). My approach involves collecting a comprehensive dataset using motion capture systems to capture human locomotion nuances. CIRL will distill expert knowledge from these demonstrations to formulate a reward function guiding the robot's behavior in various environments. Through iterative optimization, the reward function will align with observed demonstrations, fostering a nuanced understanding of legged locomotion preferences. Simultaneously, the PINN component will approximate the underlying dynamics of legged locomotion, ensuring generated movements align with physical laws. I plan to introduce a cooperative learning paradigm where CIRL and PINN components mutually enhance each other. Integration will be achieved through a carefully designed objective function combining reinforcement learning from CIRL with physics-informed constraints from the PINN. To ensure real-world applicability, I'll incorporate transfer learning techniques for model generalization across diverse environments. I'm excited about the potential impact of this research on real-world applications, especially in challenging and dynamic environments. 
+
+The Autonomous Robotics and Control Lab, particularly Dr. Chung's research in autonomy, has captivated my interest, especially his contributions to spacecraft navigation and space missions. Planetary missions, focusing on autonomous systems for mapping small solar system bodies, have fascinated me. This field is critical for low-altitude mapping of dynamic and uncertain environments. In response, I propose an innovative solution: spacecraft/rover hybrids, showcasing versatility through attitude-controlled hops and precise fine mobility with strategic tumbling maneuvers. The innovation centers around three internal flywheels for actuation, housed in a sealed enclosure for a minimalist design, consolidating subsystems for simplicity and efficiency. Beyond hardware, I envision an advanced estimation framework facilitating autonomous approaches, rendezvous, and landings on unexplored small bodies. This framework uses state-of-the-art filtering techniques, leveraging data for precise trajectory estimation from geometry and gravity field mapping. Collaborating with Dr. Chung aligns seamlessly with my passion for advancing autonomous systems in planetary exploration. What fuels my enthusiasm is resolving complexities in autonomously approaching and navigating small bodies with unknown physical parameters, involving simultaneous mapping of geometry and gravity field while precisely estimating the spacecraft's trajectory. The challenge lies in addressing uncertainties in the body's shape and mass distribution. My proposed solution revolves around an innovative spacecraft design tailored to overcome these challenges, paving the way for significant advancements in autonomous mapping missions of small solar system bodies.
+
+The accessibility of interstellar objects and their mission design have always captivated my interest. During my MSc in Space Engineering, I was primarily involved in space mission design projects, ranging from the FireSat mission to interplanetary and interstellar missions. I dedicated my time and effort to understanding the complexities of these missions, focusing on the technical and logistical challenges that come with venturing beyond our solar system. This experience has not only broadened my knowledge in the field but also fueled my passion for exploring the unknown. Moving forward, I aspire to contribute to the design and execution of future space missions, with the ultimate goal of advancing our understanding of the universe. Whether it's designing a spacecraft to withstand the harsh conditions of interstellar space or developing innovative navigation techniques for interplanetary travel, I am ready to take on the challenge. I am excited about the possibilities that lie ahead and look forward to making significant contributions to the field of space exploration.
+
+
+
+
+
+
+I'm drawn to Caltech not just for its cutting-edge research or renowned faculty but for its dynamic blend of innovation and tradition, creating a unique academic ethos. Beyond its global reputation, Caltech's legacy of uncovering the extraordinary in the ordinary propels my academic pursuits. The luminaries here are more than educators; they embody an insatiable quest for knowledge, serving as mentors and collaborators in a shared odyssey. The convergence of their expertise with my research interests is not just compelling; it sparks a symbiotic intellectual journey. Amidst diverse research labs, I see not just opportunities but a canvas to shape my narrative in academia. What captivates me most is the potential for unconventional camaraderie, a synergy beyond ordinary collaborative bounds. In this vibrant community, I envision not just colleagues but kindred spirits propelling me toward an uncharted trajectory, fostering a profound sense of belonging in the global Astronomy community. In addition to my research, I am also looking forward to the opportunity to learn from and collaborate with other esteemed faculty members and fellow students at Caltech. I believe that the interdisciplinary nature of the CMS department will provide a stimulating environment for my research and intellectual growth.
+
+
+As a professor, I'm dedicated to fostering an inclusive STEM community, empowering the next generation of scientists, regardless of their background. Through my passion for teaching, I aim to create an environment where everyone thrives. This commitment is not just professional; it's a personal mission. As a first-gen student, I faced academic challenges which honed my resilience, time management, and leadership skills. It inspired a passion for advocating diversity and equity, leading me to mentor students globally. I'm prepared for Caltech's challenges.
+
+
+
+
+\vspace{0.05cm}
+Thank you for considering my application.\vspace{-0.1cm}
+
+Sincerely, \vspace{-0.1cm}
+
+Arman Asgharpoor Golroudbari
+
+
+\end{large}
+
+\end{document}

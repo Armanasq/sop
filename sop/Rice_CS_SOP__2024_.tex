@@ -1,0 +1,191 @@
+\documentclass[a4,20pt]{article}
+
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.4cm]
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=1.cm, top=.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{0,0,0}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0.2cm}
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+{{\huge \scshape Statement of Purpose }} %\footnote{Parts of this document were grammatically prepared with the assistance of a generative artificial intelligence tool. The content, however, remains truthful, accurate, and in my own words.}
+\hfill { \small \textbf{20 Dec. 2023}} \\
+%\hfill {Aeronautics and Astronautics}\\
+\Vrulefill{-.05in}{-}
+%\rule{10cm}{0.1em}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\justifying
+
+\begin{large} 
+Dear Admissions Committee,
+
+My research interest lies in leveraging AI to address complex, real-world problems. I integrate both artificial and conventional intelligence, utilizing my expertise in learning-based navigation, visual perception, and Large Language Models to advance the fields of Human-Computer Interaction and Robotics. My primary goal is to enhance system adaptability to dynamic environments, ensuring robust and responsive operations. I focus on improving decision-making capabilities through planning under uncertainty, and enhancing perception of unstructured environments via multi-sensor fusion. This multidisciplinary approach is aimed at advancing the fields of Machine Learning and Robotics, contributing to their efficiency and reliability in real-world applications. I believe that several labs within Rice University's Department of Computer Science could provide the ideal environment to support and further this research.
+
+
+My undergraduate journey focused on equipping autonomous vehicles with robust navigation capabilities in varied environments, leveraging expertise in sensor fusion and state estimation. I honed my skills in inertial-aided GPS-denied navigation, designing algorithms for drone flight using EKF, UKF, and Madgwick filters. The CanSat competition proved a thrilling test-bed, where I implemented ORB and SURF algorithms for visual navigation, enabling drones to recognize patterns and autonomously navigate. I spearheaded the development of a multi-modal sensing system for subterranean exploration. This project combined LiDAR, RGB-D camera, and SLAM techniques to create detailed maps and enable efficient search operations. Seeking further challenges, I tackled the KITTI dataset, fusing LiDAR, camera, and inertial data for accurate 3D mapping and depth estimation. This venture unveiled the power of odometry techniques, particularly visual odometry, igniting my passion for this field. To delve deeper, I constructed CNN-based visual odometry models, seamlessly integrating IMU measurements for enhanced robustness. This project not only solidified my understanding of INS mechanization but also laid the foundation for further exploring the frontiers of visual odometry.
+
+
+During my MSc studies, I embarked on addressing the complexities of search and rescue missions in unpredictable terrains. My focus was on inertial navigation, where I tackled challenges arising from the lack of external resources and fluctuating lighting conditions. I engineered three RCNN models for inertial attitude estimation, adept at managing varying sampling rates, which resulted in a 40\% accuracy enhancement compared to traditional methods. Further, during an internship at UC Boulder, I augmented these models by incorporating Physics-Informed Neural Networks (PINN) for inertial odometry. This approach leveraged the structure and dynamics of the data distribution while utilizing the governing physical equations, thereby bolstering navigation precision in challenging environments.
+
+Under the mentorship of Dr. Kavraki, my research endeavors will delve into the intricate realm of enhancing robust motion planning in high-dimensional systems, encompassing both kinematic and dynamic constraints. My commitment is to not only explore theoretical advancements but to contribute tangible solutions to the challenges posed by complex scenarios in the field. My primary focus is on developing algorithms for motion planning that exhibit resilience across a spectrum of scenarios. The crux lies in ensuring these algorithms seamlessly integrate with frameworks capable of reasoning under sensing and control uncertainty. Leveraging my technical prowess, I aim to extend these algorithms to handle integrated systems, where the interaction between different components is harmonized, allowing for comprehensive and efficient planning.
+
+An instrumental tool in my research arsenal is the Open Motion Planning Library (OMPL). My plan is not only to utilize OMPL but also to contribute to its evolution, enhancing its adaptability to real-world challenges. OMPL's seamless integration with the Robot Operating System (ROS) and MoveIt provides a robust foundation, aligning with the practical requirements of both industry and academia. Delving deeper into the technical intricacies, my research will explore innovative techniques for data association and loop closure detection. The aim is twofold: to enhance the precision of the motion planning algorithms and to reduce the computational load, ensuring their viability for real-time applications. This technical nuance is crucial for the seamless integration of these methodologies into practical scenarios, where computational efficiency is paramount. Expanding the horizons of applicability, I am enthusiastic about adapting these methodologies to diverse scenarios, ranging from robots assisting individuals in their homes to those engaged in the intricate task of constructing space habitats. This breadth of application not only underscores the versatility of the proposed methodologies but also aligns with the evolving landscape of robotics and its real-world impact.
+
+A distinctive facet of my approach involves the integration of range sensors with visual data. This integration aims to enhance the system's performance in low-visibility conditions, a critical aspect in real-world applications. My commitment to instructing robots at a high level and fostering collaboration with them necessitates robust perceptual capabilities, a facet that the integration of range sensors and visual data addresses comprehensively.
+
+Validation of these methodologies will not be confined to simulated environments; instead, rigorous real-world field trials will be conducted. This approach ensures the practical efficacy and suitability of the proposed solutions across varied environments. By subjecting these methodologies to the complexities of real-world scenarios, I aim to bridge the gap between theoretical advancements and tangible applications, contributing significantly to the field of robotics and motion planning.
+
+
+
+I also interested in the realm of semantic perception and motion planning, where the real-time creation of a semantic image using advanced techniques like Convolutional Neural Networks becomes pivotal. To elevate this integration, I plan to delve into kinodynamic semantic-aware planners, marrying dynamic window approaches with receding horizon planners to meet kinodynamic constraints while processing semantic labels. My goal is the development of innovative techniques that seamlessly incorporate semantic perception into the design of autonomous navigation systems, ensuring heightened safety and increased efficiency in off-road navigation.
+
+
+
+In collaboration with Dr. Hang, my research will concentrate on the development of robust robotic systems capable of physical interaction with their environment. A significant portion of this work will involve creating sophisticated algorithms for manipulation in cluttered environments. This is a complex task that requires the sequential rearrangement of multiple objects. To achieve this, I will harness the power of sampling-based planning approaches. These approaches allow for the dynamic control of the planning horizon, enabling the system to progressively approach the manipulation goal while simultaneously correcting any errors or path deviations that may occur during the process. In the realm of Unmanned Aerial Vehicles (UAVs), I plan to develop a modularized and actuated landing gear framework. This innovative approach will enable UAVs to perch and rest on a wide variety of structures, thereby extending their operational time by conserving battery power. My research will also delve into the field of unseen object instance segmentation in real-world scenarios. By leveraging long-term robot interaction with objects, I aim to improve the generation of segmentation masks in a self-supervised way. This will involve the use of multi-object tracking and video object segmentation on images collected via robot pushing. The ultimate goal is to develop general-purpose robots that can handle complex physical interactions in real-world settings without requiring perfect input from sensors or extensive instructions.
+
+
+Building on my expertise in LLM and Natural Language Processing (NLP), I am intrigued by the potential of enhancing navigation systems in unseen environments. The idea of integrating natural language instructions to improve navigation efficiency is particularly compelling. I envision leveraging this concept to develop a novel framework that can bridge the gap between simulated and real-world scenarios. This framework would incorporate an instruction parser based on LLMs, capable of converting language instructions into a sequence of macro-action descriptions. It would also feature an online visual-language mapper to maintain a real-time spatial and semantic understanding of the environment. Furthermore, I plan to develop a language indexing-based localizer to ground each macro-action description into a waypoint location on the map, and a local controller to predict the action.
+
+My interest in LLMs and computer vision has led me to the research of Dr. Ordóñez-Román, where I am particularly drawn to his work at the intersection of computer vision, natural language processing, and machine learning. My goal is to develop efficient visual recognition models capable of performing high-level perceptual tasks by integrating both images and text, fostering a deeper understanding of the real world through multiple modalities. Intrigued by the potential of these models to learn naturally from human guidance and their ability to be fair, transparent, and interpretable, I envision significant applications in the realm of robotics. Robots equipped with advanced vision and language capabilities can interact with humans in a more natural and intuitive manner, assisting in tasks such as image captioning and visual question answering, thereby becoming more useful in real-world scenarios. Furthermore, my aim is to investigate how these models can be instrumental in mitigating biases in vision and language models, ensuring the development of fair and equitable technology. This aligns with the broader goal of creating general-purpose robots that can handle complex physical interactions without requiring perfect input from sensors or extensive instructions. 
+
+On the basis of Dr. Hu's work, I intend to investigate LLMs in robotics applications. Dr. Hu’s research has contributed to the understanding and utilization of LLMs, including the development of automated and interpretable machine learning algorithms that can discover actionable patterns from large-scale, networked, dynamic, and sparse data1. In the context of robotics, these LLMs can be used to improve the interaction between humans and robots, making the robots more intuitive and capable of understanding complex commands. I plan to explore how these LLMs can be integrated into robotic systems to enhance their performance and versatility. This includes investigating how LLMs can be used to mitigate biases in vision and language models, ensuring that the technology we develop is fair and equitable. 
+
+
+
+Driven by Dr. Braverman's mentorship, I envision propelling ORB-SLAM3 beyond its current limits, specifically in intricate indoor settings. My mission is to fuse the power of advanced sensor data, like LiDAR and depth cameras, with cutting-edge machine learning algorithms. This confluence will forge a hyper-adaptive system, capable of dynamically adjusting to environmental shifts and obstacles. Leveraging novel point cloud generation techniques, I will endow ORB-SLAM3 with a heightened understanding of its surroundings, empowering it to navigate with surgical precision through intricate spaces. 
+
+As an enthusiastic astronomer, I am intrigued by the application of machine learning in cosmological simulations. Dr. Braverman's work in streaming and sketching algorithms holds particular relevance in this context. These algorithms efficiently process large-scale data, a critical aspect in cosmological simulations that often involve massive datasets. Through the integration of machine learning techniques, there is potential to expedite these simulations, allowing for the generation of high-resolution models of the universe in shorter timeframes. Such advancements could unlock new insights into the mysteries of the universe, including dark matter and dark energy. My interest extends to exploring denoising diffusion probabilistic models (DDPM) to unravel the complexities of the early universe. 
+
+I intend to utilize tools like equivariant wavelets for generating realistic astrophysical fields from cosmological simulations. In the domain of weak gravitational lensing, my plan involves leveraging Deep Neural Networks (DNNs) to analyze distortions in the morphologies of distant galaxies induced by large-scale structures. This approach enhances our understanding of the universe and facilitates the detection and classification of gravitational waves. As an AI enthusiast passionate about astronomy, I envision numerous possibilities at the intersection of these fields. Specifically, I aim to employ Generative Adversarial Networks (GANs) for reconstructing dark matter fields. This involves training a GAN on a dataset of cosmological simulations, with the generator network creating synthetic dark matter fields and the discriminator network distinguishing between synthetic and real fields. Post-training, the generator network can take the observed distribution of galaxies as input and produce a reconstruction of the underlying dark matter field.
+
+I am drawn to Rice University not just for its cutting-edge research or renowned faculty, but for its dynamic blend of innovation and tradition, creating a unique academic ethos. Beyond its global reputation, Rice University's legacy of uncovering the extraordinary in the ordinary propels my academic pursuits. The luminaries here are more than educators; they embody an insatiable quest for knowledge, serving as mentors and collaborators in a shared odyssey. The convergence of their expertise with my research interests in robotics and machine learning is not just compelling; it sparks a symbiotic intellectual journey. Amidst diverse research labs, I see not just opportunities but a canvas to shape my narrative in academia. What captivates me most is the potential for unconventional camaraderie, a synergy beyond ordinary collaborative bounds. In this vibrant community, I envision not just colleagues but kindred spirits propelling me toward an uncharted trajectory, fostering a profound sense of belonging in the global robotics and AI community. In addition to my research, I am also looking forward to the opportunity to learn from and collaborate with other esteemed faculty members and fellow students at Rice. I believe that the interdisciplinary nature of the Rice University will provide a stimulating environment for my research and intellectual growth.
+
+My dedication to advancing the frontiers of machine learning and robotics is deeply rooted in a resolute commitment to tackle immediate real-world challenges. Beyond a mere pursuit of theoretical knowledge, my professional aspirations encompass the delivery of tangible, impactful solutions across diverse applications. Specifically, my focus extends to the nuanced realm of motion planning in high-dimensional systems, where considerations span both kinematic and dynamic constraints. This endeavor goes beyond theoretical advancements, involving the meticulous development of algorithms designed for resilience across an extensive spectrum of scenarios, ensuring adaptability and operational efficiency. Central to my objectives is the crafting of robust motion planning methodologies that seamlessly integrate with sophisticated frameworks, facilitating reasoned decision-making amidst sensing and control uncertainties.
+
+In my envisioned role as a professor, my dedication transcends the professional sphere, becoming a personal mission aimed at fostering an inclusive STEM community. This commitment is driven by a desire to empower the next generation of scientists, irrespective of their backgrounds. My passion for teaching serves as the catalyst for creating an environment where every individual not only survives but thrives. This dedication has its roots in personal experiences as a first-generation student, navigating academic challenges that honed my resilience, time management, and leadership skills. This journey has instilled in me a profound commitment to advocating for diversity and equity, leading me to mentor students on a global scale. My professional goals thus extend beyond individual achievements, seeking to contribute actively to the transformative evolution of STEM education and its accessibility.
+
+
+\vspace{0.15cm}
+Thank you for considering my application.\vspace{-0.1cm}
+
+Sincerely, \vspace{-0.1cm}
+
+Arman Asgharpoor Golroudbari
+
+
+\end{large}
+
+\end{document}

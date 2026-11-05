@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+
+% Essential packages
+\usepackage[margin=2.3cm]{geometry}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{fontspec}
+\usepackage{microtype}
+
+% Configure hyperref
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+}
+
+% Custom commands for consistent formatting
+
+% Begin document
+\begin{document}
+
+% Letter header
+{\large \textbf{Dear ETH AI Center Doctoral Selection Committee,}}
+
+\vspace{1em}
+
+% Main content
+As an aerospace engineer, I learned early that even the smallest sensor error could cascade into mission failure. This experience fundamentally shaped my approach to artificial intelligence: like the physical laws that keep aircraft in flight, AI systems must be unwaveringly reliable when lives are at stake. When guiding rescue robots through earthquake debris or enabling autonomous exploration of Martian caves, there is no room for uncertainty. This conviction drives my research: developing AI systems that combine the \textbf{dependability} of aerospace engineering with the \textbf{adaptability} needed to serve humanity in its most challenging environments.
+
+Working on inertial navigation systems during my undergraduate studies opened my eyes to a fascinating paradox: while we've mastered sending spacecraft to distant planets, we still struggle with reliable navigation in GPS-denied environments here on Earth. While implementing Extended Kalman Filters for GPS-aided inertial navigation systems, I encountered the fundamental limitations of traditional sensor fusion approaches in dynamic scenarios. My hands-on experience with \textbf{6-DoF IMU processing} and \emph{stochastic error modeling} revealed a critical challenge that would define my research path: how to create navigation systems as reliable in the depths of a disaster zone as they are in the reaches of space.
+
+The challenge of reliable navigation in extreme environments propelled me to investigate the fundamental limitations of inertial sensors. Through my master's research, I discovered that while IMUs offer independence from external infrastructure, their accuracy deteriorates rapidly in dynamic scenarios due to gyroscope bias instability and accelerometer random walk. This led me to innovate a suite of three novel deep learning frameworks: an architecture integrating Bi-LSTMs, another leveraging RCNNs, and a hybrid approach combining both. Each model uniquely incorporates adaptive sampling rate handling mechanisms, enabling robust performance across varying sensor frequencies – a critical capability for real-world deployments. These frameworks achieved up to 40\% error reduction across seven diverse datasets, surpassing traditional approaches like Madgwick and Mahony filters. This work, published in \textbf{Measurement} journal.
+
+Building on these insights, I engineered \textbf{TE-PINN}, a pioneering architecture integrating multi-head transformer attention mechanisms with quaternion dynamics and Runge-Kutta numerical integration. By incorporating \emph{physics-based loss terms} and \emph{uncertainty quantification} through probabilistic quaternion representation, the system achieved a 36.8\% reduction in estimation errors and enhanced robustness against sensor noise, bias instability, and rapid angular motions. This work, currently under review at \textbf{ICRA 2025}.
+
+While advancing inertial navigation capabilities marked a significant achievement, I recognized that truly autonomous operation in unstructured environments demands a comprehensive understanding of the surroundings. This insight propelled me to explore transformer architectures, initially through my work on 3D medical image analysis. As a senior AI scientist at Rajaei Cardiovascular Center, I engineered a \textbf{3D Attention U-Net} with a custom hybrid loss function for Multiple Sclerosis lesion segmentation that achieved 86.2\% accuracy when validated on clinical fMRI datasets. This success in capturing complex 3D spatial relationships sparked the idea of using transformers for environmental perception in robotics.
+
+Building on recent advancements in transformer-based models for autonomous systems, my research envisions bridging the gap between state estimation and scene understanding. Specifically, I aim to explore how attention mechanisms in transformers can be applied to fuse LiDAR and camera data effectively. Recent works, such as TransFusion and CLFT, demonstrate how transformers improve multimodal fusion by combining LiDAR's spatial precision with the texture and color information from cameras to enhance 3D object detection and semantic segmentation.
+
+At ETH AI Center, I propose to advance my research on robust autonomous navigation. Drawing from my experience, I envision creating autonomous systems that can operate reliably in the most challenging environments - from earthquake-ravaged buildings to unmapped Martian caves. My research will focus on:
+
+\begin{itemize}
+    \item Advancing TE-PINN architecture to integrate LiDAR and camera data with IMU measurements, enabling robust navigation in GPS-denied environments
+    \item Implementing probabilistic state estimation methods that quantify uncertainty in sensor degradation scenarios, critical for deployment in disaster zones
+    \item Developing efficient transformer-based SLAM that builds upon my experience in 3D semantic segmentation, essential for autonomous exploration
+\end{itemize}
+
+Growing up in a resource-limited environment shaped my perspective on technology's transformative power. My journey from basic IMU processing to sophisticated AI systems has been driven by a singular vision: \textit{creating robots that can venture into spaces too dangerous for humans}. This mission, born from personal experience, has guided my research path from aerospace engineering to autonomous systems.
+
+As a first-generation college student, I've experienced firsthand how mentorship can bridge educational gaps. Through the Space Generation Advisory Council, I've mentored over 15 students from underrepresented backgrounds, helping them overcome both technical and personal challenges in pursuing their research dreams. These mentoring experiences have crystallized my aspiration to \textbf{become a professor} who can combine cutting-edge research with meaningful teaching. Pursuing a PhD at ETH is a crucial step toward this goal, as it will provide me with the advanced research expertise and mentoring skills needed to establish an academic research group that makes robotics and AI more accessible to diverse communities. Just as my mentors opened doors for me, I aim to guide the next generation of researchers while advancing the frontiers of autonomous systems.
+
+ETH AI Center's commitment to trustworthy AI and interdisciplinary research aligns perfectly with my goals. The doctoral fellowship would enable me to leverage ETH's world-class resources to develop robust autonomous systems for both disaster response and space exploration missions. My ultimate vision is to establish a research program that translates aerospace engineering's rigorous safety standards into next-generation robotics, creating reliable systems that can save lives in hazardous environments while advancing human exploration capabilities. At ETH, I can pursue this technical innovation while fostering an inclusive research environment that ensures tomorrow's breakthrough technologies benefit all of society.
+
+\vspace{1em}
+
+Sincerely,\\
+Arman Asgharpoor
+
+\end{document}

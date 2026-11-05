@@ -1,0 +1,178 @@
+\documentclass[a4,20pt]{article}
+
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.4cm]
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=2cm, top=1.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{0,0,0}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0.2cm}
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+{{\huge \scshape Statement of Purpose }} %\footnote{Parts of this document were grammatically prepared with the assistance of a generative artificial intelligence tool. The content, however, remains truthful, accurate, and in my own words.}
+ \\
+%\hfill {Aeronautics and Astronautics}\\
+\Vrulefill{-.05in}{-}
+%\rule{10cm}{0.1em}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\justifying
+
+\begin{large} 
+Dear Admissions Committee,
+
+My journey in autonomous and intelligent systems began with a fundamental challenge in space-oriented navigation: achieving reliable state estimation in GPS-denied environments. During my MSc in Space Engineering, I focused on improving real-time inertial attitude estimation for small aerial vehicles. By integrating a custom-trained deep neural network with traditional extended Kalman filters, I achieved a measurable reduction in orientation error compared to purely classical methods. I published parts of my results in the \textbf{Elsevier journal "Measurement" (IF 5.2)} \cite{golroudbari2023generalizable}. Yet, this improvement came with a pressing concern: the learned models, while powerful, operated as black boxes, raising questions about trustworthiness and interpretability in safety-critical scenarios.
+
+To address these concerns, I turned to physics-informed neural networks (PINNs) as a way to bring domain knowledge into machine learning. In one project, I fused quaternion kinematics and rigid-body dynamics into a transformer-based architecture, training the model with custom loss terms derived from rotational dynamics. The results are currently \textbf{under review at ICLR 2025} \cite{golroudbari2024te}. This physics-guided approach yielded more stable predictions even under high sensor noise, demonstrating the benefits of embedding first-principles knowledge into learning pipelines. 
+
+My interest in large language models (LLMs) emerged during the \textbf{Oxford Machine Learning Summer School (OxML)} 2023. While I achieved \textbf{first place} in vision-based classification \textbf{(82\% F1 score)}, a lower ranking in the LLM track fueled a deeper exploration of language models' strengths and weaknesses. Determined to improve, I engaged in self-directed projects, experimenting with Retrieval-Augmented Generation (RAG) setups using open-source LLMs like LLaMA 2. Collaborating with a small AI startup on a customer support chatbot, I integrated embeddings, vector databases, and external APIs to enhance factual consistency. These efforts taught me that while LLMs can excel at broad contextual reasoning, they often falter in tasks requiring precise, domain-specific inference or numerical accuracy—an insight.
+
+To broaden the applicability of LLM-driven reasoning, I explored theoretical frameworks to bridge unstructured clinical notes with structured medical knowledge databases. Inspired by emerging research on interpretable machine learning—some of which I discovered through reading Dr. Yisong Yue’s work on LLMs as decision-makers in challenging contexts such as dueling bandits—I began to critically assess the robustness and adaptability of LLMs in high-stakes scenarios like healthcare. Dr. Yue’s exploration of hybrid algorithms like LEAD, which combine LLMs’ in-context decision-making capabilities with theoretical guarantees, particularly resonated with my own efforts to ensure reliability and interpretability in clinical applications.
+
+
+Building on these ideas, I experimented with multi-agent retrieval architectures that cross-reference validated medical literature. This experience reinforced my appreciation for layered reasoning processes, where LLMs supply interpretability and adaptability, and domain-specific logic ensures safety and reliability. In essence, it taught me how to anchor learning-driven approaches in well-defined theoretical and practical constraints.
+
+I plan to integrate interpretable AI, sensor fusion, and robotics within Caltech’s interdisciplinary research environment to develop autonomous systems for unstructured environments. Specifically, I aim to implement language-based reasoning modules to enhance scene understanding in ground robots and support mission planning for space exploration. By combining LLM-driven inference with physics-based control, I seek to design systems that interpret commands and adapt to real-world constraints.
+
+I am particularly interested in \textbf{Dr. Soon-Jo Chung}’s work on guidance, navigation, and control for autonomous spacecraft and aerial systems. His Neural-Rendezvous project, which integrates learning with control systems for interstellar missions, inspires a clear direction for applying machine learning to enhance spacecraft autonomy and reliability in data-sparse conditions. I believe my background in deep learning and and navigation makes be a good fit for his lab where I can work whether on ISO's related project or spacecraft vision based navigation.
+
+My experience in developing AI-driven systems and leveraging LLMs for complex decision-making aligns directly with \textbf{Dr. Yue}’s research in AI for autonomy and core AI/ML challenges. My recent work on integrating physics-informed neural networks with multi-modal reasoning modules for robotics and control systems complements Dr. Yue’s focus on combining LLM-based inference with strategic planning and abstraction, as demonstrated in projects like \textbf{SceneCraft} and \textbf{Tree-Search}. With a strong foundation in designing interpretable and adaptable AI systems for high-stakes applications, I am uniquely positioned to contribute to advancing LLM capabilities in autonomous systems, particularly in bridging theoretical innovation with practical deployment in dynamic and uncertain environments.
+
+
+I am also eager to work with \textbf{Dr. Ames} on bipedal locomotion and safety-critical control. His focus on achieving human-like robotic walking aligns with my experience in physics-informed neural networks and reinforcement learning. I aim to contribute to developing control policies that combine mechanical principles with data-driven adaptability, enabling bipedal robots to navigate varied terrains, including extraterrestrial environments.
+
+I recognize that my background spans multiple domains, from navigation and PINNs to LLM-based reasoning and medical data exploration. Rather than fragmentation, I view this as a deliberate assembly of tools and perspectives. Each domain has sharpened my understanding of what it means to build truly intelligent systems. Through open-source contributions to SLAM toolkits and continuous engagement with emerging research via workshops and journal reviews, I have maintained a commitment to rigor and reproducibility. I am confident that this breadth of experience positions me to develop novel AI-driven robotics solutions that integrate foundational theory, effective engineering practice, and thoughtful application in challenging scenarios.
+
+After completing my Ph.D., I plan to pursue postdoctoral research focused on developing autonomous systems that can seamlessly understand and execute complex exploration tasks in extreme environments. Having worked extensively with both LLMs and navigation systems, I aim to create frameworks where robots can process natural language commands into actionable trajectories while maintaining safety constraints. This research direction could transform how autonomous systems interact with human operators during critical space missions - imagine a lunar robot that can interpret abstract directives like "collect samples from areas showing signs of water ice" into precise navigation and collection behaviors.
+
+Long-term, I aspire to establish a research program that bridges the gap between language-based reasoning and physical autonomy, particularly for space exploration missions. By combining my expertise in LLMs and autonomous navigation with space robotics, I aim to develop systems that can robustly operate in GPS-denied environments while maintaining meaningful dialogue with mission control. This vision of creating more capable and intuitive robotic explorers aligns perfectly with Caltech's pioneering spirit in space technology and autonomous systems.
+
+
+
+
+
+
+
+\vspace{0.05cm}
+Thank you for considering my application.\vspace{-0.1cm}
+
+Sincerely, \vspace{-0.1cm}
+
+Arman Asgharpoor Golroudbari
+
+\end{large}
+\small
+\bibliographystyle{unsrt}
+\bibliography{refs}
+\end{document}

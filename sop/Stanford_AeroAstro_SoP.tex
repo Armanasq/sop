@@ -1,0 +1,161 @@
+\documentclass[a4,25pt]{article}
+
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.5cm]
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=1.3cm, top=1.3cm, bottom=1.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{0,0,0}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0.5cm}
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+{{\huge \scshape Statement of Purpose}}\\
+\large{Arman Asgharpoor Golroudbari} \hfill { \small \textbf{5 December 2022}} \\
+
+\href{https://ArmanAsq.github.io}{\textbf{\small{https://ArmanAsq.github.io}}}
+\hfill {Aeronautics and Astronautics}\\
+
+\Vrulefill{-.05in}{-}
+%\rule{10cm}{0.1em}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\justifying
+
+\begin{large} 
+Dear Graduate Admissions, \par
+\vspace{-0.25cm} \quad I am an avid astronomer passionate about exploring the night sky. This is why I investigate how AI can solve technical issues surrounding vision-based navigation for space vehicles. I want an interdisciplinary Ph.D. in emerging fields at the intersection of machine learning and space flight because I want to overcome technical problems associated with navigation in interstellar missions. Thus, I hope to pursue a Ph.D. in Aeronautics and Astronautics at Stanford University. \par
+\subsection{Education} \quad Due to my background in Avionics Engineering and passion for space, I decided to pursue a master's degree in Space Engineering, focusing on integrating AI into navigation. As part of the Spacecraft System Design course, I used European Cooperation for Space Standardization (ECSS) to conceptualize a FireSat mission based on the \textit{Space Mission Analysis and Design} book. This project sparked my interest in space missions and Interstellar Objects, particularly the concept of sending a spacecraft to the local interstellar medium, such as Breakthrough Starshot. Subsequently, I took various relevant courses and taught myself deep learning because I saw its strong potential as a vision-based navigation method. I also participated in Oxford Machine Learning Summer School to gain in-depth knowledge of various AI techniques. It allows me to examine vision-based navigation techniques and implement path-planning algorithms using Python in the ROS environment. \par
+\vspace{-0.25cm}\quad Because I want to become an entrepreneur in the space sector, I enrolled in an interdisciplinary MBA. Through various coursework and extracurricular activities, I learned a great deal about what it takes to start and run a successful business, from developing a business plan and marketing strategy to financial management and fundraising. My studies and internships enabled me to network with people in the industry to learn from their experiences. Studying Space Engineering alongside an interdisciplinary MBA helped me develop leadership and teamwork abilities.  \par
+\subsection{Research Experience}
+\quad While pursuing my MSc in Space Engineering, I conducted navigation-based research projects designed to develop deep learning models to solve the attitude estimation problem. My master's thesis focuses on the application of AI in navigation. I initially developed inertial navigation frameworks with TensorFlow and PyTorch using the Random Search algorithm. Then I tuned them with optimization techniques, including Population-Based Training and Bayesian Optimization. Also, I used various Sensor Fusion Algorithms (e.g., KF Family, QUEST, FQA, Madgwick, and Mahony) to evaluate the results. I drew several meaningful results: (1) my model performed better than conventional filtering and multi-sensor data fusion methods (it outperformed Madgwick \cite{madgwick2010efficient} and Mahony \cite{euston2008complementary} by 40\% in different scenarios). (2) Compared to RIANN \cite{weber2021riann}, the only deep learning end-to-end attitude estimation framework, our model was more robust in alleviating noise and bias. (3) I developed the first end-to-end inertial attitude and heading estimation model based on the MARG sensor measurements. These projects enabled me to learn the advanced level of navigation algorithms as well as programming and problem-solving skills. Currently, I am writing an article on using end-to-end deep learning models for Yaw/Heading estimation based on MARG sensors. In addition, I plan to utilize reinforcement learning for hyperparameter optimization of the developed model.
+\subsection{Teaching}
+\quad In addition to supervising undergraduate students on their thesis projects, I have taught university courses for over three years at Aviation Industry Training Center. Moreover, I have served as a martial arts instructor since 2016, teaching students from diverse backgrounds. Teaching has enhanced my instructional skills and helped me learn how to communicate effectively with students. My experiences taught me the importance of hard work, dedication, and perseverance. These experiences encouraged me to continue my career in academia.\par
+\subsection{Research Interest}
+\quad I want to pursue graduate studies in computer vision and AI, which have broad applications in spacecraft docking and motion planning. I am fascinated by the idea of using end-to-end deep learning framework and computer vision for spaceflights, particularly for pose estimation during rendezvous \cite{park2022cnnukf}. Moreover, I am intrigued by the idea of using deep learning to address the issue of navigation during interstellar missions (e.g., solar sailing). Due to relativistic speeds, solar sailing missions will experience time dilation, length contraction, and relativistic Doppler shift as they travel at a fraction of the speed of light. These effects lead to calculation errors. Therefore, popular methods such as AutoNav \cite{team2000autonomous} and XNAV \cite{graven2008xnav}, as well as Newtonian mechanics algorithms, would be inaccurate in these missions. Also, in the Solar System, stars may appear to be pointing in a fixed direction in space with only minor perturbations caused by stellar aberrations, parallax, and relative motion, whereas spacecraft traveling outside the solar system observes stars to be located differently. To tackle these problems, I envision a 3D star catalog because there is no comprehensive 3D star catalog yet. The most extensive catalogs cover only 1\% of Milky Way Galaxy stars \cite{mckee2022navigation}, and many of their distances are uncertain by light-years. Using this catalog, I want to train deep learning models that could solve the localization problem in interstellar missions using Physics-Informed Neural Networks that incorporate Newtonian and relativistic mechanics. However, I am also looking forward to exploring new ideas. \par
+\subsection{Conclusion}
+\quad As a prospective Ph.D. student with a strong background in AI and a passion for research, I believe Aeronautics and Astronautics Ph.D. program is an ideal opportunity for me to have concrete research experience and craft viable career plans. Further, I want to pursue a Ph.D. because it is a perfect chance to work on cutting-edge projects in collaboration with renowned scientists. It would be a privilege to study in Stanford's Aeronautics and Astronautics department under the guidance of its distinguished faculty members. Also, I am fascinated by the many exciting research projects taking place in this department. In particular, research conducted by \textbf{Professor Simone D'Amico}, which uses optical angles from an observer spacecraft to track objects in Space \cite{kruger2021autonomous}, and using CNN for spacecraft vision-based pose estimation \cite{park2022adaptive}. Also, \textbf{Professor Marco Pavone}'s research on online trajectory planning for autonomous spacecraft navigation \cite{bonalli2019gusto}. In my studies, I want to learn about all aspects of navigation and develop my research skills. In terms of my future career, aerospace offers limitless opportunities, whether in academia or research. With my motivation, intellectual ability, and preparation, I am confident I can embark on this exciting and challenging path and make significant original contributions to you and your research project.\par
+\vspace{-0.25cm} \quad As a highly motivated student, I demonstrated a solid academic record and hands-on experience in various research areas, which also manifested in my GPA of 4.0/4.0 in both my MBA and MSc programs. Given that my research interests and area of expertise align well with autonomous spacecraft and visual navigation, I hope to get the opportunity to work with Professor D'Amico or Professor Pavone among your other faculty members in these areas. \par
+\vspace{-0.25cm} \quad Stanford University is one of the world's leading centers for innovation and entrepreneurship, making it an ideal place to pursue my Ph.D. At Stanford, I want to gain hands-on experience in starting and running a new business and learn about the top management of international high-tech startups. Through this program, I will gain an understanding of the issues and policies that affect the climate for innovation and the success of startups around the world. \par
+\vspace{-0.25cm} \quad I look forward to being given the opportunity to join Stanford University as a graduate student in your esteemed department.\par
+
+In advance, I appreciate your time and consideration. \par
+\vspace{-0.4cm} Sincerely Yours, \par
+\vspace{-0.4cm}Arman Asgharpoor Golroudbari \par
+
+\end{large}
+\bibliographystyle{unsrt}
+\small
+\bibliography{refs}
+
+\end{document}

@@ -1,0 +1,185 @@
+\documentclass[a4,20pt]{article}
+
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.4cm]
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=1.75cm, top=1cm, botton=1cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{0,0,0}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0.2cm}
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+{{\huge \scshape Statement of Purpose }} %\footnote{Parts of this document were grammatically prepared with the assistance of a generative artificial intelligence tool. The content, however, remains truthful, accurate, and in my own words.}
+\hfill 
+{{\small{\textbf{User ID}: A.Asgharpoor1993@gmail.com}}} \\ % \hfill { \small \textbf{10 March 2023}} \\
+%\hfill {Aeronautics and Astronautics}\\
+\Vrulefill{-.05in}{-}
+%\rule{10cm}{0.1em}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\justifying
+
+\begin{large} 
+
+
+The first time I witnessed a robot navigate a simulated Martian terrain, I was struck by its clumsiness and frequent failures. This moment, during my sophomore year, ignited a question that has driven my research ever since: How can we create robots that navigate complex, unknown environments?
+
+This question led me down a path of increasingly sophisticated research in autonomous navigation, from GPS-denied drone control to deep learning models for inertial navigation. Now, as I apply to the Robotics Institute at Carnegie Mellon University, I envision my PhD as the next crucial step in this journey. My goal is to develop a new generation of autonomous navigation systems that seamlessly blend classical control theory, machine learning, and formal verification methods to enable safe and efficient robot operation in the most challenging environments, from disaster zones to other planets.
+
+\textbf{Past: Building Foundations in Autonomous Navigation}
+
+My journey began with an undergraduate project on GPS-denied drone navigation. Implementing Extended and Unscented Kalman Filters in C++ and ROS, I fused IMU and visual data for state estimation. The challenge of optimizing these algorithms for real-time performance on resource-constrained hardware was exhilarating. When my custom error state Kalman filter achieved a 60\% reduction in position drift compared to IMU-only estimation during 5-minute indoor flights, I realized the power of innovative algorithmic approaches in overcoming hardware limitations.
+
+This experience propelled me to lead our university's CanSat team in developing a real-time vision system for atmospheric descent. Constrained by the Raspberry Pi's limited resources, I dove deep into the OpenCV library, optimizing ORB feature detection and matching algorithms. The resulting system, achieving reliable ground pattern recognition at 10 fps, enabled accurate trajectory tracking and parachute deployment within 50 meters of the target - a 40\% improvement over our previous attempt. This project taught me the critical importance of efficient algorithm implementation for real-world robotic systems.
+
+\textbf{Present: Pushing the Boundaries of Learning-Based Navigation}
+
+My master's thesis work marked a shift towards learning-based approaches. Recognizing the limitations of Kalman filters in handling complex motion dynamics, I developed a deep learning model for direct attitude estimation from raw IMU data. I designed a novel architecture combining 1D convolutional layers for feature extraction with LSTMs for temporal modeling, implemented in TensorFlow. The challenge of training on diverse motion profiles pushed me to develop innovative data augmentation techniques. The result? A 40\% reduction in orientation error compared to state-of-the-art Kalman filters, particularly in rapid rotation scenarios where traditional methods often fail.
+
+Currently, I'm leading a team developing a multi-modal sensing system for underground exploration, inspired by the DARPA Subterranean Challenge. Integrating LiDAR, RGB-D cameras, and IMU data, we've implemented a factor graph-based SLAM approach using GTSAM. My focus on loop closure detection led me to develop a place recognition system using NetVLAD descriptors, achieving an 85\% true positive rate with only a 5\% false positive rate in challenging underground environments. This project has highlighted the critical need for robust perception in extreme environments, a challenge I'm eager to tackle further in my PhD research.
+
+\textbf{Future: Certifiable Learning-Based Navigation at CMU}
+
+At CMU's Robotics Institute, I aim to push the boundaries of autonomous navigation in three key directions:
+
+1. Multimodal Perception for Extreme Environments: Building on my work in underground sensing, I plan to develop perception systems that can operate reliably in the most challenging conditions. Working with Prof. David Wettergreen on projects like MoonRanger, I hope to create algorithms that fuse data from multiple sensor modalities to build accurate environmental models, even in low-light, dusty, or otherwise perceptually challenging scenarios.
+
+2. Physics-Informed Learning for Robust State Estimation: Inspired by my recent work with Physics-Informed Neural Networks (PINNs) for inertial odometry, I want to explore how we can better incorporate physical models into learning-based navigation systems. By collaborating with Prof. Katerina Fragkiadaki, I aim to develop hybrid models that leverage both data-driven learning and physical constraints, potentially revolutionizing how robots understand and interact with their environment.
+
+3. Certifiable Navigation under Uncertainty: As autonomous systems venture into high-stakes environments, ensuring their reliability becomes critical. Working with Prof. Sebastian Scherer, I plan to investigate methods for providing formal guarantees on the safety and performance of learning-based navigation systems. This research will bridge the gap between the flexibility of learning-based approaches and the rigorous safety requirements of real-world deployment.
+
+\textbf{Why a PhD at CMU's Robotics Institute?}
+
+CMU's Robotics Institute stands out for its concrete advancements in autonomous navigation for extreme environments. Prof. Red Whittaker's work on the MoonRanger project, particularly the development of visual-inertial odometry for lunar navigation, directly aligns with my research on robust state estimation. The institute's involvement in the DARPA Subterranean Challenge, especially Team Explorer's innovations in multi-robot coordination and LiDAR-based SLAM, provides an ideal platform to extend my work on underground sensing systems.
+
+The Field Robotics Center's emphasis on long-duration autonomy in unstructured environments perfectly complements my goal of developing certifiable learning-based navigation systems. Prof. Sebastian Scherer's research on safe autonomous flight offers a unique opportunity to apply my experience with physics-informed neural networks to aerial robotics, potentially enhancing the robustness of trajectory optimization algorithms.
+
+Additionally, the collaborative projects between the Robotics Institute and the Machine Learning Department, such as the work on uncertainty-aware perception for autonomous driving, align closely with my interest in integrating formal verification methods with learning-based control. This interdisciplinary approach is crucial for addressing the complex challenges of deploying autonomous systems in safety-critical applications.
+
+\textbf{Long-term Vision}
+
+Looking beyond my PhD, I aspire to lead a research program that bridges the gap between theoretical advances in AI and the practical challenges of deploying autonomous systems in unstructured environments. Whether in academia or industry research, my goal is to create a new generation of robots capable of safe, efficient operation in the most challenging settings on Earth and beyond.
+
+I envision robots that can assist in disaster response, explore the depths of our oceans, or venture onto other planets, all while being reliable, adaptable, and trustworthy. This vision drives my pursuit of a PhD, as I believe the rigorous training and cutting-edge research experience at CMU will be crucial in realizing this ambitious goal.
+
+\textbf{Personal Motivation}
+
+As a first-generation student who has balanced academic pursuits with full-time work, I've developed a resilience and determination that I believe are essential for PhD research. These experiences have also fueled my commitment to mentoring and outreach, particularly to underrepresented groups in STEM. At CMU, I look forward to contributing not only to groundbreaking research but also to fostering a diverse and inclusive robotics community.
+
+In conclusion, my focused research vision, technical expertise in navigation systems, and drive to tackle real-world challenges make me well-suited for the rigorous PhD program at CMU's Robotics Institute. I'm eager to contribute to pushing the boundaries of autonomous navigation and to grow as a researcher in CMU's collaborative environment. The opportunity to work alongside world-class faculty and peers, tackling some of the most challenging problems in robotics, is exactly what I need to take the next step in my journey towards creating more capable, reliable, and impactful autonomous systems.
+
+
+\end{large}
+
+\end{document}

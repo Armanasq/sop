@@ -1,0 +1,180 @@
+\documentclass[a4,20pt]{article}
+
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.4cm]
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=1.cm, top=0.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{0,0,0}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0.5cm}
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+{{\huge \scshape Statement of Purpose }} %\footnote{Parts of this document were grammatically prepared with the assistance of a generative artificial intelligence tool. The content, however, remains truthful, accurate, and in my own words.}
+\\
+\large{Arman Asgharpoor Golroudbari} \hfill 
+{{\small{\textbf{User ID}: A.Asgharpoor1993@gmail.com}}} \\ % \hfill { \small \textbf{10 March 2023}} \\
+%\hfill {Aeronautics and Astronautics}\\
+\Vrulefill{-.05in}{-}
+%\rule{10cm}{0.1em}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\justifying
+
+\begin{large} 
+Dear Admissions Committee,
+
+Motivated by multidisciplinary research on AI-based autonomy, I aspire to tackle tangible, real-world challenges. My primary research interests lie in the realm of enhancing the reliability of autonomous systems, particularly in the context of motion planning under uncertainty. My vision encompasses the development of resilient and secure perception frameworks, applicable to a spectrum of environments, including extraterrestrial rovers and search and rescue robots. Several labs within Robotic Institute could support me in this research.
+
+
+
+
+During my undergraduate studies, I immersed myself in AI-powered solutions for autonomous navigation, contributing to a research group dedicated to unraveling the intricacies of drone navigation, with a specific focus on visual navigation. My practical application of theoretical knowledge during the CanSat competition, utilizing ORB and SURF for pattern recognition.
+
+
+During my MBA studies, I explored Natural Language Processing (NLP) and conceived the idea of utilizing Large Language Models (LLMs) for analyzing clinical records to identify anomalies—a concept with life-saving potential. This experience heightened my interest in LLMs, guiding me to my current role as a Lead AI Engineer where I concentrate on advancing LLMs to elevate human-computer interactions. Throughout my journey, I've observed the immense potential of LLMs and endeavored to explore various facets of these models. One application of LLMs that particularly captivates me is their utilization in robotics, specifically for command and control (C2) in autonomous systems.
+
+Collaborating with \textbf{Dr. Pavone}, I'll contribute to advancing LLMs as cognitive agents, integrating human-like intelligence into autonomous driving systems, focusing on enhancing the safety of self-driving cars by improving collision avoidance performance. Leveraging my experience in computer vision and LLM, I'll address semantic anomalies in robotic systems, bolstering contextual understanding and reasoning capabilities. I’ll apply these skills to 3D Scene Understanding, further augmenting the safety of autonomous vehicles. I'm confident that my expertise in LLM and autonomy will be a valuable asset in Dr. Pavone's ongoing projects, particularly in utilizing language models for applications related to autonomous vehicles.
+
+Furthermore, I am intrigued by his recent work on the Autonomous Rendezvous Transformer, in collaboration with \textbf{Dr. D'Amico}. The approach to spacecraft onboard autonomy through end-to-end frameworks resonates with me. I plan to integrate transformers and Koopman operators for handling high-dimensional data in trajectory optimization which aims to reduce computational burden while striking a balance between complexity and prediction accuracy.
+
+
+Venturing into space engineering, I'm eager to collaborate with \textbf{Dr. D'Amico}, confident that my expertise in attitude estimation, filtering, and deep learning can significantly contribute to ongoing SLAB projects. In my Master’s thesis, I developed end-to-end deep learning frameworks for inertial attitude estimation, effectively addressing the sampling rate variation issue which outperformed conventional algorithms by up to 40\%. My initial involvement with SLAB began with the SPEED dataset, which captivated me due to its use of learning frameworks for spacecraft pose estimation. Within SLAB, I aim to contribute to GNC projects, primarily using neural networks for vision-based relative navigation. Leveraging my experience in multi-task learning, supervised learning with CNNs, and Kalman filtering, I aim to enhance these tasks. My overarching goal is to improve the safety of active debris removal and on-orbit servicing missions through more accurate state estimation.
+
+As an avid astronomer, my foundational understanding of orbital mechanics and astrodynamics reinforces my confidence in being a valuable asset to astrodynamics projects. During my MSc studies, I undertook various projects, designing spacecraft trajectories for travel between celestial bodies. This included implementing orbital maneuver algorithms and conducting Orbit Transfer using Optimal Control, primarily employing LQR in MATLAB. I simulated the precise trajectory for a Hohmann transfer to optimize spacecraft orbital insertion. This involved utilizing a multi-body dynamics model and numerical integration techniques, factoring in gravitational perturbations, solar radiation pressure, and varying celestial body positions. Leveraging solutions to Lambert's problem, I calculated the required delta-v and executed a trajectory optimization algorithm to minimize fuel consumption.
+
+
+Building on this foundation, I aim to contribute to refining relative astrodynamics models for distributed space systems. My proficiency in numerical integration techniques and mission-specific trajectory optimization will be valuable for achieving high-fidelity modeling while maintaining computational efficiency. This will enhance the precision and applicability of these models for onboard guidance, navigation, and control systems. Additionally, I am eager to contribute to \textbf{Dr. Elschot}’s Trajectory Design project by leveraging these skills. My experience in simulating complex trajectories equips me with the necessary tools to further refine the equations of motion and astrodynamics models within the Three-Body Problem framework. My expertise in trajectory optimization algorithms aligns with the project's focus on invariant funnels and quasi-periodic orbits, offering potential enhancements to mission design strategies.
+
+Furthermore, I bring experience in aviation and Aircraft Collision Avoidance Systems (ACAS) as an avionics engineer to collaborate on decision-making under uncertainty projects. I aim to contribute to developing and optimizing onboard systems for unmanned aircraft. My unique skill set and experiences in aviation, machine learning, and navigation will add value to \textbf{SISL}’s ongoing research. I am excited about enhancing the safety and efficiency of autonomous systems while developing decision-making systems for uncertain and dynamic environments.
+
+
+Transitioning into perception and localization, I am captivated by \textbf{Dr. Gao}'s work in robust perception, localization, and navigation. Eager to address challenges posed by sensing uncertainties in autonomous vehicles, I leverage experience in simulating complex space mission trajectories to apply similar principles to ground-based vehicles navigating unpredictable environments. Considering my background, I’ll play a key role in devising robust vehicle path-planning strategies that account for sensing errors and uncertainties. Integrating formal methods like stochastic reachability and considering environmental factors, such as 3D maps, I aim to contribute to the project's objective of providing provable navigation safety guarantees for autonomous vehicles in real-world, dynamic conditions.
+
+Across any of these projects, I could build upon my experience as a lead AI engineer to explore the untapped potential of LLMs for human-robot interaction for motion planning application. LLMs could enable accurate semantic understanding of qualitative natural language control objectives, even when those objectives are ambiguous or incomplete.
+
+My long-term goals include becoming a prominent researcher in developing AI solutions that enhance human-robot interaction and enable robots to navigate real-world environments safely and efficiently.
+
+As a professor, I aim to cultivate an inclusive and diverse STEM community as a professor, dedicating myself to empowering the next generation of scientists irrespective of their background. Through my fervor for teaching, I aim to reinforce the dedication to creating an environment where everyone has the opportunity to thrive. This commitment is not just a professional objective; it is a deeply personal mission.
+
+
+Thank you for considering my application.
+
+Sincerely,
+
+Arman Asgharpoor Golroudbari
+
+
+\end{large}
+
+\end{document}

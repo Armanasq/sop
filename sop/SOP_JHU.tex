@@ -1,0 +1,174 @@
+\documentclass[a4,20pt]{article}
+
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.4cm]
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=1cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{0,0,0}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0.5cm}
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+{{\huge \scshape Statement of Purpose}}\\
+\large{Arman Asgharpoor Golroudbari} \hfill 
+\href{https://ArmanAsq.github.io}{\textbf{\small{https://ArmanAsq.github.io}}} \\ % \hfill { \small \textbf{10 March 2023}} \\
+%\hfill {Aeronautics and Astronautics}\\
+\Vrulefill{-.05in}{-}
+%\rule{10cm}{0.1em}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\justifying
+
+\begin{large} 
+
+\textbf{Introduction} \newline
+My research interest revolves around the question: How can AI be effectively integrated into the perception and navigation of autonomous robots, particularly in dynamic and unstructured environments? I envision myself as a leading innovator in the realm of AI, confronting the hurdles associated with autonomous systems, and forging a new paradigm. As a researcher, graduate school would offer the essential knowledge, mentorship, and resources that would help me to achieve my goals. I aim to prepare for a career dedicated to advancing autonomous robot navigation.   \vspace{-0.35cm}
+
+My decision to pursue a Ph.D. at Johns Hopkins University was motivated by its reputation for innovations, distinguished faculties and research labs, mainly Laboratory for Computational Sensing and Robotics. In particular, Dr. Whitcomb's research on enhancing vehicle attitude estimation accuracy that caught my attention, which focused on developing algorithms to improve the performance of vehicle attitude estimation. This not only enhances navigation accuracy for robotic vehicles but also paves the way for more precise calibration and real-time attitude estimation.  \vspace{-0.35cm}
+
+Aside from that, Dr. Kobilarov's work on optimizing the state estimation of dynamic observables using a mobile sensor closely aligns with my research interests. It focuses on computing an optimal sensor trajectory, minimizing estimation errors while considering uncertain observable dynamics, sensor noise, and workspace constraints. His work has broad applications, contributing to the development of robust algorithms for sensor-based navigation in dynamic environments.  \vspace{-0.25cm}
+
+
+\textbf{Research Interests} \vspace{-0.35cm}
+
+\textbf{Robotic Perception}: My research focuses on addressing the challenges of autonomous perception in dynamic and unstructured environments. Conventional methods often rely on precise mathematical models, while data-driven approaches face limitations in terms of interpretability and generalization. Drawing from my research experience at the University of Colorado Boulder, where I utilized Physics-Informed Neural Networks (PINN) for inertial odometry, my goal is to bridge these two approaches. By harnessing advanced models like Transformers and PINN, I aim to capture the intrinsic physics, fostering adaptable and efficient navigation solutions for ever-changing terrains. PINN-Transformers present a promising avenue for enhancing inertial and visual-inertial navigation through their capacity to approximate intricate spatiotemporal functions. To operationalize this concept, a PINN architecture can be purposefully designed to assimilate data from accelerometers and gyroscopes, concurrently acquiring knowledge about system dynamics and sensor biases. By incorporating these data streams into the PINN model, the network can be trained to forecast the evolving position and velocity of a mobile object. Central to this method is the inclusion of fundamental physical equations, such as Newton's laws, as constraints within the PINN framework, ensuring the accuracy of predictions. Furthermore, the adaptability of PINN-Transformers in adjusting their internal representations equips them to handle nonlinearities and uncertainties within the inertial measurements. This innovative approach offers a robust, hybrid data-driven solution for achieving precise inertial navigation, especially in scenarios where traditional methods face challenges.\vspace{-0.35cm}
+
+
+\textbf{Navigation}: Throughout my MSc studies, I delved into diverse attitude determination techniques, encompassing TRIAD, QUEST, and FQA, with practical implementation conducted in Python. This hands-on involvement significantly influenced my decision to specialize in attitude estimation for my thesis work. In my thesis research, I developed deep learning models tailored for inertial attitude estimation which are generalized various across sampling rates. This provided me with a profound understanding of autonomous robot navigation and attitude dynamics, while also enhancing my proficiency in Python. These technical skills have equipped me to make substantial contributions to the advancement of visual sensing and control systems for autonomous vehicles across diverse domains, including ground, air, and space. \vspace{-0.35cm}
+
+
+\textbf{Guidance, Navigation, and Control}: The intricate world of Attitude Determination and Control Subsystem (ADCS) algorithms has always captivated me which enable CubeSat satellites to be precisely oriented and positioned in the celestial expanse, encompassing all six degrees of freedom. My keen interest naturally gravitated towards the dynamic and multifaceted field of small satellite guidance and control, which perfectly aligns with my passion for space exploration. \vspace{-0.35cm}
+
+My enthusiasm was ignited by a research in the Autonomous Systems, Control, and Optimization (ASCO) Lab, which combines the intricacies of orbital dynamics with the subtleties of rotational and translational rigid body dynamics. This project is a compelling response to the complex issues surrounding underactuation and control constraints while prioritizing obstacle avoidance. 2D experimental test beds and meticulous simulations are utilized in the study, revealing the pragmatic use of cold-gas propulsion systems and enabling comprehensive control across all six degrees of freedom. Furthermore, the project's utilization of ROS to coordinate perception, control, and planning algorithms, thereby enabling autonomous behavior, is a testament to its innovative and comprehensive nature. This level of interdisciplinary collaboration and technical rigor resonates deeply with my aspirations in satellite engineering, fueling my eagerness to explore such cutting-edge initiatives during my doctoral studies. \vspace{-0.35cm}
+
+
+Leveraging my expertise in deep learning, I am eager to explore novel applications of AI in this domain. Specifically, I see the potential to employ deep learning techniques to enhance our understanding of orbital and rotational dynamics in strongly perturbed systems, which is of paramount importance in space science. The Model-Based PINN-Deep Koopman Operator method, with its integration of transformers within the Koopman Operator framework and utilization of PINN, intrigues me deeply. Not only does it promise to optimize interplanetary trajectories, but it also offers the potential for addressing the pressing issue of space debris. By harnessing this approach, we can potentially reduce fuel consumption during interplanetary missions, elevating the sustainability and cost-effectiveness of space exploration. Furthermore, the method's application to space debris management introduces a solution for actively tracking and eliminating defunct satellites and debris, thus safeguarding the long-term sustainability of space environments and future space missions. 
+
+\textbf{Conclusion}  \vspace{-0.35cm}
+
+During my undergraduate studies, I immersed myself in robotic and deep learning projects. My proficiency in Python, ROS, and Deep Learning allowed me to tackle complex problems in navigation, notably in path planning, perception and odometry. Additionally, I delved into computer vision using deep learning architectures like YOLO and U-Net for image segmentation and object detection. Notably, I achieved the top rank in the Oxford Machine Learning Summer School competition. In this competition, I applied techniques such as k-fold cross-validation, weighted sampling, and ensemble learning for the detection of cancer cells. \vspace{-0.35cm}
+
+Additionally, I gained valuable practical experience in programming and testing robotic systems using ROS and Python. I contributed to the development of autonomous navigation systems for a wheeled robot, which involved the use of an RGB-D camera and a laser range finder based on SLAM algorithms. Furthermore, I worked on visual-inertial odometry using the KITTI dataset, where I explored different feature extraction methods, including ORB, SIFT, and SURF. These experiences are poised to be beneficial in the fields of space debris detection and vision-based relative navigation.  \vspace{-0.25cm}
+
+Johns Hopkins University's interdisciplinary research across mechanical engineering, robotics, and machine learning perfectly aligns with my multifaceted research interests. Moreover, the research of the Laboratory for Computational Sensing and Robotics, presents an exciting avenue for exploration. Their work on various aspects of robotics aligns closely with my background. I have been particularly captivated by the innovative work conducted by Dr. Whitcomb and Dr. Kobilarov’s research group. Working under the supervision of such renowned faculties offers a unique opportunity to integrate theoretical robotics, controls, and machine learning.  \vspace{-0.35cm}
+
+
+In conclusion, my extensive review of the programs and faculty at Johns Hopkins University assures me that this institution offers the ideal platform to pursue my academic and research objectives. The combination of interdisciplinary coursework, cutting-edge facilities, and collaborative opportunities will provide me with the necessary tools to address complex challenges in robotics. I am committed to expanding my knowledge and making substantial contributions to the realm of autonomous systems. With a diverse skill set and unwavering dedication, I believe I am well-suited to thrive in this dynamic academic environment. I eagerly anticipate the opportunity to engage with and contribute to the esteemed academic community at Johns Hopkins University. \vspace{-0.15cm}
+
+In advance, I appreciate your time and consideration. \par
+\vspace{-0.4cm} Sincerely Yours, \par
+\vspace{-0.4cm}Arman Asgharpoor Golroudbari \par
+\end{large}
+
+\end{document}

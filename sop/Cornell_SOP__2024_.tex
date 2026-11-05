@@ -1,0 +1,171 @@
+\documentclass[a4,20pt]{article}
+
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.4cm]
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=1.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{0,0,0}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0.5cm}
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+{{\huge \scshape Statement of Purpose }} \footnote{Parts of this document were grammatically prepared with the assistance of a generative artificial intelligence tool. The content, however, remains truthful, accurate, and in my own words.}
+\\
+\large{Arman Asgharpoor Golroudbari} \hfill 
+\href{https://ArmanAsq.github.io}{\textbf{\small{https://ArmanAsq.github.io}}} \\ % \hfill { \small \textbf{10 March 2023}} \\
+%\hfill {Aeronautics and Astronautics}\\
+\Vrulefill{-.05in}{-}
+%\rule{10cm}{0.1em}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\justifying
+
+\begin{large} 
+Dear Admissions Committee,
+
+Driven by a profound interest in AI-based autonomy, specifically within the realms of unmanned vehicles and spacecraft, I am interested in pursuing a PhD. My intellectual curiosity is deeply rooted in the intersection of Space Engineering, Autonomy, and the transformative potential of AI in these domains where I aspire to enhance autonomous systems' safety by implementing certifiable, distributed robust autonomy for motion planning. I aim to tackle real-world challenges in autonomous systems, including navigating complex environments, managing uncertainties, and ensuring safe and efficient operation. I believe that several labs within the Mechanical and Aerospace Engineering (MAE) department could provide valuable support for my research.
+
+
+The Space Systems Design Studio, under the guidance of Professor Peck, has captured my attention due to its pioneering work in relativistic spacecraft navigation. Specifically, the Autonomous Navigation of Relativistic Spacecraft project aligns with my research interests. I intend to extend this project by incorporating data-driven methods and physics-informed models to address challenges posed by time dilation, Doppler shift, and the parallax effect resulting from relativistic speed.
+
+Leveraging my expertise in visual navigation and state estimation, I aspire to develop learning-based spacecraft relative navigation, focusing on applications like spacecraft rendezvous and landing on small bodies or the Moon. I will address visual tracking challenges in autonomous spacecraft navigation by developing learning frameworks for a vision-based Terrain Relative Navigation system. This system will exploit observed crater patterns for absolute position measurement, addressing high reliability requirements in spacecraft navigation. These developments would enhance the performance and reliability of autonomous spacecraft navigation systems. I could also be a valuable asset in astrodynamics-related projects and orbital rendezvous, helping tackle challenges in in-orbit assembly for sustainable space missions. 
+
+Moreover, collaborating with Dr. Campbell on state estimation and perception-planning for safe autonomous drone flights and self-driving vehicles aligns with my expertise in sensor fusion and machine learning. My experience in visual and visual-inertial navigation projects, including the creation of open-source generalized inertial attitude estimation models, positions me well to contribute to learning-based robust autonomous driving projects within the department.
+
+Leveraging my proficiency with LiDAR-based perception, I plan to collaborate with Professor Campbell to explore the fusion of LiDAR-based models with multi-agent trajectory planners. This collaboration aims to create a robust, real-time 3D scene understanding system with certifiable perception algorithms for unmapped GPS-denied environments, further aligning with the department's overarching objectives.
+
+At the LISC, I intend to contribute my experience in using Digital Twins for Autonomous Vehicles to contribute to the design and development of Advanced Driver-assistance Systems (ADAS) to enhance the situational awareness of high-performance automobiles by accurately perceiving and interpreting the surrounding traffic conditions. My varied experiences position me to make significant contributions to Ph.D. research on robotic navigation and interaction, particularly in enhancing situational awareness for high-performance automobiles. My expertise in state estimation and robotic perception will play a key role in developing precise semantic understanding for unmanned vehicles. I seek to apply these skills for safer operations, especially in critical situations requiring precision and adaptability.
+
+
+Throughout my academic journey, I have actively pursued research experiences, internships, and teaching opportunities to develop expertise in AI-based navigation and decision-making using large language models (LLMs). My roles as a lead AI engineer at Hotelsazi Darya and during my healthcare-focused MBA allowed me to leverage LLMs for enhancing human-computer interactions and augmenting medical decision-making, respectively.
+
+During my research internship with UC Boulder, I developed the first Physics-Informed odometry models, contributing to improved inertial odometry for underground navigation. At Purdue University, I delved into various aspects of Digital Twins for autonomous vehicles, while my time at the University of Tehran involved the development of AI-enabled systems for optimized visual and inertial odometry, as well as attitude estimation.
+
+I have also imparted my knowledge through teaching AI and navigation concepts at multiple academic levels, from undergraduate to doctoral students. This experience has not only reinforced my understanding of these concepts but also fueled my passion for contributing to the academic community.
+
+
+I believe that the diverse range of perspectives and ideas within MAE PhD program would not only broaden my horizons but also stimulate innovative thinking—a crucial factor in a rapidly evolving field like AI-based autonomy. Moreover, the opportunity to engage with the program's vibrant academic community, comprising both faculty and students, is invaluable. The exchange of ideas and knowledge facilitated by such interactions will undoubtedly enrich my learning experience and foster my intellectual growth.
+
+Overall, I am confident that my experience in AI-based autonomy for unmanned vehicles and spacecraft well prepared me to pursue a PhD at Cornell University.
+
+Thank you for considering my application.
+
+Sincerely,
+
+Arman Asgharpoor Golroudbari
+
+
+\end{large}
+
+\end{document}

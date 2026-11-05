@@ -1,0 +1,181 @@
+\documentclass[a4,20pt]{article}
+
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.4cm]
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=0.75cm, top=0.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{0,0,0}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0.2cm}
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+{{\huge \scshape Statement of Purpose }} %\footnote{Parts of this document were grammatically prepared with the assistance of a generative artificial intelligence tool. The content, however, remains truthful, accurate, and in my own words.}
+\hfill 
+{{\small{\textbf{User ID}: A.Asgharpoor1993@gmail.com}}} \\ % \hfill { \small \textbf{10 March 2023}} \\
+%\hfill {Aeronautics and Astronautics}\\
+\Vrulefill{-.05in}{-}
+%\rule{10cm}{0.1em}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\justifying
+
+\begin{large} 
+Dear Admissions Committee,
+
+Passionate about AI-based autonomy, I aim to advance autonomous navigation and perception for robotic exploration in real-world scenarios. My ambition is to enhance the safety of autonomous systems through certifiable, distributed robust autonomy for motion planning. I am particularly interested in enhancing the reliability of autonomous navigation under uncertainty for extraterrestrial rovers and search and rescue robots. My primary research interest is to develop autonomous robots that can navigate and perform meaningful tasks in unstructured environments, including extreme environments like the Moon and Mars. These robots will be able to generate 3D maps in real-time, learn from interaction and demonstration, and perform terrain analysis through self-supervised learning. Several labs within CMU's RI could support me in this research.
+
+The advent of autonomous robots with enhanced navigation and perception capabilities holds immense potential to revolutionize our interactions with the world around us. These robots can navigate and explore hazardous environments, deliver supplies, search for survivors, and contribute to planetary exploration. However, their development raises concerns about potential societal impacts, privacy issues, safety, and resource utilization. Addressing these concerns is crucial for ensuring the responsible and ethical deployment of these transformative technologies.
+
+During my undergraduate studies, I immersed myself in AI-powered solutions for autonomous navigation, contributing to a research group at Civil Aviation Technology College. In this capacity, I implemented various sensor fusion and attitude estimation techniques for drone navigation, including EKF, UKF, and Madgwick. I focused on inertial-aided state estimation for GPS-denied environments. My involvement in the CanSat competition further solidified my expertise in visual navigation, by utilizing ORB and SURF for pattern recognition. 
+
+Furthermore, I implemented a multi-modal sensing system for underground exploration, enhancing my expertise in developing resilient solutions for navigating and searching in subterranean environments by utilizing LiDAR, RGB-D Camera, and SLAM techniques. To deepen my knowledge, I delved into the KITTI dataset, where I fused LiDAR, camera, and inertial data for 3D mapping and depth estimation. This project not only acquainted me with odometry techniques but also steered me towards exploring visual odometry. Concurrently, I developed CNN-based models for visual odometry and integrated IMU measurements to enhance robustness, establishing a strong foundation in INS mechanization. These experiences closely pertain to the \textbf{Robot Perception Lab}, emphasizing inertial-aided state estimation approaches for fast and agile flight, as well as localization and  mapping for autonomous mobile robots, covering both Aerial Robotics and Efficient Incremental SLAM.
+
+In my MSc studies, I applied these experiences to tackle the challenge of search and rescue missions in unpredictable environments, mirroring the SubT DARPA challenge. Focusing on inertial-based navigation, I addressed issues related to the absence of external resources and variable lighting conditions. 
+I developed three RCNN models for inertial attitude estimation, handling varying sampling rate which achieved up to 40\% accuracy improvement over conventional methods. I extended these models through a UC Boulder internship by employing Physics-Informed Neural Networks (PINN) for inertial odometry to capture the data distribution's structure and dynamics while harnessing the underlying physical governing equations. This approach enhances navigation accuracy in challenging environments. These experiences align with \textbf{AirLab}'s focus on off-road driving by learning from interaction and demonstration, self-supervised learning, and terrain analysis through self-supervised learning. 
+
+
+I actively participated in spacecraft and satellite navigation projects, including the use of Koopman Operators for trajectory optimization. Implementing RK4 for improved stability in longer integrations was particularly insightful for spacecraft trajectory optimization. This experience deepened my understanding of RK4 and underscored its potential in enhancing asteroid impact modeling. Leveraging these experiences, I am confident in contributing significantly to the \textbf{Robotic Exploration Lab}'s Low-Thrust Trajectory Optimization projects.
+
+My AI-based navigation projects prepared me well to contribute to the \textbf{Field Robotics Center}'s efforts in advancing off-road navigation and applying robotics exploration, mainly in the \textbf{MoonRanger project}. Collaborating with \textbf{Dr. Wettergreen}, I aim to develop high-speed navigation for robotic explorers in unstructured environments, focusing on space exploration. The research covers multimodal perception, endurance navigation, resource-cognizant planning, scientific data classification, and evaluation, especially in extreme environments. The broader scope includes creating versatile robots for planetary exploration, emphasizing robust autonomy and the capability to perform tasks like drilling and prospecting on Mars and terrestrial volcanoes.
+
+In advancing autonomous exploration, I focus on contributing to \textbf{Science Rover} development through ROS simulation. This entails creating Lunar Rover Software, emphasizing learning-based SLAM for barren terrains. The main objective would be to improve the accuracy of localization using rock detection and analyzing spatial arrangements to identify distinctive patterns. Additionally, I aim to address challenges in low-light conditions through the integration of perception techniques, such as visual odometry and sensor fusion, to ensure robust performance in varied and challenging exploration scenarios. Additionally, I am passionate about participating in \textbf{DARPA Subterranean Challenges} to address the complexities of navigating in underground environments, crucial for disaster response. I aim to fuse LiDAR and IMU data to develop odometry models in vision-denied environments, with a specific emphasis on applications in search and rescue operations.
+
+In \textbf{AirLab}, I will enhance off-road driving capabilities using self-supervised learning and learning-from-demonstration. The integration of Cooperative Inverse Reinforcement Learning (CIRL) with a PINN will improve overall learning and system adaptability. This integration aims to comprehend terrain traversability cost and vehicle dynamics from extensive interaction data. The approach includes online adaptation of the cost and dynamics model to mitigate out-of-distribution failures, relying on the vehicle's own experiences in the environment.
+
+
+Collaborating with \textbf{Robotic Exploration Lab}, I propose Deep-Koopman operators that integrate transformers for \textbf{low-thrust trajectory optimization} by selectively prioritizing crucial features in high-dimensional data, enhancing the efficiency and prediction accuracy. This learning-driven approach enables the operator to focus on informative features, reducing problem dimensionality and alleviating computational burden.
+
+As a potential member of the \textbf{Center for Autonomous Vehicle Research}, my goal is to drive autonomy in open-world scenarios by employing end-to-end learning frameworks for\textbf{ Multimodal 3D Semantic Scene Understanding}. This involves leveraging RCNNs to devise a fusion algorithm adept at seamlessly integrating data from LiDAR, radar, and visual sensors to establish a resilient system proficient in interpreting dynamic 3D scenes comprehensively. Utilizing CNNs for spatial pattern capture and RNNs for temporal relations, the system would enhance its understanding and interaction within its environment.
+
+I am drawn to the Robotics Institute not merely for its cutting-edge research or celebrated faculty but for its role as a dynamic crucible where innovation collides with tradition, forging a unique ethos that transcends the conventional boundaries of academia. Beyond its global reputation, it is the Institute's legacy of unearthing the extraordinary within the ordinary that propels my academic pursuits. The luminaries here are not just educators but living embodiments of an insatiable quest for knowledge, presenting not only mentors but collaborators in a shared odyssey. The convergence of their expertise with my research interests is not merely compelling; it's the catalyst for a symbiotic intellectual journey. Furthermore, amidst the myriad research labs, each pulsating with distinct cadence, I discern not just opportunities but a canvas to craft my own narrative within the tapestry of academia. Beyond the accolades and pioneering endeavors, what beckons me most is the prospect of an unconventional camaraderie, a synergy that transcends the ordinary bounds of collaborative research. In this vibrant community, I see not just colleagues but kindred spirits, a collective force propelling me toward an uncharted trajectory that defies convention and fuels a profound sense of belonging within the global robotics diaspora.
+
+
+My journey is fueled by a fervent aspiration to carve a path as a forefront researcher in AI, shaping the landscape of safe and efficient robotic navigation. Within this quest, I am propelled by an unwavering dedication to confront scalability challenges in expansive autonomous systems, fortify resilience amidst uncertainty, and propel advancements in human-robot interaction control. My commitment is a tapestry woven across diverse research domains, with a deliberate focus on empowering robots to navigate the complexities of real-world environments. I visualize immersing myself in avant-garde projects, navigating the intricate terrains of unstructured environments, and unlocking the potential of deep reinforcement learning (DRL) to enable robots to glean expertise directly from their interactions. Beyond, my vision extends to the integration of deep learning with multi-agent systems, envisioning a collaborative dance echoing the Robotics Institute's emphasis on collective intelligence. In this intellectual voyage, I foresee crafting distributed algorithms powered by deep learning, orchestrating a synchronized ballet of multiple robots, transcending the limits of individual capabilities.
+
+
+
+
+As a professor, I aim to cultivate an inclusive and diverse STEM community, dedicating myself to empowering the next generation of scientists irrespective of their background. Through my fervor for teaching, I aim to reinforce the dedication to creating an environment where everyone has the opportunity to thrive. This commitment is not just a professional objective; it is a deeply personal mission. As a first-generation student facing scarce academic resources and guidance, I navigated the challenging terrain of higher education fueled by relentless determination. Balancing a full-time job and caretaker responsibilities following my parents' divorce, I transformed adversity into strength, learning the values of hard work, determination, and the barriers faced by those from low-income backgrounds. My experiences honed resilience, time management, and leadership skills, leading me to instruct martial arts and mentor students from diverse backgrounds. This journey ignited a passion for advocating diversity, inclusion, and equity in education, prompting me to volunteer and extend guidance globally.  I’m ready for CMU’s challenges
+
+\vspace{0.05cm}
+Thank you for considering my application.\vspace{-0.1cm}
+
+Sincerely, \vspace{-0.1cm}
+
+Arman Asgharpoor Golroudbari
+
+
+\end{large}
+
+\end{document}

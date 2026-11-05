@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+
+\usepackage{hyperref}
+
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{fancyhdr}
+
+\usepackage{lastpage}
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=01.cm, top=1.cm]{geometry}
+\usepackage[document]{ragged2e}
+
+\setmainfont{Times New Roman}
+\onehalfspacing
+
+\setlength{\parindent}{0pt}
+
+
+
+
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+\singlespacing
+\begin{document}
+
+\justifying
+
+Dear Admissions Committee,
+
+My main passion lies in AI-based autonomy and leveraging deep learning to advance navigation and perception for robotic exploration in unstructured environments. I am particularly interested in enhancing the reliability of autonomous navigation under uncertainty for extraterrestrial rovers and search and rescue robots. My aim is to develop autonomous robots that can navigate and perform meaningful tasks in extreme environments, such as extraterrestrial locations and disaster areas, to generate 3D maps in real-time and navigate autonomously through the environment. Several labs within the Mechanical Engineering Department could support me in this research.
+
+
+
+During undergrad, I focused on AI for autonomous navigation where I utilized sensor fusion and attitude estimation techniques (EKF, UKF, Madgwick) for drone navigation. I focused on inertial-aided state estimation for GPS-denied environments. My involvement in the CanSat competition further solidified my expertise in visual navigation, by utilizing ORB and SURF for pattern recognition. Furthermore, I implemented a multi-modal sensing system for underground exploration, enhancing my expertise in developing resilient solutions for navigating and searching in subterranean environments by utilizing LiDAR, RGB-D Camera, and SLAM techniques. To deepen my knowledge, I delved into the KITTI dataset, where I fused LiDAR, camera, and inertial data for 3D mapping and depth estimation. This project introduced me to odometry techniques and sparked my interest in visual odometry. I developed CNN-based models for visual odometry, integrating IMU measurements for enhanced robustness and establishing a solid foundation in INS mechanization.
+
+In my MSc studies, I aimed to tackle the challenge of search and rescue missions in unpredictable environments, mirroring the SubT DARPA challenge. Focusing on inertial navigation, I addressed issues related to the absence of external resources and variable lighting conditions. I developed three RCNN models for inertial attitude estimation, handling varying sampling rate which achieved up to 40\% accuracy improvement over conventional methods. I extended these models through a UC Boulder internship by employing Physics-Informed Neural Networks (PINN) for inertial odometry to capture the data distribution's structure and dynamics while harnessing the underlying physical governing equations which could enhance navigation accuracy in challenging environments. 
+
+My AI-based navigation projects prepared me well to contribute to the \textbf{Field Robotics Center}'s efforts in advancing off-road navigation and applying robotics exploration, mainly in the \textbf{MoonRanger project}. With \textbf{Dr. Wettergreen}, I aim to collaborate on \textbf{Robotic Exploration projects}, focusing on space exploration. I will develop robotic systems for planetary exploration, emphasizing robust autonomy and the capability to perform tasks like drilling and prospecting on Mars and terrestrial volcanoes. I will focus on contributing to \textbf{Science Rover} development through ROS simulation. This entails creating Lunar Rover Software, emphasizing learning-based SLAM for barren terrains. The main objective would be to improve the accuracy of localization using rock detection and analyzing spatial arrangements to identify distinctive patterns. Additionally, I aim to address challenges in low-light conditions through the integration of perception techniques, such as visual odometry and sensor fusion, to ensure robust performance in varied and challenging exploration scenarios. I am passionate about participating in \textbf{DARPA Subterranean Challenges} to address the complexities of navigating in underground environments, crucial for disaster response. I aim to fuse LiDAR and IMU data to develop odometry models in vision-denied environments, with a specific emphasis on applications in search and rescue operations.
+
+I am deeply inspired by \textbf{Dr. Scherer}'s pioneering work in enhancing autonomy, particularly in the field of vision-based navigation and obstacle avoidance for unmanned rotorcraft. My proficiency in learning-based SLAM could significantly contribute to the diverse projects within \textbf{AirLab}. I plan to leverage RCNNs to devise fusion algorithms that integrate data from LiDAR, radar, and visual sensors, thereby establishing a robust system capable of interpreting dynamic 3D scenes in a comprehensive manner. To augment the system’s capabilities, I propose employing CNNs for capturing spatial patterns and RNNs for understanding temporal relations. This approach aims to enhance the system’s comprehension of and interaction with its environment, thereby improving the safety and efficiency of UAV localization in complex, cluttered environments. Drawing on my comprehensive experience with inertial sensors, I am keen to advance the field of uncertainty estimation in inertial odometry, a crucial component for achieving optimal sensor fusion. My primary focus will be on the creation of learning-based frameworks that can adeptly encapsulate the inherent non-linearities of IMUs, while also denoising the raw IMU data. I aim to ensure the precise propagation of covariance, thereby bolstering the reliability and performance of multi-sensor systems in challenging environments.
+
+Within the \textbf{Robot Perception Lab}, my interest lies in developing novel inertial-aided state estimation approaches for fast and agile flight which is crucial for enabling autonomous operation of UAVs in GPS-denied environments. In addition, I am keen on advancing localization and mapping techniques by utilizing learning-based SLAM. I am intrigued by the concept of Efficient Incremental SLAM, such as the iSAM (Incremental Smoothing and Mapping) and riSAM (Robust Incremental Smoothing and Mapping) algorithms. These algorithms provide efficient solutions for online incremental SLAM, making them highly relevant for real-time applications. In these areas, I aim to contribute to the advancement of autonomous robotics, particularly in challenging and dynamic environments.
+
+Fascinated by Dr. Johnson's work on robust control algorithms for legged robots in challenging terrains, I'm eager to apply these strategies to extraterrestrial missions, where legged robots navigating complex terrains are crucial. I would like to explore the development of Cooperative Inverse Reinforcement Learning (CIRL) for legged locomotion. I aim to couple CIRL with PINN to design a robust and adaptive control framework for legged robots. This integrated approach not only leverages the benefits of CIRL in learning from human demonstrations but also incorporates the physical constraints and dynamics of the robotic system through PINN. By combining these techniques, I intend to create a more versatile and efficient control system that enhances the legged robot's adaptability, stability, and performance across various terrains and scenarios. 
+
+
+I am attracted to Carnegie Mellon University not simply for its cutting-edge research or renowned faculty but for its dynamic role as a crucible where innovation intersects with tradition, creating a unique ethos that goes beyond the traditional boundaries of academia. The individuals here are not just educators; they embody an insatiable quest for knowledge, serving not only as mentors but as collaborators in a shared odyssey. The intersection of their expertise with my research interests is not only compelling but also the catalyst for a symbiotic intellectual journey. Amidst the diverse research labs, each with its distinct rhythm, I perceive not only opportunities but also a canvas to weave my own narrative within the academic tapestry. Beyond the awards and groundbreaking initiatives, what intrigues me the most is the possibility of an unconventional camaraderie, a synergy that transcends the usual boundaries of collaborative research. In this vibrant community, I don't just see colleagues; I find kindred spirits—a collective force propelling me toward an uncharted trajectory that defies convention and nurtures a profound sense of belonging within the global robotics diaspora.
+
+My passion lies in becoming a leading researcher in AI, focusing on improving robotic navigation. I am dedicated to addressing challenges in large-scale autonomous systems and enhancing resilience in uncertain situations. My commitment spans various research areas, with a specific focus on empowering robots to navigate real-world environments effectively. I envision working on cutting-edge projects, exploring complex terrains, and utilizing deep learning to enable robots to learn. Additionally, I am interested in integrating deep learning with multi-agent systems. In this journey, I see myself developing AI-based robust navigation systems for unstructured and extreme environments.
+
+
+
+As a professor, I aim to cultivate an inclusive and diverse STEM community, dedicating myself to empowering the next generation of scientists irrespective of their background. Through my fervor for teaching, I aim to reinforce the dedication to creating an environment where everyone has the opportunity to thrive. This commitment is not just a professional objective; it is a deeply personal mission. As a first-generation student facing scarce academic resources and guidance, I navigated the challenging terrain of higher education fueled by relentless determination. Balancing a full-time job and caretaker responsibilities following my parents' divorce, I transformed adversity into strength, learning the values of hard work, determination, and the barriers faced by those from low-income backgrounds. My experiences honed resilience, time management, and leadership skills, leading me to instruct martial arts and mentor students from diverse backgrounds. This journey ignited a passion for advocating diversity, inclusion, and equity in education, prompting me to volunteer and extend guidance globally.  I’m ready for CMU’s challenges
+
+\vspace{0.05cm}
+Thank you for considering my application.\vspace{-0.1cm}
+
+Sincerely, \vspace{-0.1cm}
+
+Arman Asgharpoor Golroudbari
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,194 @@
+%-------------------------
+% Entry-level Resume in LaTeX
+% Version - v1.3
+% Last Edits - October 5, 2021
+% Author : Jayesh Sanwal
+% Reach out to me on LinkedIn(/in/jsanwal), with any suggestions, ideas, issues, etc.
+%------------------------
+
+%%-------------------------------------
+% Notes to the User here -
+% 1) Change " Author+an = {N=highlight}" in "Publications.bib", where N is the number at which your name appears
+% 2) Use "\vspace" wisely, that would change spacing, and is currently being used as a hacky fix
+% 3) Do not delete the fonts in the left side
+% 4) Use the "Rich Text" feature on Overleaf - On the top panel next to source. Makes it much easier for starters on LaTeX to use this template
+% 5) Do NOT use periods at the end of bullet points, the sample (ipsum) text might have it
+% 6) Use "maxbibnames" on this file to change the maximum number of authors on the paper (Credits: Dr. Natasha Krell) - Default is 3, but change line 92 to add authors
+
+%%-------------------------------------
+% Changes from last version (v1.3, October 5, 2021) -
+% 1) Summary statement removed, replaced with 4 keywords on top and Impact statement
+
+% Changes from last version (v1.2, August 23, 2021) -
+% 1) Changes in the Technical Skills section - renamed to just Skills
+% 2) Changed the font size for the name
+% 3) Education to the top
+%%-------------------------------------
+
+
+%%-------------------------------------
+% Changes to be made in the next version -
+% 1) Shift to Class file, make changes here
+% 2) Use a fonts folder
+% 3) Incorporate Leadership & volunteering together
+% 4) Remove \vspace based 'hacky' fixes
+%%-------------------------------------
+
+
+\documentclass[a4,25pt]{article}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  STARTING HERE, DO NOT TOUCH ANYTHING 
+%%%%%%% --------------------------------------------------------------------------------------
+ \usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.5cm]
+%%%% Set Margins
+\usepackage[margin=1cm, top=0.5cm, bottom=0.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{165,42,42}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  END OF "DO NOT TOUCH" REGION
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%% --------------------------------------------------------------------------------------
+%\vspace{-1.5cm}\rfoot{\vspace{-1.5cm}{\fontfamily{ttf} \selectfont \footnotesize \emph{ \vspace{-1.5cm} \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0.5cm}
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+\begin{center}
+    \begin{minipage}[b]{0.34\textwidth}
+            \normalsize (+98)-919-6097597 \\
+            \small Innovation Center, \\ Student’s Scientific Research Center, \\ Vesal St., Tehran, Iran\\
+            
+    \end{minipage}% 
+    \begin{minipage}[b]{0.34\textwidth} \hspace{-0.8cm}
+            \centering
+            {\huge Arman \Huge \textbf{Asgharpoor}} \\ %
+            \vspace{0.1cm}
+            \large \hspace{-0.8cm}\href{mailto:A.Asgharpoor@ut.ac.ir}{A.Asgharpoor@ut.ac.ir} \\
+            %{\color{UI_blue} \Large{}} \\
+    \end{minipage}% 
+    \begin{minipage}[b]{0.31\textwidth}
+            \flushright \large  %Willing to Relocate
+            %{\href{https://www.linkedin.com/in/link/}{linkedin.com/in/yourlink} } \\
+            %\href{https://Add_your_portfolio_here_}{Portfolio}
+            {\href{https://linkedin.com/in/asgharpoor/}{ \footnotesize linkedin.com/in/asgharpoor \faLinkedin\ }} \\
+            {\href{https://github.com/Armanasq}{ \footnotesize github.com/Armanasq \faGithubSquare\ }}\\
+            {\href{https://www.researchgate.net/profile/Arman_Asgharpoor}{ \footnotesize researchgate.net/profile/Arman\_Asgharpoor \aiResearchGateSquare\ }}\\
+            {\href{http://armanasq.github.io/}{\footnotesize armanasq.github.io \faGlobe\ }}
+            %{\href{https://fuzzylogic.ut.ac.ir/en/page/7122/arman-asgharpoor/}{\faGlobe\ \footnotesize fuzzylogic.ut.ac.ir/en/page/7122/arman-asgharpoor}}
+    \end{minipage} 
+     
+\end{center}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\vspace{-0.3cm}\section{\vspace{-0.5cm}\Large{Statement of Purpose}}
+ \small  \vspace{-0.79cm} \textbf{5 December 2022}  \par
+\justifying
+
+\begin{large} 
+\vspace{-0.3cm}Dear Graduate Admissions, \par
+\vspace{-0.35cm} \quad 
+Through the AeroAstro Ph.D. program at the University of Washington, I want to contribute to spacecraft autonomous navigation, with a focus on computer vision and optimal trajectories for autonomous systems using deep learning (DL). Growing up, I had been an avid astronomer, passionate about exploring Space. This excitement brought me into academia to research how DL addresses technical problems surrounding vision-based navigation for space vehicles. Through my master's studies and in the Spacecraft System Design course, I used European Cooperation for Space Standardization to conceptualize a FireSat mission based on the Space Mission Analysis and Design book. This project led me to be fascinated with the spacecraft’s Attitude Determination and Control Subsystem and the spacecraft navigation algorithms. After then, I narrowed down my research scope to Space and Guidance, Navigation, and Control. I took a variety of relevant courses and taught myself DL because I saw its strong potential as a vision-based navigation method. \par
+\vspace{-0.35cm} \quad  My master’s thesis focuses on integrating AI into inertial navigation by developing DL frameworks for inertial odometry and attitude estimation. We developed four DL models using LSTMs, CNNs, and IMU measurements in this study using MATLAB and Python. Also, many methods were used for evaluation (e.g., KF Family, QUEST, FQA, Madgwick, and Mahony). We drew several meaningful results: (1) Our model outperformed conventional filtering and multi-sensor data fusion methods significantly. (2) Compared with RIANN, which is the only DL end-to-end attitude estimation method, our model was more robust in alleviating noise and bias. (3) We developed the first end-to-end model for inertial attitude and heading estimation based on the MARG sensor measurements. Initially, we built the model with Tensorflow and Pytorch, using the Random Search algorithm, then tuned it with several optimization techniques, including Population Based Training and Bayesian Optimization. This project enabled me to learn the advanced level of navigation algorithms as well as programming and problem-solving skills.\par
+\vspace{-0.35cm} \quad  Last summer, I participated in Oxford Machine Learning Summer School, where I gained a deeper understanding of various AI techniques. It gives me the opportunity to do research on vision-based navigation techniques as well as to develop path-planning algorithms using Python and computer vision in the ROS environment. Recently, I submitted my papers on DL Attitude Estimation Framework and Model Predictive Control. Currently, I am writing a paper on using end-to-end DL models for Yaw/Heading estimation based on MARG sensors. In addition, I plan to utilize reinforcement learning for hyperparameter optimization of the developed model.  \par
+\vspace{-0.35cm} \quad As a highly motivated student, I demonstrated a solid academic record, hands-on experience in various research areas, and leadership skills, which also manifested in my GPA, 4.0/4.0 in both my MBA and MSc programs. Having the opportunity to study Space Engineering alongside an interdisciplinary MBA helped me develop analytical and technical skills as well as teamwork abilities. Based on my experience in robotics and AI, I found the UW AeroAstro Ph.D. program to be a great fit for my research goals, and in particular, the research of professors Mehran Mesbahi and Behçet Açkmeşe on motion planning and spacecraft pose estimation. It would be a privilege to study in the department under the guidance of its distinguished faculty members. As a prospective Ph.D. student with a strong background in navigation and a passion for research, I believe this program is an ideal opportunity for me to have concrete research experience and craft viable career plans. In addition, this would be an ideal opportunity for me to work on cutting-edge projects in collaboration with renowned scientists and develop my critical thinking and communication skills. Also, I believe  achieving academic excellence requires faculty and students with diverse interests and backgrounds to communicate and collaborate freely. Moreover, the UW's focus on promoting diversity and inclusion deeply resonates with my values. As a Martial Art instructor and a university teacher in Iran, I have been passionate about giving more creating opportunities to students with scarce resources. I envision myself as a professor in Space Engineering and want to learn to create diverse and welcoming environments in classrooms and research labs at the UW. \par
+\vspace{-0.35cm} \quad Finally, I am confident that my research and leadership experience will be the key to my success in your program, which will enable me to achieve my academic and career goals. I look forward to joining the University of Washington as a graduate student in your esteemed department. \par
+\vspace{-0.35cm}I appreciate your time and consideration. \par
+\vspace{-0.4cm}Sincerely Yours, \par
+\vspace{-0.4cm}Arman Asgharpoor Golroudbari \par
+\end{large}
+\end{document}

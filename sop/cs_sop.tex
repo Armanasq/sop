@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+}
+
+\begin{document}
+\vspace{-0.3cm}
+{\Large\textbf{Arman Asgharpoor}} \hfill \textbf{Word Count:} 1,443\\
+DPhil in Computer Science \hfill University of Oxford
+\rule[-0.2em]{\textwidth}{1pt}
+
+\section*{The Generalization Problem}
+
+A learning-based navigation system trained on one robot fails when deployed on another with different sensor sampling rates. A deep neural network that works perfectly indoors struggles when moved outdoors. An end-to-end model achieving impressive benchmark results cannot adapt when sensor synchronization becomes imperfect or data gets corrupted.
+
+This brittleness—the inability of learned models to generalize beyond their training conditions—limits how learning-based approaches translate to real deployment. The challenge isn't just achieving high accuracy on test sets. The real problem is building systems robust enough to handle variability inherent in actual robotic platforms: sensors that drift, sampling rates that fluctuate, environmental conditions that change, and data that arrives imperfect or incomplete.
+
+\textbf{My research addresses this challenge}: developing learning-based methods for robust state estimation that generalize across sensors, platforms, and conditions by incorporating physical constraints and adaptive fusion strategies into neural architectures.
+
+\section*{How I Got Here}
+
+During my Master's at University of Tehran in Space Engineering, I encountered Changhao Chen's DPhil thesis on deep neural network-based inertial odometry from Oxford's Cyber Physical Systems group. The work demonstrated end-to-end learning could map raw IMU measurements to displacement, learning feature representations autonomously without hand-crafted filters. This was compelling—traditional approaches required extensive parameter tuning and struggled with low-cost sensors.
+
+I started reproducing the IONet approach. But while implementing it, a question emerged: if end-to-end learning works for odometry, why only odometry? Why not tackle the harder problem of full attitude estimation, which requires maintaining global orientation rather than relative displacement?
+
+So I shifted focus. But attempting attitude estimation revealed deeper challenges. First: the model trained perfectly on Device A would fail completely on Device B with different sampling rates. The architecture assumed fixed timing between measurements—a constraint rarely satisfied in practice. Second: end-to-end learning worked beautifully when data was clean and synchronized, but real deployments involve missing measurements, corrupted data, bad synchronization. The monolithic approach had no mechanism to adapt.
+
+These observations led me to question the end-to-end framework itself for complex, real-world scenarios.
+
+Instead of learning everything from scratch, I designed a loss function that minimized quaternion calculation errors while respecting the manifold structure of SO(3). This embedded the mathematical constraints of rotational kinematics directly into the optimization process. \textbf{Publishing this work in \textit{Measurement}} demonstrated that incorporating domain knowledge improved both accuracy and generalizability—the resulting model handled variable sampling rates without retraining by treating time intervals as explicit inputs, the way integral calculus naturally accounts for spacing between measurements.
+
+But I noticed something: while this addressed temporal variations, it didn't leverage temporal dependencies. I added transformer attention mechanisms to learn how IMU measurements relate across time, reducing orientation error by 37\% compared to the baseline. Yet even this felt incomplete. The model learned correlations but didn't understand the underlying physics governing inertial dynamics.
+
+That's when I turned to physics-informed neural networks. By embedding Newton-Euler equations and gyroscope kinematics as constraints within the architecture—not as post-processing corrections, but as structural elements of the network itself—I could enforce physical principles while maintaining the learning capacity of deep networks. \textbf{Combining transformers with physics-informed architectures} created a system that learned temporal patterns while respecting physical laws.
+
+This progression—from end-to-end odometry to constrained attitude estimation to physics-guided learning—taught me that robust generalization requires hybrid approaches. Pure data-driven methods achieve impressive results under controlled conditions but lack the structural knowledge needed for real-world variability. Pure model-based approaches struggle with complex sensor characteristics. The synthesis matters.
+
+\section*{Current Work and Motivation}
+
+At Fasta Robotics, I deploy these insights on Unitree Go2 quadruped robots in warehouse environments. I've integrated visual-inertial odometry using ORB-SLAM3 with ROS2, fusing camera data from RealSense D435i and ZED 2i with IMU measurements. Achieving centimeter-level accuracy over 100-meter trajectories validated the technical approach.
+
+But warehouses are unforgiving. Poor lighting causes vision to fail. Repetitive structures confuse feature matching. Moving forklifts create dynamic obstacles. The system needs to adapt—weighting visual information when reliable, falling back to inertial when vision degrades, detecting when both modalities disagree.
+
+This is exactly the selective sensor fusion challenge Chen et al. addressed in \textit{Selective Sensor Fusion for Neural Visual-Inertial Odometry}. Rather than fixed fusion weights, the system learns to dynamically select and weight modalities based on data quality. I've seen this need firsthand: when a forklift blocks the camera view, the system should recognize visual features have become unreliable and increase reliance on inertial predictions. Current fixed-weight approaches cannot adapt.
+
+Recent work on \textit{SelfVIO} extends this further—self-supervised learning for VIO that doesn't require labeled ground truth, using adversarial training to learn fusion strategies from unlabeled sequences. For real deployments, where obtaining labeled training data across all operating conditions is impractical, self-supervised adaptation is essential.
+
+\section*{Why Oxford and This Research Direction}
+
+The Cyber Physical Systems group's research directly addresses the challenges I've encountered. Work on selective fusion (\textit{CVPR 2019}), multimodal localization (\textit{VMLoc, AAAI 2021}), and self-supervised VIO (\textit{SelfVIO, Neural Networks 2022}) demonstrates principled approaches to building robust learning-based state estimation.
+
+What particularly excites me is the recent direction toward multimodal sensing beyond vision and inertia. \textit{SoundLoc3D} (December 2024) shows how acoustic signals can complement visual modalities for 3D localization. \textit{MambaLoc} (August 2024) applies state space models to camera relocalization, demonstrating efficient alternatives to transformer architectures. These works suggest that robust localization requires flexible fusion across diverse sensing modalities.
+
+I want to build on this foundation, specifically addressing \textbf{adaptive learning-based state estimation for robotic platforms operating in variable conditions}. This involves three connected challenges:
+
+\vspace{0.3cm}
+\noindent\textbf{First: Architectures embedding physical constraints while maintaining learning capacity.}
+
+Pure end-to-end learning lacks interpretability and struggles out-of-distribution. Pure physics-based models cannot capture complex sensor characteristics. Physics-informed neural networks offer a middle ground—embedding differential equations and kinematic constraints as structural elements while allowing networks to learn residual dynamics. How can we encode sensor calibration relationships, timing constraints, and measurement models directly into fusion architectures?
+
+\vspace{0.2cm}
+\noindent\textbf{Second: Self-supervised adaptation to changing conditions.}
+
+The SelfVIO work shows systems can learn to fuse sensors without labeled data. But real deployments involve continual shifts—lighting changes throughout the day, sensor drift over time, new environmental patterns. The system needs online adaptation without catastrophic forgetting. How can we leverage continual learning and meta-learning to enable fusion strategies that adapt throughout deployment while preserving previously learned capabilities?
+
+\vspace{0.2cm}
+\noindent\textbf{Third: Robustness to imperfect data through learned selection.}
+
+The selective fusion framework demonstrated learning when to trust different modalities improves robustness to corrupted data and synchronization issues. But selection strategies could extend beyond binary gating—probabilistic fusion that quantifies uncertainty, detects anomalies, and degrades gracefully when modalities become unreliable. State space models like Mamba might offer computational advantages over transformers for real-time uncertainty estimation.
+
+\vspace{0.2cm}
+The combination of the group's expertise in learning-based VIO, multimodal fusion, and self-supervised methods provides exactly the foundation needed for this research. The emphasis on rigorous evaluation across diverse datasets and real-world deployment aligns with my belief that robustness comes from testing under varied conditions, not just benchmark performance.
+
+\section*{Research Approach}
+
+My approach builds directly on the Selective Sensor Fusion and SelfVIO frameworks. Initial work will involve extending physics-informed architectures to multi-sensor fusion scenarios, using the OxIOD dataset and my own data from Fasta deployments. The key technical challenge is balancing the expressiveness needed to learn complex sensor interactions with the structure needed to enforce physical consistency.
+
+For adaptive fusion, I'll investigate meta-learning approaches that allow rapid adaptation to new sensing conditions without requiring extensive retraining. My experience combining transformers with physics constraints offers a complementary perspective to recent state space model work—comparing these architectures for real-time state estimation could reveal fundamental trade-offs between capacity and efficiency.
+
+For robustness evaluation, I'll leverage my hands-on experience with real deployments. Testing under controlled degradation (introducing synchronization errors, dropping measurements, adding noise) provides systematic evaluation, but validation ultimately requires real-world trials where failure modes emerge organically. The Unitree Go2 platform I currently use at Fasta offers a testbed for legged robot scenarios.
+
+\section*{Moving Forward}
+
+The convergence of physics-informed learning with adaptive sensor fusion creates new possibilities: systems that learn from data while respecting physical laws, adapt to changing conditions without catastrophic forgetting, and degrade gracefully when sensors become unreliable. The challenges I've encountered—models that work in the lab but fail in warehouses, systems that achieve benchmark performance but cannot generalize—drive this research.
+
+My goal is an academic research career developing robust learning-based methods for real-world robotics. Oxford's Computer Science department, with its emphasis on principled approaches to practical problems and the Cyber Physical Systems group's track record in robust state estimation, provides the ideal environment for this work. This research will extend the group's selective fusion and self-supervised approaches with physics-informed architectures, addressing the critical challenge of building learning-based systems that generalize beyond controlled conditions.
+
+\vspace{0.5cm}
+\noindent\textbf{Selected References:}
+
+\begin{itemize}
+\item Chen, Changhao, et al. "Selective sensor fusion for neural visual-inertial odometry." \textit{CVPR}, 2019.
+
+\item Almalioglu, Yasin, et al. "SelfVIO: Self-supervised deep monocular visual-inertial odometry and depth estimation." \textit{Neural Networks} (2022).
+
+\item He, Yuhang, et al. "SoundLoc3D: Invisible 3D sound source localization." arXiv (2024).
+
+\item Wang, Jialu, et al. "MambaLoc: Efficient camera localisation via state space model." arXiv (2024).
+
+\item Golroudbari, Arman Asgharpoor, and Mohammad Hossein Sabour. "Generalizable end-to-end deep learning frameworks for real-time attitude estimation using 6DoF inertial measurement units." \textit{Measurement} (2023).
+
+\item Asgharpoor Golroudbari, Arman. "TE-PINN: Quaternion-based orientation estimation using transformer-enhanced physics-informed neural networks." arXiv (2024).
+\end{itemize}
+
+\end{document}

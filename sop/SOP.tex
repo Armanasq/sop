@@ -1,0 +1,217 @@
+%-------------------------
+% Entry-level Resume in LaTeX
+% Version - v1.3
+% Last Edits - October 5, 2021
+% Author : Jayesh Sanwal
+% Reach out to me on LinkedIn(/in/jsanwal), with any suggestions, ideas, issues, etc.
+%------------------------
+
+%%-------------------------------------
+% Notes to the User here -
+% 1) Change " Author+an = {N=highlight}" in "Publications.bib", where N is the number at which your name appears
+% 2) Use "\vspace" wisely, that would change spacing, and is currently being used as a hacky fix
+% 3) Do not delete the fonts in the left side
+% 4) Use the "Rich Text" feature on Overleaf - On the top panel next to source. Makes it much easier for starters on LaTeX to use this template
+% 5) Do NOT use periods at the end of bullet points, the sample (ipsum) text might have it
+% 6) Use "maxbibnames" on this file to change the maximum number of authors on the paper (Credits: Dr. Natasha Krell) - Default is 3, but change line 92 to add authors
+
+%%-------------------------------------
+% Changes from last version (v1.3, October 5, 2021) -
+% 1) Summary statement removed, replaced with 4 keywords on top and Impact statement
+
+% Changes from last version (v1.2, August 23, 2021) -
+% 1) Changes in the Technical Skills section - renamed to just Skills
+% 2) Changed the font size for the name
+% 3) Education to the top
+%%-------------------------------------
+
+
+%%-------------------------------------
+% Changes to be made in the next version -
+% 1) Shift to Class file, make changes here
+% 2) Use a fonts folder
+% 3) Incorporate Leadership & volunteering together
+% 4) Remove \vspace based 'hacky' fixes
+%%-------------------------------------
+
+
+\documentclass[a4,15pt]{article}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  STARTING HERE, DO NOT TOUCH ANYTHING 
+%%%%%%% --------------------------------------------------------------------------------------
+ \usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.5cm]
+%%%% Set Margins
+\usepackage[margin=1cm, top=1cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{165,42,42}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  END OF "DO NOT TOUCH" REGION
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{1em}
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+\begin{center}
+    \begin{minipage}[b]{0.34\textwidth}
+            \normalsize (+98)-919-6097597 \\
+            \small Innovation Center, \\ Student’s Scientific Research Center, \\ Vesal St., Tehran, Iran
+    \end{minipage}% 
+    \begin{minipage}[b]{0.34\textwidth}
+            \centering
+            {\huge Arman Asgharpoor Golroudbari} \\ %
+            \vspace{0.1cm}
+            \large \href{mailto:A.Asgharpoor@ut.ac.ir}{A.Asgharpoor@ut.ac.ir} \\
+            %{\color{UI_blue} \Large{}} \\
+    \end{minipage}% 
+    \begin{minipage}[b]{0.31\textwidth}
+            \flushright \large  %Willing to Relocate
+            %{\href{https://www.linkedin.com/in/link/}{linkedin.com/in/yourlink} } \\
+            %\href{https://Add_your_portfolio_here_}{Portfolio}
+            {\href{https://linkedin.com/in/asgharpoor/}{ \footnotesize linkedin.com/in/asgharpoor \faLinkedin\ }} \\
+            {\href{https://github.com/Armanasq}{ \footnotesize github.com/Armanasq \faGithubSquare\ }}\\
+            {\href{https://www.researchgate.net/profile/Arman_Asgharpoor}{ \footnotesize researchgate.net/profile/Arman\_Asgharpoor \aiResearchGateSquare\ }}\\
+            {\href{http://armanasq.github.io/}{\footnotesize armanasq.github.io \faGlobe\ }}
+            %{\href{https://fuzzylogic.ut.ac.ir/en/page/7122/arman-asgharpoor/}{\faGlobe\ \footnotesize fuzzylogic.ut.ac.ir/en/page/7122/arman-asgharpoor}}
+    \end{minipage} 
+     
+\end{center}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\section{\Large{Cover Letter} }
+\vspace{0.2cm}
+\justifying
+    
+\begin{large} 
+\quad  A deep space exploration mission is not far away; such a mission can be accomplished through intelligent and long-term autonomous systems that require \textbf{navigation} and \textbf{localization} algorithms with high accuracy and precision. A topic of interest to me is estimating attitude and position using Star Tracker in deep space missions. Star Tracker is one of the most critical subsystems of spacecraft that use star patterns to determine the attitude and position. Observations of star patterns will change as spacecraft travel deep into space\cite{bailer2021lost}. Almost all autonomous navigation algorithms use 2D star catalogs; despite Solar system missions\cite{hallock2017acs}, deep space and interstellar missions require 3D catalogs. Also, conventional algorithms usually use Look-up tables that are not efficient or even not capable of such complex calculations. Furthermore, due to the high speed in these missions, the relativistic doppler effect and stellar aberration can have a negative impact on the navigation algorithm performance.  \par
+
+\quad Despite recent advancements in spacecraft technology, accurate attitude estimation remains an important research topic, and many studies have focused on visual navigation. Research on computer vision and machine learning for navigation through star identification attracted me. 
+Recently, Rijlaarsdam et al. \cite{rijlaarsdam2020survey} reviewed many of these methods and categorized almost all feature extraction methods into  \textbf{subgraph isomorphism-based} and  \textbf{pattern-based}. Also, they define the  \textbf{hybrid methods}, which are the combination of both. Toloei et al. \cite{toloei2020comparative} analyze and compare seven different algorithms for star identification used in Star Trackers. Lost in space algorithms, recursive algorithms, and non-dimensional algorithms for star identification have been reviewed by Benjamin et al. \cite{spratling2009survey}. A  \textbf{CNN} and  \textbf{Transformer Encoder} used as a star identification algorithm purposed by Han et al. \cite {han2021end}. Nishikawa-Toomey et al. \cite{nishikawa2020semi} used  \textbf{VAEs} for galaxy morphology classification. 
+All these pushed me to choose visual navigation as my PhD topic. I am passionate about developing a  \textbf{3D star catalog} not only for deep space mission navigation but also for  \textbf{detecting anomalies in stars pattern} via machine learning.
+In short, the objective of my proposed research are:
+\begin{itemize}
+    \item 	Build a 3D Star Catalog via  \textbf{Gaia dataset} \cite{brown2021gaia} \vspace{-0.3cm}
+    \item 	Develop stars pattern  \textbf{anomaly detector} based on Gaia dataset \vspace{-0.3cm}
+    \item 	Develop an  \textbf{End-to-End ANN framework for star identification} based on the proposed 3D Star Catalog
+\end{itemize}
+ \par
+
+\quad During my undergraduate studies, I became familiar with the aircraft instrument, which led me to participate in many navigation projects. I used embedded systems and development boards such as Arduino and Raspberry Pi to implement robotics navigation projects such as attitude estimation, ultrasonic distance measurement, and computer vision for object detection. I gained hands-on experience in  \textbf{Python} and  \textbf{MATLAB} programming by doing these projects. As an Aircraft Avionics student, I gained a great deal of practical knowledge and experience in Electrical Engineering, Robotics, and Computer Sciences fundamentals. In this time, I had the unique opportunity to work in Aircraft Instrument Lab as a teacher assistant. After graduation, this experience led me to be a university lecturer and teach 11 different courses at  \textbf{Aviation Industry Training Center} related to computer science and electrical engineering. Based on my performance as a university lecturer, I have been chosen as the advisor of five theses, and I have advised undergraduate students in researching and presenting dissertations.  \par
+
+\quad Being an M.Sc. student at the University of Tehran ( \textbf{ranked 1st} in Iranian Universities based on USNews) gave me the chance to work on different space navigation projects at the University of Tehran Space Lab. Based on my research interest in navigation, I chose the application of Machine Learning for attitude estimation as my master thesis topic. This research aims to analyze the performance of various Artificial Neural Network architectures for multi-data sensor fusion and time-series estimation. In this research, I compared the intelligent and conventional estimators for inertial attitude estimation. As part of this project, I gained experience utilizing MATLAB, Python, and the libraries related to Machine Learning (TensorFlow, Keras, PyTorch). The hard work I put into my studies and my thirst for knowledge led me to rank first in my class.  \par
+\vspace{1cm}
+\quad My curiosity led me to join different multi-disciplinary groups, the Students' Scientific Research Center is one of those. Due to my academic records and performance in this center, I was chosen as one of the Research Council's referees and worked with top scientists such as professor Nima Rezaei, founder and current president of the Universal Scientific Education and Research Network (USERN). I have been working under his supervision since 2020, and I was more than honored to meet him throughout my professional life. Meeting such renowned professors increased my faith and motivation in the path I had already chosen and inspired me to pursue higher education. \par
+
+\quad Based on these experiences and working on various robotics and artificial intelligence projects, I decided to apply for the  \textbf{ETH Robotic Systems Lab}. As a prospective Ph.D. student with a strong background in Robotics and a passion for research, I think this program is an ideal opportunity for me and taking part in such a valuable program would give me a better idea of my research and career path. As an ETH Ph.D. student, I will have the opportunity to participate in high-level research and immerse myself in subjects I am passionate about. In addition, this could also help me develop skills like critical thinking, communication skills, and cooperation. These aspects will allow me to continue my path to pursuing a career in research, as I have always been interested in it.  \par
+
+\quad My goal is to conduct research on AI applications in navigation and environment perception for satellite and space robots and publish my research results. I intend to pursue a scientific career, especially a space-related research career. As an ETH Ph.D. student, I will have the chance to work on cutting-edge projects with renowned scientists in a multicultural environment. Joining this program will build up my skills in different aspects of Artificial Intelligence and autonomous robots, which is so attractive. I believe that my background in Avionics engineering and entrepreneurship could be helpful to progress the research projects. Also, my skills and experience in machine learning, estimation theory, and programming (Python, MATLAB, and ROS) will lead me to achieve my goals. \par
+
+\quad Lastly, I can assure you that my research and leadership experience will be the key to my success in the program. I am confident that I will achieve my academic and career goals with your program. \par
+
+
+      \vspace{1cm}
+      In advanced, I appreciate your time and consideration. \par
+      Sincerely,\par
+      Arman Asgharpoor Golroudbari
+      \end{large}
+
+ 
+\bibliographystyle{unsrt}
+\bibliography{refs}
+\end{document}

@@ -1,0 +1,112 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2cm, top=1.5cm]{geometry}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage[none]{hyphenat}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65em}
+
+\begin{document}
+
+\begin{center}
+\Large \textbf{Statement of Purpose}\\
+\vspace{0.2cm}
+\normalsize Arman Asgharpoor\\
+RAINZ CDT Application -- University of Oxford\\
+\vspace{0.1cm}
+\textbf{Word Count: 959}
+\end{center}
+
+\vspace{0.1cm}
+
+Dear Admission Committee,
+
+Five minutes of sensor data from our lab produced the reconstruction
+in Figure~\ref{fig:mesh}. The geometry is there, but the map has no
+memory and no meaning. It cannot tell what any object is, whether it
+was there last week, or whether something small has changed since the
+last scan. Building a representation that accumulates spatial knowledge
+over time and resolves changes at the scale of individual objects from
+camera data alone is the problem I want to work on.
+
+Last November, a Unitree Go2 navigated our lab using this map. Localization held to fifteen centimeters, but when a person stood near the glass partition, the robot stopped. It could not separate the person from the wall. Both entered the map as permanent obstacles. The problem was not the sensor or the algorithm. The map had no concept of object identity or temporal persistence. Robots inspecting wind turbines, solar arrays, or nuclear facilities face this gap at higher stakes. Prior work such as VILENS~\cite{wisth2022vilens} provides robust, low-drift multi-sensor odometry (visual–inertial–lidar–leg) that enables accurate high-frequency local terrain/elevation mapping for planning and control, and LEXIS~\cite{kassab2024lexis} shows semantics can be embedded into such maps through CLIP features and label propagation. However, these approaches primarily enrich map-level geometry (e.g., terrain/surface representations) rather than producing object- or instance-centric semantic maps. Neither can tell whether a specific object has changed, disappeared, or degraded. A facility valve inspected months apart will differ geometrically from lighting, oxidation, and surface accumulation, yet it is the same object in a changed state. That is the gap I want to close.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth]{mesh.png}
+\caption{Dense 3D reconstruction of our lab.}
+\label{fig:mesh}
+\end{figure}
+
+My Master's research developed a sampling-rate-aware neural network
+for IMU attitude estimation: a 1D-CNN feature extractor with a
+bidirectional LSTM and an explicit sampling-rate fusion layer, trained
+with Gaussian noise injection across seven public datasets covering
+200$+$ km of motion. It reduced orientation error by 37\% without
+retraining across sensors, published in
+\textit{Measurement}~\cite{golroudbari2023imu}. At Fasta Robotics, I
+integrated ORB-SLAM3 with ROS2 on RealSense D435i and ZED 2i across multi-floor warehouse layouts, trained YOLOv12 for human-aware navigation reaching 95\% recall at
+30\,FPS, and tracked people with DeepSORT. When someone moved behind a
+forklift, the tracker lost them because SLAM held no semantic state to
+help. The failure was not in either component. It was in the absence
+of a shared representation between them.
+
+With only 204 labeled images across 53 classes, I used CLIP embeddings
+to keep object identity stable across viewpoint and lighting shifts,
+reaching 81\% mAP. In TE-PINN, I embedded rotational kinematics on
+SO(3) directly into the transformer training objective, so geometric
+consistency was enforced by construction rather than hoped for through
+the loss. The next step is reasoning about 3D object identity and change
+from camera observations across time. 
+
+Feed-forward geometric reconstruction backbones such as 
+VGGT~\cite{wang2025vggt} and MapAnything~\cite{keetha2025mapanything} 
+directly predict multi-view 3D structure in a single pass, with 
+MapAnything additionally targeting globally consistent metric 
+reconstructions from flexible and partial inputs. I intend to build 
+on these models as geometric priors and integrate them with 
+multi-session visual SLAM to reason about object identity and change 
+across revisits separated by weeks. For that to be deployable over 
+months, the map cannot grow without bound: PlanarMesh~\cite{wang2025planarmesh} 
+shows that adaptive-resolution meshing can substantially reduce map 
+footprint while retaining the detail needed to detect small changes.
+
+
+Those models provide the geometric foundations, but not a principled 
+way to reason about what has changed and what has not. A map built 
+from one session carries geometry but no model of what it does not 
+yet know. How a system should reconcile conflicting observations 
+across sessions and update its belief is a question in probabilistic 
+inference, not engineering. I have not had formal training to address 
+that from first principles. I placed first among 120+ participants in the Oxford Machine Learning 
+Summer School competition, received an Outstanding Reviewer recognition 
+from IEEE, and have reviewed for ICRA and ICLR, so the research 
+exposure is there. The grounding 
+in estimation theory is not, and that is why a PhD is the right step 
+now rather than more deployment. The DRS group is where that formal 
+training connects directly to deployment on real platforms, which is 
+the combination I cannot find elsewhere.
+
+
+After the PhD I want to work on inspection systems for energy
+infrastructure that are reliable enough to operate without human
+verification of every output. RAINZ is structured around that goal. The cohort model means working on a shared industrial challenge across wind, solar, and nuclear rather than isolated academic problems. When a method fails in one energy context, the cohort sees whether the failure generalizes or is domain-specific. That cross-sector exposure is how you learn what makes a system deployable versus what makes it publishable. The industrial engagement and commercialisation training mean the gap between research and field deployment stays visible throughout. I want to build tools operators actually use, and I want to understand deeply enough why they fail to fix them when they do.
+
+I am applying to work with Professor Maurice Fallon on the Long-Term 
+3D Change Detection of Industrial Facilities project. My work has 
+followed the same direction independently: from inertial state 
+estimation, into visual-inertial SLAM, and toward the point where 
+geometric representations fail because they carry no model of object 
+identity or change over time. That is where this project begins. 
+The Year 1 MSc at Manchester addresses the formal gap I identified 
+through deployment rather than reading. Years 2 to 4 at Oxford, 
+within a group that has already demonstrated these foundations in 
+real facilities, is the environment where that gap can be properly 
+closed. I want to build tools operators actually use, in infrastructure 
+where the cost of a missed change is real.
+
+
+\bibliographystyle{ieeetr}
+\bibliography{ref}
+
+\end{document}

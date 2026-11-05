@@ -1,0 +1,181 @@
+\documentclass[a4,20pt]{article}
+
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.4cm]
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=1.cm, top=.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{0,0,0}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0.2cm}
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+{{\huge \scshape Statement of Purpose }} %\footnote{Parts of this document were grammatically prepared with the assistance of a generative artificial intelligence tool. The content, however, remains truthful, accurate, and in my own words.}
+\hfill { \small \textbf{10 Dec. 2023}} \\
+%\hfill {Aeronautics and Astronautics}\\
+\Vrulefill{-.05in}{-}
+%\rule{10cm}{0.1em}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\justifying
+
+\begin{large} 
+Dear Admissions Committee,
+
+My research interest lies in AI-based autonomy mainly in the intersection of field robotics and physics-based machine learning. I am particularly drawn to the development of decentralized learning, perception, and control algorithms for autonomous robots. My focus is on enhancing their decision-making capabilities through planning under uncertainty and improving their perception of unstructured environments via multi-sensor fusion. This multidisciplinary approach aims to advance the field of robotics and contribute to their efficiency and reliability in real-world applications. Several labs within Khoury College of Computer Sciences could support me in this research.
+
+
+My undergraduate journey focused on equipping autonomous vehicles with robust navigation capabilities in varied environments, leveraging expertise in sensor fusion and state estimation. I honed my skills in inertial-aided GPS-denied navigation, designing algorithms for drone flight using EKF, UKF, and Madgwick filters. The CanSat competition proved a thrilling testbed, where I implemented ORB and SURF algorithms for visual navigation, enabling drones to recognize patterns and autonomously navigate. I spearheaded the development of a multi-modal sensing system for subterranean exploration. This project combined LiDAR, RGB-D camera, and SLAM techniques to create detailed maps and enable efficient search operations. Seeking further challenges, I tackled the KITTI dataset, fusing LiDAR, camera, and inertial data for accurate 3D mapping and depth estimation. This venture unveiled the power of odometry techniques, particularly visual odometry, igniting my passion for this field. To delve deeper, I constructed CNN-based visual odometry models, seamlessly integrating IMU measurements for enhanced robustness. This project not only solidified my understanding of INS mechanization but also laid the foundation for further exploring the frontiers of visual odometry.
+
+
+During my MSc studies, I embarked on addressing the complexities of search and rescue missions in unpredictable terrains, akin to the SubT DARPA challenge. My focus was on inertial navigation, where I tackled challenges arising from the lack of external resources and fluctuating lighting conditions. I engineered three RCNN models for inertial attitude estimation, adept at managing varying sampling rates, which resulted in a 40\% accuracy enhancement compared to traditional methods. Further, during an internship at UC Boulder, I augmented these models by incorporating Physics-Informed Neural Networks (PINN) for inertial odometry. This approach leveraged the structure and dynamics of the data distribution while utilizing the governing physical equations, thereby bolstering navigation precision in challenging environments.
+
+To overcome SLAM's limitation in unstructured environments, under Dr. Rosen's guidance, I aim to enhance robust SLAM in dynamic settings. Integrating neural networks with resilient feature descriptors, I focus on improving precision and efficiency in feature extraction for more accurate map creation and narrower localization bounds. Moreover, I plan to integrate range sensors with visual data to enhance performance in low-visibility conditions, broadening the system's versatility. Adopting a multi-modal approach aligns with my commitment to expanding SLAM's applicability across diverse scenarios. My focus on optimization algorithms aims to refine the SLAM process's efficiency. Developing innovative techniques for data association and loop closure detection, I seek to reduce the computational load, making the system more suitable for real-time applications. I aim to validate these methodologies through rigorous real-world field trials, demonstrating their practical efficacy and broad suitability across varied environments. 
+
+In the pursuit of fast off-road navigation, my interest converges with risk-aware mapping and planning pipelines, aiming to balance speed and safety in challenging terrains. Leveraging ground point inflation with persistent spatial memory, I seek to generate precise occupancy grid maps from classified point clouds. This exploration seamlessly transitions into the realm of semantic perception and motion planning, where the real-time creation of a semantic image using advanced techniques like Convolutional Neural Networks becomes pivotal. To elevate this integration, I plan to delve into kinodynamic semantic-aware planners, marrying dynamic window approaches with receding horizon planners to meet kinodynamic constraints while processing semantic labels. Under Dr. Michael Everett's supervision, the overarching goal is the development of innovative techniques that seamlessly incorporate semantic perception into the design of autonomous navigation systems, ensuring heightened safety and increased efficiency in off-road navigation.
+
+Collaborating with Dr. Amato, I aim to explore multi-agent systems and decentralized decision-making intricacies, developing efficient algorithms for handling uncertainty and partial observability in complex, dynamic environments. I envision creating a robust framework that enables multiple autonomous agents to collaborate effectively, share information, and make optimal decisions in real-time. This involves integrating machine learning techniques with traditional planning algorithms to enhance adaptability and performance.  I will explore context-aware communication strategies among the agents, enabling dynamic adjustments based on situational context to improve overall system efficiency and resilience.
+
+With Dr. Mingolla, my research will delve into the intricacies of visual navigation, particularly focusing on the segmentation, grouping, and contour formation processes of early and middle vision in primates. I aim to transition these neural network models of visual perception to technological applications, enhancing autonomous navigation systems. My novel approach will involve the development of advanced algorithms that leverage the dynamics of data distribution in visual perception, thereby improving the precision of navigation in complex environments. This will involve the integration of neural network models with innovative techniques for data association and loop closure detection, reducing computational load and making the system more suitable for real-time applications. The ultimate goal is to validate these methodologies through rigorous real-world field trials, demonstrating their practical efficacy and broad suitability across varied environments.
+
+Building on my expertise in state estimation and signal processing, refined during my MSc studies with a specialization in indoor navigation, I am eager to collaborate with Dr. Closas. My intention is to explore advanced signal processing and its applications in navigation systems. My research focuses on enhancing the accuracy and reliability of positioning systems, especially in demanding environments such as urban canyons or indoor settings where conventional GPS signals may be weak or unavailable. I aim to pioneer inventive techniques for signal acquisition and tracking, utilizing the power of machine learning and statistical signal processing to effectively address these challenges.
+
+
+
+Building on my expertise in Language Model Learning (LLM) and Natural Language Processing (NLP), I am intrigued by the potential of enhancing navigation systems in unseen environments. The idea of integrating natural language instructions to improve navigation efficiency is particularly compelling. I envision leveraging this concept to develop a novel framework that can bridge the gap between simulated and real-world scenarios. This framework would incorporate an instruction parser based on LLMs, capable of converting language instructions into a sequence of macro-action descriptions. It would also feature an online visual-language mapper to maintain a real-time spatial and semantic understanding of the environment. Furthermore, I plan to develop a language indexing-based localizer to ground each macro-action description into a waypoint location on the map, and a local controller to predict the action. By refining these components, I aim to significantly enhance the performance of navigation systems in real-world applications. This endeavor aligns with my commitment to pushing the boundaries of autonomous systems, and I look forward to validating these methodologies through rigorous field trials.
+
+
+Additionally, I am intrigued by the potential of risk-aware mapping and planning pipelines for fast off-road navigation, particularly in the field of semantic perception and motion planning. Integrating semantic information into the motion planning process can significantly enhance the performance of autonomous systems, and I plan to explore innovative techniques for its incorporation into the design of navigation systems.
+
+
+
+
+
+
+I am drawn to Northeastern University not just for its cutting-edge research or renowned faculty, but for its dynamic blend of innovation and tradition, creating a unique academic ethos. Beyond its global reputation, Northeastern's legacy of uncovering the extraordinary in the ordinary propels my academic pursuits. The luminaries here are more than educators; they embody an insatiable quest for knowledge, serving as mentors and collaborators in a shared odyssey. The convergence of their expertise with my research interests in robotics and machine learning is not just compelling; it sparks a symbiotic intellectual journey. Amidst diverse research labs, I see not just opportunities but a canvas to shape my narrative in academia. What captivates me most is the potential for unconventional camaraderie, a synergy beyond ordinary collaborative bounds. In this vibrant community, I envision not just colleagues but kindred spirits propelling me toward an uncharted trajectory, fostering a profound sense of belonging in the global robotics community. In addition to my research, I am also looking forward to the opportunity to learn from and collaborate with other esteemed faculty members and fellow students at Northeastern. I believe that the interdisciplinary nature of the Northeastern University will provide a stimulating environment for my research and intellectual growth.
+
+As a professor, I'm dedicated to fostering an inclusive STEM community, empowering the next generation of scientists, regardless of their background. Through my passion for teaching, I aim to create an environment where everyone thrives. This commitment is not just professional; it's a personal mission. As a first-gen student, I faced academic challenges which honed my resilience, time management, and leadership skills. It inspired a passion for advocating diversity and equity, leading me to mentor students globally. I'm prepared for Northeastern's challenges.
+
+
+
+\vspace{0.15cm}
+Thank you for considering my application.\vspace{-0.1cm}
+
+Sincerely, \vspace{-0.1cm}
+
+Arman Asgharpoor Golroudbari
+
+
+\end{large}
+
+\end{document}

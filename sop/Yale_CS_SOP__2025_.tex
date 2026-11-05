@@ -1,0 +1,171 @@
+\documentclass[a4,20pt]{article}
+
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.4cm]
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=2.cm, top=.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{0,0,0}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0.2cm}
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+{{\large \scshape{ Statement of Purpose:} Arman Asgharpoor Golroudbari }} %\footnote{Parts of this document were grammatically prepared with the assistance of a generative artificial intelligence tool. The content, however, remains truthful, accurate, and in my own words.}
+ \\
+%\hfill {Aeronautics and Astronautics}\\
+\Vrulefill{-.05in}{-}
+%\rule{10cm}{0.1em}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\justifying
+\vspace{0.2cm}
+\begin{large} 
+
+My primary research focus lies at the intersection of autonomous navigation and 3D scene understanding through robust sensor fusion. The 2006 Bam earthquake, where rescue teams struggled to navigate collapsed rubble, ignited my commitment to developing reliable autonomous systems for disaster response. This event underscored the urgent need for technologies that can operate effectively in chaotic, unpredictable settings. During my MSc in Space Engineering at the University of Tehran, I designed end-to-end deep learning frameworks for real-time inertial attitude estimation in GPS-denied environments, achieving a 40\% reduction in orientation error across diverse datasets, as published in \textbf{Measurement (IF 5.2)} \cite{golroudbari2023generalizable}.
+
+Confronted by the black-box nature of these models, I developed \textbf{physics-informed neural networks (PINNs)} that embed quaternion kinematics and rigid-body dynamics into learning frameworks to enhance model transparency and reliability. Implementing multi-head attention mechanisms and Runge-Kutta 4 (RK4) quaternion integration, alongside uncertainty quantification techniques, I achieved a 36.8\% reduction in attitude estimation error. This approach ensured that the model’s predictions adhered to the fundamental principles of rotational dynamics, making it more reliable for safety-critical applications. The results are currently \textbf{under review at ICLR 2025} \cite{golroudbari2024te}. This work, focused on combining geometric understanding with physical constraints, aligns closely with Yale's strengths in 3D reconstruction and physics-based simulation.
+
+Leading the \textbf{OpenSLAM project}, I developed a modular, open-source platform designed to advance SLAM research, \textbf{3D reconstruction}, and \textbf{scene understanding} while democratizing access to cutting-edge tools. Recognizing the fragmentation in SLAM methodologies and the lack of standardized platforms, I implemented a sensor abstraction layer capable of processing \textbf{Visual-Inertial and LiDAR data streams}, ensuring compatibility with industry-standard datasets such as \textbf{KITTI}. This abstraction streamlined the integration of diverse sensor modalities, addressing critical gaps in existing solutions.
+
+To enhance system versatility, I engineered a modular \textbf{VIO-LiDAR }fusion framework supporting real-time point cloud registration and geometric reconstruction. This framework enables seamless fusion of visual and LiDAR data for improved mapping and localization accuracy in unstructured environments. The backend was designed with extensibility in mind, allowing researchers to incorporate new algorithms and workflows while automating performance benchmarking to ensure reproducibility and scalability.
+
+OpenSLAM bridges theoretical advancements with real-world applications, providing adaptable tools for academic and practical challenges in autonomous systems. Through accurate 3D mapping and scene understanding, it addressed key challenges in complex indoor environments, supporting navigation and operational efficiency. These advancements also contributed to Yale's computer graphics and visualization research, particularly in geometric modeling and visualization, further showcasing the platform's significance across diverse domains.
+
+
+
+My industry experience spans AI engineering roles in computer vision, NLP, and LLMs, where I bridged theoretical advancements with practical applications in scientific and medical research. As a Lead AI Engineer, I designed frameworks for efficient 3D scene analysis and reconstruction, focusing on geometric understanding and visual computing. At Rajaei Cardiovascular Research Center, I served as Lead AI Engineer, directing a team to develop advanced AI solutions, including ResearchPulse, a platform for bibliometric analysis and automated summarization of PubMed and Scopus data, and a Differential Diagnosis Engine, integrating Retrieval-Augmented Generation (RAG) pipelines with clinical data for evidence-based diagnostic suggestions. These projects involved scalable architectures, efficient deployment workflows, and compliance with real-world operational constraints.
+
+My work in computer vision at Rajaei included developing novel approaches to geometric modeling and visual analysis for medical imaging. These experiences were complemented by my participation in competitive summer schools. At the \textbf{MIT IAIFI Summer School}, I developed a Vision Transformer-based severity analysis system incorporating Sequential Neural Posterior Estimation for uncertainty quantification, providing probabilistic insights essential for decision-making in safety-critical medical imaging scenarios. Similarly, at the \textbf{Oxford Machine Learning Summer School}, I achieved \textbf{first place} in the Health and Medicine competition, applying transfer learning and ensemble methods combined with few-shot learning to achieve high-accuracy cancer detection.
+
+At Yale University, I aim to advance autonomous navigation and sensor fusion research in collaboration with professors whose work aligns closely with my research trajectory. Working with \textbf{Dr. Wong}, I plan to extend his research on 3D reconstruction and semantics by integrating physics-informed neural networks with geometric modeling, enhancing environmental understanding in complex scenarios. My experience with OpenSLAM's modular architecture and sensor fusion frameworks provides a strong foundation for developing more robust 3D reconstruction methods that maintain reliability in challenging conditions. \textbf{Dr. Abraham}'s expertise in Koopman operators and trajectory optimization complements my work on physics-informed neural networks, offering opportunities to enhance the fidelity of our navigation systems through better environmental modeling and dynamics understanding. His research on high-dimensional, nonlinear dynamical systems aligns with my goals of developing computationally efficient solutions for real-time autonomous navigation. With \textbf{Dr. Scassellati}, I aim to leverage his expertise in unstructured terrain navigation to improve adaptability and efficiency in SLAM systems, particularly focusing on complex and unstructured environments like disaster sites. His work provides critical insights for enhancing real-time navigation strategies through experiential learning. Finally, collaborating with \textbf{Dr. Rakita}, I aim to develop real-time motion planning approaches informed by environmental analysis, integrating learning-based components to refine motion strategies dynamically. This research would redefine robotics by enabling highly adaptable systems capable of effective operation in diverse and challenging conditions.
+
+
+
+
+
+
+At Yale, I plan to develop unified frameworks that seamlessly integrate physics-informed sensor fusion with advanced geometric modeling and reconstruction techniques. By combining Professor Dorsey's approaches to 3D reconstruction with physics-informed constraints, I aim to create more reliable and interpretable autonomous navigation systems. Drawing on Professor Kim's expertise in numerical methods and Professor Rushmeier's work in geometric modeling, I will explore novel approaches to representing and understanding complex environments, enabling more robust autonomous operation in challenging scenarios. My research will focus on bridging the gap between theoretical advances in physics-informed AI and practical applications in autonomous navigation, contributing to Yale's strong tradition of innovation in computer science and robotics.
+
+\vspace{0.15cm}
+Thank you for considering my application.\vspace{-0.1cm}
+
+Sincerely, \vspace{-0.1cm}
+
+Arman Asgharpoor Golroudbari
+
+
+\end{large}
+\small
+\bibliographystyle{unsrt}
+\bibliography{refs}
+\end{document}

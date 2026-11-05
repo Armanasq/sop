@@ -1,0 +1,172 @@
+\documentclass[a4,20pt]{article}
+
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.4cm]
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=1.cm, top=.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{0,0,0}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0.2cm}
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+{{\huge \scshape Statement of Purpose }} %\footnote{Parts of this document were grammatically prepared with the assistance of a generative artificial intelligence tool. The content, however, remains truthful, accurate, and in my own words.}
+\hfill { \small \textbf{20 Dec. 2023}} \\
+%\hfill {Aeronautics and Astronautics}\\
+\Vrulefill{-.05in}{-}
+%\rule{10cm}{0.1em}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\justifying
+
+\begin{large} 
+Dear Admissions Committee,
+
+My research passion revolves around utilizing AI to address intricate real-world challenges. Drawing on my expertise in machine learning, visual perception, and Large Language Models, I aim to integrate artificial and traditional intelligence to advance Human-Computer Interaction and Robotics, specifically enhancing system adaptability in dynamic environments and refining decision-making under uncertainty. 
+
+In the realm of visual perception, my work aligns with research conducted at the Yale Vision Laboratory. Here, the focus is on developing systems capable of learning from multi-sensory observations to infer properties of the environment, particularly emphasizing robust perception under adverse conditions—a crucial facet of my research.
+
+Confident in the compatibility of my research goals, I see Yale University's Department of Computer Science, renowned for its emphasis on Human-Robot Interaction, as an ideal setting to further my research, leveraging their expertise to improve the practical efficiency and reliability of Machine Learning and Robotics principles.
+
+My undergraduate journey focused on equipping autonomous vehicles with robust navigation capabilities in varied environments, leveraging expertise in sensor fusion and state estimation. I honed my skills in inertial-aided GPS-denied navigation, designing algorithms for drone flight using EKF, UKF, and Madgwick filters. The CanSat competition proved a thrilling test-bed, where I implemented ORB and SURF algorithms for visual navigation, enabling drones to recognize patterns and autonomously navigate. I spearheaded the development of a multi-modal sensing system for subterranean exploration. This project combined LiDAR, RGB-D camera, and SLAM techniques to create detailed maps and enable efficient search operations. Seeking further challenges, I tackled the KITTI dataset, fusing LiDAR, camera, and inertial data for accurate 3D mapping and depth estimation. This venture unveiled the power of odometry techniques, particularly visual odometry, igniting my passion for this field. To delve deeper, I constructed CNN-based visual odometry models, seamlessly integrating IMU measurements for enhanced robustness. This project not only solidified my understanding of INS mechanization but also laid the foundation for further exploring the frontiers of visual odometry.
+
+
+During my MSc studies, I embarked on addressing the complexities of search and rescue missions in unpredictable terrains. My focus was on inertial navigation, where I tackled challenges arising from the lack of external resources and fluctuating lighting conditions. I engineered three RCNN models for inertial attitude estimation, adept at managing varying sampling rates, which resulted in a 40\% accuracy enhancement compared to traditional methods. Further, during an internship at UC Boulder, I augmented these models by incorporating Physics-Informed Neural Networks (PINN) for inertial odometry. This approach leveraged the structure and dynamics of the data distribution while utilizing the governing physical equations, thereby bolstering navigation precision in challenging environments.
+
+Collaborating with Dr. Abraham, I am intrigued by his Koopman operators research and propose an extension focusing on deep Koopman operators employing transformers for trajectory optimization in high-dimensional, non-linear dynamical systems. This advancement aims to enhance control strategies in robotics for improved efficiency and robustness. Simultaneously, I plan to develop adaptive algorithms that balance search thoroughness against time constraints. Specifically, I aim to design strategies enabling robots to dynamically adjust their search patterns based on the evolving information landscape, enhancing efficiency in time-critical applications like search and rescue.
+
+Furthermore, I intend to concentrate on developing learning-based coordination strategies for multi-agent teams in complex environments. One potential research direction involves optimizing information sharing among agents to improve the overall efficiency of their search and exploration tasks while maintaining autonomy. In the realm of autonomous exploration, my focus is on contributing to the development of mobile robot navigation and localization, with a particular emphasis on planetary rovers. This entails creating learning-based SLAM techniques tailored for barren terrains. The primary objective is to enhance localization accuracy through rock detection and analysis of spatial arrangements to identify distinctive patterns. Additionally, I aim to address challenges in low-light conditions by integrating perception techniques such as visual odometry and sensor fusion, ensuring robust performance in diverse and challenging exploration scenarios.
+
+Studying with Dr. Wong, I propose extending his research by developing frameworks that seamlessly integrate 3D reconstruction and semantics to enhance robotics' perceptual capabilities. My goal is to create algorithms based on 3D reconstruction and semantics principles, improving robots' effectiveness in challenging environments. This involves crafting models enabling robots to deduce the 3D structure of their surroundings from diverse data sources and understanding the semantic significance of scene elements. Furthermore, I envision developing techniques to enhance model resilience, ensuring consistent high performance in adverse conditions like low-light environments or inclement weather. The applications extend to autonomous vehicles.
+
+
+Building on Dr. Scassellati's Unstructured Terrain Navigation research, I propose an approach to boost robotic system adaptability and efficiency across diverse environments. This involves designing advanced algorithms that dynamically adjust robot navigation strategies in response to real-time terrain analysis. Simultaneously, incorporating a learning component enables robots to enhance their navigation capabilities through experiential learning. The envisioned integration of these navigation strategies with state-of-the-art machine learning techniques forms a continuous feedback loop, where the robot's navigation experiences iteratively inform and refine its learning process. This iterative process aims to develop more robust and adaptable robotic systems, ensuring effective operation in an extensive array of real-world environments.
+
+Collaborating with Dr. Rakita, I propose a real-time motion planning approach focused on adaptive robot motion strategies. The algorithm, informed by environmental analysis, dynamically adjusts robot movements. By integrating a machine learning model, robots learn from prior navigation experiences, refining their motion planning capabilities. This research aims to redefine robotics by significantly improving adaptability and efficiency in complex environments, setting a new standard for robotic systems.
+
+
+I am drawn to Yale University for its rich academic environment, combining cutting-edge research and traditional values. The renowned faculty, beyond their global reputation, embody an insatiable quest for knowledge, serving as mentors and collaborators. The convergence of their expertise with my research interests in robotics and machine learning sparks a compelling intellectual exploration. In this vibrant community, I envision not just colleagues but kindred spirits propelling me toward an uncharted trajectory. I eagerly anticipate learning from esteemed faculty members and fellow students at Yale, believing in the interdisciplinary nature of the university to provide a stimulating environment for my research and growth. My dedication to advancing machine learning and robotics is rooted in a commitment to tackle real-world challenges. Beyond theoretical knowledge, my aspirations involve delivering impactful solutions. 
+
+As a future professor, my dedication transcends the professional sphere, becoming a personal mission fostering an inclusive STEM community. This commitment is driven by a desire to empower the next generation of scientists, irrespective of backgrounds. Rooted in personal experiences as a first-generation student, navigating challenges honed my resilience. This journey instilled in me a profound commitment to advocating for diversity and equity, leading me to mentor students globally. My goals extend beyond individual achievements, actively contributing to the transformative evolution of STEM education and accessibility.
+
+\vspace{0.15cm}
+Thank you for considering my application.\vspace{-0.1cm}
+
+Sincerely, \vspace{-0.1cm}
+
+Arman Asgharpoor Golroudbari
+
+
+\end{large}
+
+\end{document}

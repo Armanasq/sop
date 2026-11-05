@@ -1,0 +1,176 @@
+\documentclass[a4,20pt]{article}
+
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.4cm]
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=1cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{0,0,0}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0.5cm}
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+{{\huge \scshape Statement of Purpose}}\\
+\large{Arman Asgharpoor Golroudbari} \hfill 
+\href{https://ArmanAsq.github.io}{\textbf{\small{https://ArmanAsq.github.io}}} \\ % \hfill { \small \textbf{10 March 2023}} \\
+%\hfill {Aeronautics and Astronautics}\\
+\Vrulefill{-.05in}{-}
+%\rule{10cm}{0.1em}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\justifying
+
+\begin{large} 
+
+\textbf{Introduction} \newline
+The central question that fuels my academic passion is the exploration of AI applications in autonomous robot perception and navigation, especially within dynamic and unstructured environments. This inquiry revolves around the possibility of replacing conventional model-based methods with end-to-end learning frameworks. My career goal is to become a research scientist specializing in AI and its practical applications for solving complex real-world problems. Graduate school represents the pivotal next step on this path, providing the knowledge, mentorship, and resources necessary to achieve this aspiration.
+
+\textbf{Professional Plans and Career Goals} \\
+My career goal is to become a leading researcher and innovator in the field of AI to address the challenges in the field of autonomous space systems. I envision myself at the forefront of developing cutting-edge technologies that enable space robots to navigate, perceive, and make decisions in dynamic and unstructured environments, much like the challenges faced by planetary rovers. I believe that attending graduate school at Purdue University is the pivotal next step in my journey. Here, I anticipate acquiring the advanced knowledge, specialized skills, and invaluable mentorship needed to excel in my chosen field. Through rigorous academic training, involvement in research, and collaboration with esteemed faculty members, I aim to prepare myself for a career dedicated to pushing the boundaries of autonomous space exploration.
+
+\textbf{Research Interests} \vspace{-0.35cm}
+
+\textbf{Robotic Perception}: My research focuses on addressing the challenges of autonomous perception in dynamic, unstructured environments, which closely resemble those encountered by planetary rovers. Conventional methods often rely on precise mathematical models, while data-driven approaches face limitations in terms of interpretability and generalization. Drawing from my research experience at the University of Colorado Boulder, where I utilized Physics-Informed Neural Networks (PINN) for inertial odometry, my goal is to bridge these two approaches. By harnessing advanced models like Transformers and PINN, I aim to capture the intrinsic physics, fostering adaptable and efficient navigation solutions for ever-changing terrains.\vspace{-0.35cm}
+
+Additionally, this approach involves integrating various sensor modalities, including cameras, IMUs, and LiDARs, which are essential components of Planetary Terrain Relative Navigation. Leveraging their capabilities for real-time data acquisition and analysis further enhances the robustness and precision of navigation systems. My research seeks to advance autonomous perception, enabling robots to navigate confidently and make informed decisions, even in challenging and dynamic terrains. Furthermore, this sensor-rich approach offers promise not only for planetary rovers but also for interplanetary spacecraft, where accurate terrain-relative navigation is crucial for ensuring mission safety and success.\vspace{-0.25cm}
+
+
+\textbf{Astrodynamics}: As an avid astronomer, I am deeply intrigued by the prospect of employing deep learning techniques for interstellar missions. Interstellar missions, like solar sailing missions such as Breakthrough Starshot, operate at relativistic speeds, which give rise to several relativistic effects, including time dilation, length contraction, and the relativistic Doppler shift, due to their high velocities approaching the speed of light. These relativistic effects introduce significant challenges and potential calculation errors when using conventional navigation methods such as AutoNav, XNAV, and Newtonian mechanics algorithms. Furthermore, in the context of the Solar System, stars may appear relatively fixed in space, with minor deviations caused by factors like stellar aberrations, parallax, and relative motion. However, for spacecraft venturing beyond the Solar System, the observed positions of stars differ considerably.\vspace{-0.35cm}
+
+To address these formidable challenges, I propose the development of a comprehensive 3D star catalog, drawing data from sources like Gaia and Pan-STARRS1. Currently, no such catalog exists, and even the most extensive catalogs cover a mere 1\% of Milky Way Galaxy stars, with considerable uncertainties in their distances spanning light-years. My objective is to utilize this newly created 3D star catalog to train deep learning models. These models will be designed to tackle the intricate localization problem encountered in interstellar missions, leveraging Physics-Informed Neural Networks that seamlessly incorporate both Newtonian and relativistic mechanics. I am also excited about the prospect of exploring novel approaches to further advance our understanding and capabilities in this field.\vspace{-0.35cm}
+
+Furthermore, I possess a strong inclination to explore pioneering methodologies in the field. One such approach, the Model-Based PINN-Deep Koopman Operator method, involves the integration of transformers within the Koopman Operator framework and utilizes PINN. This method not only holds promise for optimizing interplanetary trajectories but also piques my interest due to its potential applicability in the active removal of space debris. Harnessing the power of this approach could lead to reductions in fuel consumption during interplanetary missions, thereby enhancing the sustainability and cost-effectiveness of space exploration. Additionally, the application of this method to space debris management presents a novel solution for actively tracking and eliminating defunct satellites and other debris, thus contributing to the long-term sustainability of outer space environments and ensuring the safety of future space missions.\vspace{-0.25cm}
+
+
+\textbf{Navigation}: Another area of investigation I have pursued is the utilization of Deep Neural Networks for vision-based navigation. I am intrigued by the possibility of developing camera-based Terrain Relative Navigation (TRN) methodologies using PINN, particularly for precision landing, remote sensing, and scientific missions in extraterrestrial environments. This endeavor encompasses crucial tasks such as feature association and visual odometry, both vital components of navigation when predefined maps are unavailable. My research strives to enhance the precision and reliability of TRN techniques, providing spacecraft and robotic explorers with the capability to make real-time informed decisions, even when navigating through unfamiliar, dynamic, and challenging terrains.
+
+
+\textbf{Preparation for Graduate Study} \vspace{-0.35cm}
+
+During my master's program, I immersed myself in space-related projects, gaining a deep understanding of essential concepts such as Spacecraft Attitude Dynamics, n-Body Problems, Orbit Determination, and Orbit Transfer. My proficiency in Python and MATLAB allowed me to tackle complex problems in orbital mechanics, notably in determining orbits using Classical Orbital Elements. In my master's thesis, I integrated machine learning techniques into conventional state estimation and sensor fusion algorithms. This endeavor led to the development of multiple models for attitude estimation. Additionally, I delved into computer vision using deep learning architectures like YOLO and U-Net for image segmentation and object detection.Notably, I achieved the top rank in the Oxford Machine Learning Summer School competition. In this competition, I applied techniques such as k-fold cross-validation, weighted sampling, and ensemble learning for the detection of cancer cells. \vspace{-0.35cm}
+
+Additionally, I gained valuable practical experience in programming and testing robotic systems using ROS and Python. I contributed to the development of autonomous navigation systems for a wheeled robot, which involved the use of an RGB-D camera and a laser range finder based on SLAM algorithms. Furthermore, I worked on visual-inertial odometry using the KITTI dataset, where I explored different feature extraction methods, including ORB, SIFT, and SURF. These experiences are poised to be beneficial in the fields of space debris detection and vision-based relative navigation. 
+
+
+\textbf{Conclusion}  \vspace{-0.35cm}
+
+Purdue University's interdisciplinary approach, spanning computer science, robotics, and aerospace engineering, strongly resonates with the diverse facets of my research interests. Specifically, my attention has been drawn to the groundbreaking work of Dr. Spencer and Dr. Oguri in the realm of solar sailing. I am keen to leverage and extend their research by developing autonomous relativistic navigation systems for trajectory optimization, particularly in the context of solar sail missions. Additionally, Dr. Arnas's research on Koopman Operators has captured my attention. I am intrigued by the potential synergy of Koopman Operators and Transformers to create Deep-Koopman Operators for satellite trajectory optimization, offering unprecedented precision and efficiency in orbital maneuver planning and execution.
+
+I have meticulously examined the program, faculty members, and research focus areas at Purdue University, ensuring that my academic and research goals align seamlessly with the program's objectives. The comprehensive coursework, state-of-the-art facilities, and collaborative opportunities available at Purdue will equip me with the essential tools and resources to address complex challenges in aerospace engineering. My objective is not only to expand my knowledge but also to make substantial contributions to the field of autonomous space systems. I am confident that my diverse experiences, technical skills, and unwavering commitment make me an exceptionally well-suited candidate for this program. I eagerly anticipate the opportunity to engage with and contribute to the academic community at Purdue University.
+
+In advance, I appreciate your time and consideration. \par
+\vspace{-0.4cm} Sincerely Yours, \par
+\vspace{-0.4cm}Arman Asgharpoor Golroudbari \par
+\end{large}
+
+\end{document}

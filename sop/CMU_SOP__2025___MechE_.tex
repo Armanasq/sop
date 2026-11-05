@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+
+\usepackage{hyperref}
+
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{fancyhdr}
+
+\usepackage{lastpage}
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=01.5cm, top=1.cm]{geometry}
+\usepackage[document]{ragged2e}
+
+\setmainfont{Times New Roman}
+\onehalfspacing
+
+\setlength{\parindent}{0pt}
+
+
+
+
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+\singlespacing
+\begin{document}
+
+\justifying
+
+{{ \scshape Statement of Purpose: Arman Asgharpoor Golroudabri }} \hfill \href{https://ArmanAsq.github.io/ }{ArmanAsq.github.io} \vspace{-.5cm}
+ \\
+%\hfill {Aeronautics and Astronautics}\\
+\Vrulefill{-.05in}{-}
+%\rule{10cm}{0.1em}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\vspace{.5cm}
+
+\justifying
+My primary research focus lies at the intersection of \textbf{autonomous navigation and robust sensor fusion within unstructured environment}s. The 2006 Bam earthquake, where rescue teams struggled to navigate collapsed rubble, ignited my commitment to developing reliable autonomous systems for disaster response. This event underscored the urgent need for technologies that can operate effectively in chaotic, unpredictable settings. During my MSc in Space Engineering at the University of Tehran, I designed end-to-end deep learning frameworks for real-time inertial attitude estimation in GPS-denied environments, achieving a 40\% reduction in orientation error across diverse datasets, as published in Measurement (IF 5.2) \cite{golroudbari2023generalizable}. 
+
+Confronted by the black-box nature of these models, I developed \textbf{physics-informed neural networks (PINNs)} that embed quaternion kinematics and rigid-body dynamics into learning frameworks to enhance model transparency and reliability. Implementing multi-head attention mechanisms and Runge-Kutta 4 (RK4) quaternion integration, alongside uncertainty quantification techniques, I achieved a 36.8\% reduction in attitude estimation error. This approach ensured that the model’s predictions adhered to the fundamental principles of rotational dynamics, making it more reliable for safety-critical applications. The results are currently \textbf{under review at ICLR 2025} \cite{golroudbari2024te}.
+
+Leading the \textbf{OpenSLAM project}, I spearheaded the development of a modular, open-source platform designed to advance SLAM research and democratize its accessibility. Recognizing the fragmentation in SLAM methodologies and the lack of standardized tools, I implemented a sensor abstraction layer capable of processing Visual-Inertial and\textbf{ LiDAR data streams}, ensuring compatibility with industry-standard datasets such as \textbf{KITTI}. This abstraction streamlined the integration of diverse sensor modalities, addressing a critical gap in existing platforms.
+
+To enhance system versatility, I engineered a modular \textbf{VIO-LiDAR} fusion framework that supports real-time point cloud registration, allowing seamless fusion of visual and LiDAR data for improved mapping and localization accuracy in unstructured environments. The backend was designed with extensibility in mind, enabling researchers to incorporate new algorithms and workflows while automating performance benchmarking to ensure reproducibility and scalability. OpenSLAM bridges theoretical advancements with real-world applications, providing adaptable tools for academic and practical challenges in autonomous systems.
+
+My industry experience began as an AI Engineer specializing in NLP and LLMs, where I focused on fine-tuning foundation models and developing Retrieval-Augmented Generation (RAG) pipelines. I designed hybrid retrieval systems integrating BM25 and FAISS with transformer-based architectures, achieving scalable solutions for evidence extraction and summarization in scientific research. To optimize computational efficiency, I implemented Parameter-Efficient Fine-Tuning (PEFT), streamlining resource-intensive processes and bridging theoretical advancements with deployment workflows. 
+
+
+These efforts, combined with my contributions to practical AI pipelines, led to an offer as \textbf{Lead AI Engineer} at Rajaei Cardiovascular Research Center. In this role, I directed a team of ML engineers and interns to develop LLM-based applications for scientific and medical research. Projects included ResearchPulse, a platform leveraging LLMs for advanced bibliometric analysis and automated summarization of PubMed and Scopus data, and a Differential Diagnosis Engine, integrating RAG pipelines with clinical data to provide evidence-based diagnostic suggestions. These systems required scalable architectures, efficient deployment workflows, and compliance with real-world operational constraints, blending advanced AI techniques with rigorous software engineering practices. 
+
+Additionally, my participation in the \textbf{MIT IAIFI Summer School} involved developing a Vision Transformer-based severity analysis system with Sequential Neural Posterior Estimation for uncertainty quantification in medical imaging. This project improved probabilistic insights critical for decision-making in safety-critical scenarios. At the \textbf{Oxford Machine Learning Summer School}, I \textbf{ranked first} in the Health and Medicine competition, where I applied advanced machine learning techniques to achieve high-accuracy cancer detection using transfer learning on medical imaging datasets, showcasing my ability to translate research into impactful solutions.
+
+
+At CMU, I plan to develop robust multi-sensor fusion frameworks integrating visual, LiDAR, and inertial data, while embedding physics-informed principles for enhanced reliability and interpretability. I aim to advance SLAM systems capable of reliable operation in unstructured and dynamic environments. I am eager to collaborate with Professors Michael Kaess, Sebastian Scherer, Aaron Johnson, Ding Zhao, and Kenji Shimada, whose research aligns with my goals of enhancing autonomous navigation systems. With \textbf{Professor Michael Kaess}, I aim to embed physics-informed constraints into factor graph models for 3D mapping and localization, particularly in challenging environments such as underwater or disaster-stricken areas. His work on applying factor graphs and multi-sensor fusion to underwater robotics reflects environments where traditional navigation methods fail, similar to disaster scenarios. I plan to extend his efficient inference algorithms by integrating physics-informed priors, enhancing their robustness and adaptability. \textbf{Professor Sebastian Scherer}'s research on autonomous flight and obstacle avoidance complements my efforts in dynamic scene perception and integrating visual-inertial odometry and LiDAR within real-time SLAM pipelines for UAV navigation. Collaborating with \textbf{Professor Aaron Johnson}, I intend to extend my PINNs experience to bio-inspired locomotion and contact-rich dynamics, bridging machine learning with first-principles approaches for adaptable and stable robotics. \textbf{Professor Ding Zhao}’s focus on safe reinforcement learning will guide my efforts in uncertainty quantification and developing certifiable frameworks for autonomous decision-making, ensuring that SLAM systems can adapt to dynamic conditions while maintaining safety and trustworthiness. Furthermore, \textbf{Professor Kenji Shimada}’s expertise in geometric modeling and collision detection will enhance environmental representations in SLAM systems for complex terrains, refining mesh generation and collision detection algorithms to improve the fidelity of SLAM-generated maps in cluttered and collapsed environments.
+
+
+My long-term goal is to create autonomous systems that transform disaster response and space exploration by enabling robots to make reliable real-time decisions in dynamic settings. These systems will revolutionize how we approach challenges, from guiding rescue teams through collapsed structures during disasters, managing logistics in smart hospitals, to mapping uncharted planetary terrains for space exploration. By developing robust, interpretable, and adaptable autonomous navigation systems, I aim to provide dependable solutions that can operate under uncertainty and inspire confidence in their reliability. Growing up as a first-generation student balancing academic responsibilities with supporting my family, I learned resilience and adaptability—qualities that drive my commitment to solving impactful, real-world challenges through innovative research at CMU. The PhD program at CMU represents an unparalleled opportunity to pursue this vision alongside world-class faculty whose research embodies the rigor and impact I strive for. By contributing to CMU’s legacy of innovation, I aim to build tools that bridge theory and practice, ensuring they work not just in the lab but in the moments when they are needed most.
+
+
+
+
+\vspace{0.05cm}
+Thank you for considering my application.\vspace{-0.1cm}
+
+Sincerely, \vspace{-0.1cm}
+
+Arman Asgharpoor Golroudbari
+
+
+
+
+\small
+\bibliographystyle{unsrt}
+\bibliography{refs}
+
+\end{document}

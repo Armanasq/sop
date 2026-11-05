@@ -1,0 +1,105 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=1cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+% Define custom colors
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}
+
+% Set fonts
+\usepackage{libertine}
+\renewcommand*\familydefault{\sfdefault}
+
+% Set hyperlink colors
+\hypersetup{
+  colorlinks=true,
+  linkcolor=darkblue,
+  urlcolor=darkblue,
+  citecolor=darkblue
+}
+
+% Custom title formatting
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}[runin]{\bfseries}{\thesubsubsection}{1em}{}[:]
+
+% Custom header/footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage}
+\lhead{\vspace{.75cm}}
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+\begin{spacing}{1.25}
+
+\begin{center}
+\Large\textbf{Statement of Purpose}
+\end{center}
+
+\section{Introduction}
+
+The central question that drives my academic passion is the exploration of the application of AI in autonomous robot perception and navigation, particularly in the context of dynamic and unstructured environments. This query revolves around the possibility of replacing conventional model-based methods with end-to-end learning frameworks. My journey toward addressing this question has been shaped by my academic and research experiences, and I am eager to continue this pursuit by pursuing a Ph.D. in Aerospace Engineering. My career goal is to become a research scientist specializing in AI and its applications in solving complex real-world problems. Graduate school is the pivotal next step on this path, offering the knowledge, mentorship, and resources necessary to realize this aspiration.
+
+\section{Professional Plans and Career Goals}
+My career goal is to become a leading researcher and innovator in the field of AI to address the challenges in the field of autonomous space systems. I envision myself at the forefront of developing cutting-edge technologies that enable space robots to navigate, perceive, and make decisions in dynamic and unstructured environments, much like the challenges faced by planetary rovers. I believe that attending graduate school at Purdue University is the pivotal next step in my journey. Here, I anticipate acquiring the advanced knowledge, specialized skills, and invaluable mentorship needed to excel in my chosen field. Through rigorous academic training, exposure to groundbreaking research, and collaboration with esteemed faculty members, I aim to prepare myself for a career dedicated to pushing the boundaries of autonomous space exploration.
+
+\section{Research Interests}
+My research interests are threefold:
+
+\textbf{Robotic Perception}:My research focuses on addressing the challenges of autonomous perception in dynamic, unstructured environments, which closely resemble those encountered by planetary rovers. Conventional methods often rely on precise mathematical models, while data-driven approaches face limitations in terms of interpretability and generalization. Drawing from my research experience at the University of Colorado Boulder, where I utilized Physics-Informed Neural Networks (PINN) for inertial odometry, my goal is to bridge these two approaches. By harnessing advanced models like Transformers and PINN, I aim to capture the intrinsic physics, fostering adaptable and efficient navigation solutions for ever-changing terrains.
+
+Additionally, this approach involves integrating various sensor modalities, including cameras, IMUs, and LiDARs, which are essential components of Planetary Terrain Relative Navigation. Leveraging their capabilities for real-time data acquisition and analysis further enhances the robustness and precision of navigation systems. My research seeks to advance autonomous perception, enabling robots to navigate confidently and make informed decisions, even in challenging and dynamic terrains. Furthermore, this sensor-rich approach offers promise not only for planetary rovers but also for interplanetary spacecraft, where accurate terrain-relative navigation is crucial for ensuring mission safety and success.
+
+
+\textbf{Astrodynamics}: As an avid astronomer, I am deeply passionate about conducting research in space exploration and space trajectory design and optimization. My aspiration is to address the complex navigational challenges encountered by interstellar missions, including novel concepts such as solar sailing, exemplified by projects like the Breakthrough Starshot. These missions, traveling at relativistic speeds, encounter complex challenges due to time dilation, length contraction, and Doppler shift, rendering traditional navigation techniques inadequate. My vision involves creating a comprehensive 3D star catalog for interstellar missions using data from Gaia and Pan-STARRS1. This catalog, combined with PINN, will enable precise spacecraft localization, incorporating both Newtonian and relativistic mechanics.
+
+Furthermore, I possess a strong inclination to explore pioneering methodologies in the field. One such approach, the Model-Based PINN-Deep Koopman Operator method, involves the integration of transformers within the Koopman Operator framework and utilizes PINN. This method not only holds promise for optimizing interplanetary trajectories but also piques my interest due to its potential applicability in the active removal of space debris. Harnessing the power of this approach could lead to reductions in fuel consumption during interplanetary missions, thereby enhancing the sustainability and cost-effectiveness of space exploration. Additionally, the application of this method to space debris management presents a novel solution for actively tracking and eliminating defunct satellites and other debris, thus contributing to the long-term sustainability of outer space environments and ensuring the safety of future space missions.
+
+
+\textbf{Navigation}: Another area of investigation I have pursued is the utilization of Deep Neural Networks for vision-based navigation. I am intrigued by the possibility of developing camera-based Terrain Relative Navigation (TRN) methodologies using PINN, particularly for precision landing, remote sensing, and scientific missions in extraterrestrial environments. This endeavor encompasses crucial tasks such as feature association and visual odometry, both vital components of navigation when predefined maps are unavailable. My research strives to enhance the precision and reliability of TRN techniques, providing spacecraft and robotic explorers with the capability to make real-time informed decisions, even when navigating through unfamiliar, dynamic, and challenging terrains.
+
+
+\section{Preparation for Graduate Study}
+During my master's program, I immersed myself in space-related projects, gaining a deep understanding of essential concepts such as Spacecraft Attitude Dynamics, n-Body Problems, Orbit Determination, and Orbit Transfer. My proficiency in Python and MATLAB allowed me to tackle complex problems in orbital mechanics, notably in determining orbits using Classical Orbital Elements.
+
+During my MSc studies, I integrated machine learning techniques into conventional state estimation and sensor fusion algorithms. This endeavor led to the development of multiple models for attitude estimation. Additionally, I delved into computer vision using deep learning architectures like YOLO and U-Net for image segmentation and object detection.Notably, I achieved the top rank in the Oxford Machine Learning Summer School competition. In this competition, I applied techniques such as k-fold cross-validation, weighted sampling, and ensemble learning for the detection of cancer cells.
+
+Additionally, I gained valuable practical experience in programming and testing robotic systems using ROS and Python. I contributed to the development of autonomous navigation systems for a wheeled robot, which involved the use of an RGB-D camera and a laser range finder based on SLAM algorithms. Furthermore, I worked on visual-inertial odometry using the KITTI dataset, where I explored different feature extraction methods, including ORB, SIFT, and SURF. These experiences are poised to be beneficial in the fields of space debris detection and vision-based relative navigation.
+
+
+\section{Conclusion}
+
+Purdue University interdisciplinary approach, encompassing computer science, robotics, and aerospace engineering, resonates with my multifaceted research interests. I found Dr. Spencer and Dr. Oguri's works on solar sailing very appealing and look for the opportunity to extend these works by developing autonomous relativistic navigation systems for trajectory optimization. Also, Dr. Arnas works on Koopman Operators catch my eyes and I was wondering who can comine the Koopman Operators with Transformers to acheive Deep-Koopman Operator for satelite trajectory oprimztion.
+
+I firmly believe that the guidance and mentorship I can receive at [University Name] will provide an ideal platform for me to explore innovative solutions in space technology and robotics. The comprehensive coursework, state-of-the-art facilities, and collaborative opportunities will equip me to tackle complex challenges in aerospace engineering.
+
+In conclusion, I am excited about the opportunity to embark on this academic journey at [University Name], where I aim to not only expand my knowledge but also contribute meaningfully to the field of autonomous space systems. I am confident that my experiences, skills, and unwavering dedication make me a strong candidate for this program, and I look forward to the opportunity to contribute to the academic community at [University Name].
+
+
+
+
+My research passion is deeply rooted in the realm of space exploration, particularly in interplanetary trajectory optimization. The concept of solar sailing missions, exemplified by projects like Breakthrough Starshot, which travel at a significant fraction of the speed of light and grapple with relativistic effects, captivates my imagination. These missions demand innovative navigation methodologies beyond traditional paradigms.
+
+\section{Ph.D. Research Vision}
+For my Ph.D. research, I am driven to confront the navigational challenges inherent in interstellar missions. These missions, propelled to relativistic speeds, encounter phenomena such as time dilation, length contraction, and Doppler shift that fundamentally challenge traditional navigation techniques. Conventional approaches like AutoNav, XNAV, and Newtonian mechanics become inadequate in such environments.
+
+My proposed research envisions the creation of a comprehensive 3D star catalog for interstellar missions. This catalog, derived from data harnessed from Gaia and Pan-STARRS1, will serve as a foundational element. Leveraging Physics-Informed Neural Networks (PINN), this model will tackle the complex localization problem inherent to interstellar missions, seamlessly integrating both Newtonian and relativistic mechanics. This novel approach will facilitate the precise localization of spacecraft, even as they venture beyond our solar system, where the positions of stars undergo significant shifts due to relativistic effects.
+
+Furthermore, I am deeply intrigued by the potential of the Model-Based PINN-Deep Koopman Operator Approach for Low Thrust Trajectory Optimization of Lunar Missions. This innovative fusion of transformers with the Koopman Operator framework, coupled with the power of PINN, holds promise not only for lunar trajectory optimization but also as a transformative solution for active space debris removal.
+
+\section{Why Georgia Tech}
+Georgia Tech's graduate program stands as an ideal platform for the pursuit of my research and academic aspirations. The institution's stellar reputation in aerospace engineering, coupled with its state-of-the-art facilities and distinguished faculty, perfectly aligns with my academic and research goals. I am confident that Georgia Tech will provide me with the requisite knowledge and resources to make substantial contributions to the field of astrodynamics, particularly in the domains of space exploration and mission navigation.
+
+\section{Conclusion}
+In summary, my unbridled enthusiasm for aerospace engineering, combined with my rich research experiences and unwavering commitment to pushing the boundaries of knowledge, fuels my desire to embark on a Ph.D. journey at Georgia Tech. I am fervently excited about the prospect of collaborating with domain experts, engaging in groundbreaking research endeavors, and contributing to the advancements of interplanetary navigation and space exploration.
+
+\end{spacing}
+\end{document}

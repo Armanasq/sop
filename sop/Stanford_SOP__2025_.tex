@@ -1,0 +1,177 @@
+\documentclass[a4,20pt]{article}
+
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.4cm]
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=1.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{0,0,0}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0.5cm}
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+{{\huge \scshape Statement of Purpose }} %\footnote{Parts of this document were grammatically prepared with the assistance of a generative artificial intelligence tool. The content, however, remains truthful, accurate, and in my own words.}
+\\
+\large{Arman Asgharpoor Golroudbari} \hfill 
+\href{https://ArmanAsq.github.io}{\textbf{\small{https://ArmanAsq.github.io}}} \\ % \hfill { \small \textbf{10 March 2023}} \\
+%\hfill {Aeronautics and Astronautics}\\
+\Vrulefill{-.05in}{-}
+%\rule{10cm}{0.1em}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\justifying
+
+\begin{large} 
+
+My journey into this field began during my undergraduate studies in Aircraft Avionics, where I developed a GPS-aided inertial navigation system using Extended Kalman Filters. Addressing sensor fusion and real-time state estimation challenges exposed me to the complexities of autonomous systems and sparked my fascination with motion planning. Complementing this foundation, I joined a research group focusing on drone navigation and applied feature-based visual navigation algorithms like ORB and SURF. 
+
+Building on this, my Master’s in Space Engineering expanded my expertise into space robotics and autonomous systems. My thesis focused on developing end-to-end deep learning frameworks for inertial attitude estimation, achieving a 40\% improvement in algorithmic performance over conventional methods. This research addressed critical issues such as sampling rate variations. Simultaneously, I explored spacecraft trajectory design, optimizing Hohmann transfers and orbital maneuvers using MATLAB. By employing numerical integration and multi-body dynamics models, I tackled challenges like gravitational perturbations and solar radiation pressure, laying the foundation for future contributions to space autonomy.
+
+
+
+Additionally, I developed the OpenSLAM platform, integrating Visual and LiDAR SLAM algorithms with real-time trajectory estimation and point cloud rendering. This platform enhances localization accuracy in GPS-denied environments and offers an extensible interface for optimizing mapping methods, reflecting my focus on scalable solutions in robotics. Additionally, I designed Transformer-Enhanced Physics-Informed Neural Networks (TE-PINNs), combining multi-head attention mechanisms with physics-based models to achieve a 36.8\% reduction in attitude estimation errors compared to traditional methods.
+
+
+
+
+
+
+
+
+My transition to AI engineering marked a pivotal shift, where I delved into NLP and LLMs. As a Lead AI Engineer, specializing in LLMs, I have developed advanced AI-agent assistants for decision-making, focusing on both clinical and financial domains. In these projects, I not only designed and implemented conversational chatbots but also explored cutting-edge techniques for knowledge injection into LLMs to enhance their accuracy and applicability. My research led to the application of Parameter-Efficient Fine-Tuning (PEFT) and QLoRA to efficiently fine-tune large-scale models, optimizing them for real-world tasks while significantly reducing computational overhead.
+
+In the clinical domain, I focused on integrating LLMs for analyzing and interpreting complex medical records, applying AI models to identify anomalies and assist in diagnosis, with life-saving implications in mind. I also contributed to the development of RAG pipelines, combining LLMs with structured databases to enhance decision-making precision in healthcare settings, ensuring that AI recommendations are both accurate and contextually relevant.
+
+In the financial sector, I applied LLM-based systems to provide tailored investment recommendations and portfolio management advice, demonstrating the versatility of AI in transforming decision-making processes. My work involved creating hybrid systems that integrated AI agents with financial data, improving the quality of recommendations and enhancing users' ability to make informed investment decisions. This cross-disciplinary approach exemplified my ability to merge AI with domain expertise, driving tangible improvements in both healthcare and finance.
+
+
+
+My publications, including the Quaternion-Based Orientation Estimation using Transformer-Enhanced Physics-Informed Neural Networks (under review at ICRA 2024) and the End-to-End Deep Learning Framework for Real-Time Inertial Attitude Estimation (published in Measurement), highlight my capacity to tackle complex challenges and deliver actionable insights. Beyond research, I have mentored over 10 professionals in applying AI to satellite data processing and remote sensing through my role in the Space Generation Advisory Council. 
+
+My interdisciplinary expertise in aerospace engineering and LLMs positions me to advance research at Stanford by bridging these fields to address critical challenges. My work has spanned developing AI-driven systems for autonomous navigation in aerospace contexts and applying advanced LLM techniques like PEFT and QLoRA for decision-making and knowledge integration. This combination has allowed me to tackle problems such as spacecraft trajectory optimization and robust localization, as well as AI applications in high-stakes domains.
+
+\textbf{Future research agenda}\\
+My overarching research goal is to enhance the safety and reliability of autonomous systems, specifically by developing resilient, certifiable motion planning systems that can operate autonomously under uncertain conditions. This work has critical applications in areas such as extraterrestrial exploration, where rovers must navigate alien terrains, and in search-and-rescue missions, where robots must operate in dynamic, hazardous environments. My aim is to integrate AI and advanced perception techniques to enable autonomous systems to make reliable decisions, even in the most challenging conditions. A key part of my research will focus on building systems that are not only robust but certifiable, ensuring they meet high safety standards in both space and terrestrial applications.
+
+\textbf{Ph.D. program and potential advisors} \\
+Stanford’s Aeronautics and Astronautics Ph.D. program offers an unparalleled opportunity to advance my research at the intersection of AI and aerospace, particularly through the work of Professors Pavone and D’Amico. Professor Pavone’s exploration of LLMs for real-time planning, anomaly detection, and robust motion planning directly aligns with my focus on enhancing autonomous systems with language-based agents capable of dynamic decision-making in uncertain environments. Similarly, Professor D’Amico’s application of LLMs and multimodal learning for spacecraft trajectory optimization and autonomous navigation complements my expertise in integrating AI with state estimation and mission planning. Their pioneering efforts to leverage LLMs in decision-making and adaptability across terrestrial and space systems resonate with my goal of developing scalable, AI-driven autonomous systems. Collaborating with them would allow me to contribute meaningfully to innovations in autonomy, advancing robust, adaptive solutions for aerospace applications.
+
+
+
+\textbf{Career after graduation}\\
+After completing my Ph.D., I plan to continue my research in academia, where I can contribute to advancing the safety and reliability of autonomous systems in real-world applications. By focusing on the development of robust motion planning, perception, and decision-making systems, I aim to push the boundaries of what autonomous systems can achieve in dynamic and uncertain environments. I am also committed to mentoring the next generation of researchers and engineers, fostering an interdisciplinary approach that integrates AI, robotics, and aerospace engineering. My long-term vision is to contribute to the development of AI-driven technologies that improve human safety, resilience, and efficiency, with the ultimate goal of creating autonomous systems that can operate seamlessly in a variety of critical scenarios.
+
+
+\end{large}
+
+\end{document}

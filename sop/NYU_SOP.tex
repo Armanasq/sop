@@ -1,0 +1,163 @@
+\documentclass[a4,20pt]{article}
+
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.4cm]
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=1cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{0,0,0}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0.5cm}
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+{{\huge \scshape Statement of Purpose}}\\
+\large{Arman Asgharpoor Golroudbari} \hfill 
+\href{https://ArmanAsq.github.io}{\textbf{\small{https://ArmanAsq.github.io}}} \\ % \hfill { \small \textbf{10 March 2023}} \\
+%\hfill {Aeronautics and Astronautics}\\
+\Vrulefill{-.05in}{-}
+%\rule{10cm}{0.1em}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\justifying
+
+\begin{large} 
+Dear Admission Committee, \par
+
+\vspace{-0.25cm} \quad I am keenly interested in deep learning and robotics, with a particular focus on exploring the potential of AI to overcome the technical challenges of autonomous navigation for aerial and space robots. I am passionately committed to pursuing an interdisciplinary Ph.D. in emerging areas at the intersection of machine learning and autonomous robots. Thus, I am excited to apply for a Mechanical Engineering Ph.D. with a focus in Robotics at the Department of Mechanical and Aerospace Engineering, New York University.\par
+
+\vspace{-0.25cm} \quad With a Master's degree in Space Engineering and experience as an Avionics Engineer, I am eager to leverage my expertise in Computer Vision and AI to enhance the navigation of autonomous robots, particularly in aerial and space domains. During my MSc studies, I worked on several robotics research projects. I utilized cutting-edge machine learning algorithms for attitude estimation, building CNN-LSTM-based networks for sensor fusion algorithms to enhance the performance of inertial pose estimation in PyTorch and TensorFlow. Additionally, I investigated the performance of different architectures, such as LSTM and CNN, and the effects of hyperparameters on the accuracy of the models. I optimized them using various hyperparameter optimization algorithms such as Random Search, Population Based Training, and Bayesian Optimization methods through Ray, Sherpa, and Keras-Tuner in Python. To ensure the reliability of my proposed algorithms, I conducted extensive testing procedures using conventional attitude estimation methods. I implemented various sensor fusion algorithms (the Kalman filter family, QUEST, FQA, Madgwick, and Mahony) in Python to evaluate the model's performance. I evaluated the proposed methods on six publicly available datasets (e.g. OxIOD, EuroC, KITTI, and RONIN), totaling more than 120 hours and 200 kilometers of IMU measurements. My models outperformed conventional filtering and MSDF algorithms by up to 40\% in different scenarios and were more robust in alleviating noise and bias. Meanwhile, I developed end-to-end learning framework for inertial odometry and intend to incorporate visual data into these models to develop visual-inertial odometry deep learning models.\par
+
+\vspace{-0.25cm} \quad Having taken part in the Oxford Machine Learning Summer School and having worked on a project related to path planning at University College London, I have had the opportunity to deepen my knowledge of artificial intelligence techniques, including the use of reinforcement learning to achieve optimal path planning outcomes in complex environments. I also gained practical experience in programming and testing robotic systems in ROS environments and Python, including developing a system for autonomous navigation of a wheeled robot using an RGB-D camera and a laser range finder based on SLAM algorithms. Additionally, I developed a system for visual-inertial odometry using monocular images and IMU measurements, investigating different feature extraction methods such as ORB, SIFT, and SURF. Building on this, I am highly confident that my practical experience in utilizing deep learning for autonomous navigation, coupled with my ability to develop end-to-end learning frameworks for odometry and risk state estimation, would bring significant value to the ongoing research endeavors at your esteemed university.\par
+
+
+
+\vspace{-0.25cm} \quad As an accomplished MBA and MSc graduate with leadership and teamwork skills gained from interdisciplinary projects, I am eager to pursue a Ph.D. Mechanical Engineering with a focus in Robotics at New York University. With a 4.0/4.0 GPA in both programs, my academic excellence and hands-on research experience make me a promising candidate for this program. My ultimate goal is to pursue an academic career as a researcher and instructor at the university level, and I believe that this program at NYU is the perfect opportunity to achieve that. I want to pursue a Ph.D. because it is an excellent opportunity for me to take my research interests to the next level. As an individual who is passionate about the field, I am eager to gain more knowledge and skills, work with renowned faculty members, and contribute to the exciting research projects taking place at NYU.\par
+
+\vspace{-0.25cm} \quad I am particularly interested in the innovative work being conducted at the \textbf{AI4CE Lab}, focused on employing computer vision and machine learning for navigation. Their research in using deep learning for LiDAR map optimization and reinforcement learning for robot navigation has the potential piqued my attention. The application of these models for planetary rovers, such as the Intelligent Quadruped Robot or the Husky Robot Platform, could provide insights into the complexities and challenges of navigating robots through extraterrestrial environments. In addition, I am intrigued by \textbf{Professor Khorrami}'s work on the development of a novel neural network architecture that utilizes temporal attention to process time series data from various sensors in robotics tasks. Furthermore, his work on semantically enhanced feature matching and visual inertial bundle adjustment has the potential to improve the robustness of odometry, even in feature-sparse environments. This research could have broad applications and is an exciting area of exploration. Moreover, the research being conducted at the \textbf{Machines in Motion laboratory} is also intriguing, particularly their work on legged robot locomotion and odometry. This research has the potential to be impactful, particularly in exploring low-gravity celestial bodies. I am particularly interested in the idea of extending their work on quadruped robots to investigate dynamic legged locomotion. Also, \textbf{ARPL} and \textbf{Dr. Loianno}'s research on robot autonomy, particularly their work on vision-based navigation for micro-aerial vehicles caught my eye. \par
+
+\vspace{-0.25cm} \quad As a Ph.D. student, I intend to work on developing novel deep learning frameworks for vision-based navigation and SLAM that can adapt to different types of environments. Notably, my curiosity lies in investigating the use of attention mechanisms and unsupervised learning techniques for feature extraction and matching, as well as exploring the integration of multiple sensor modalities, such as LiDAR, RGB-D, and IMU data. I believe that such research can have important applications in autonomous navigation, aerial and ground robotics. To achieve these goals, I am seeking admission to a Ph.D. program that provides a strong foundation in computer vision, machine learning, and robotics, and offers ample opportunities for hands-on research experience. I am excited by the prospect of working with distinguished faculty members and collaborating with fellow researchers on cutting-edge research projects. I am confident that my background, skills, and research experience have prepared me well for this challenge, and I look forward to contributing to the advancement of this exciting field. \par
+
+\vspace{-0.25cm} \quad I am highly interested in pursuing advanced research in deep learning and robotics, with a focus on optical navigation for robots in particular planetary rovers localization and pose estimation. My research aims to incorporate cutting-edge deep learning models, such as attention mechanisms and transformer networks, and Generative Adversarial Networks (GANs) to develop highly accurate and robust navigational systems. By training the generator to produce realistic synthetic images of the surrounding environment, we can augment the training data for navigation models and improve their accuracy and robustness, particularly in unknown or dynamic environments. Additionally, GANs can be used to generate synthetic images of hypothetical scenarios to help test the navigational systems in various challenging conditions. I am enthusiastic about the cutting-edge advancements in object detection and segmentation, specifically in the context of sensor fusion using camera and LiDAR technology. My passion lies in the use of state-of-the-art deep learning models like Faster R-CNN, YOLO, and Mask R-CNN. I firmly believe that the integration of data from multiple sensors has the potential to create a highly reliable and robust system for the safe operation of autonomous robots.\par
+
+\vspace{-0.25cm} \quad As an avid astronomer, I am constantly intrigued by the intricate process of guiding robots through complex and unknown terrain in deep space. Exploring distant planets is an invigorating experience that stimulates my curiosity. Specifically, I am captivated by the obstacles and intricacies of maneuvering robots through uncharted and unpredictable environments on celestial bodies. My research in planetary robotics centers on employing state-of-the-art artificial intelligence and machine learning techniques to surmount the intricate and challenging conditions of extraterrestrial environments. My specific interest lies in capitalizing on the latest advancements in deep learning models and multi-sensor fusion techniques to enhance the performance of visual-inertial SLAM techniques. To this end, I integrate various sensors such as cameras, LiDAR, and IMUs to develop highly accurate and precise perception and odometry models. By creating advanced deep learning models for optical navigation, we can produce precise maps of extraterrestrial environments, thereby facilitating better decision-making and increasing the success rate of space missions.\par
+
+\vspace{-0.25cm} \quad I am an enthusiastic learner and interested in joining a diverse team to learn from others. As an Iranian scholar, I recognize the importance of promoting diversity and equality in my home country's academic environment. I am committed to sharing my experiences and knowledge with other scholars in Iran and working to promote diversity and inclusivity in the robotics field. By doing so, I hope to help create a more inclusive and supportive academic environment that empowers individuals from all backgrounds to pursue their academic and professional aspirations. Overall, I am confident that the Ph.D. program at NYU will provide me with a challenging and stimulating opportunity to work on cutting-edge research projects with distinguished faculty members. With my motivation, intellectual ability, and preparation, I am confident that I can make significant original contributions to the department and its research projects. I am eager to learn, grow, and contribute to the field of Artificial Intelligence and Robotics, and I believe that NYU is the perfect place to do so.\par
+
+In advance, I appreciate your time and consideration. \par
+\vspace{-0.4cm} Sincerely Yours, \par
+\vspace{-0.4cm}Arman Asgharpoor Golroudbari \par
+
+
+\end{large}
+
+\end{document}

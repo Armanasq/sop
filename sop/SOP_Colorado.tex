@@ -1,0 +1,176 @@
+\documentclass[a4,20pt]{article}
+
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{academicons}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{parskip}[0.4cm]
+\usepackage{hyperref}
+\usepackage{url}
+%%%% Set Margins
+\usepackage[margin=1cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=EBGaramond-Bold.ttf, %SourceSansPro-Bold.otf
+ItalicFont=EBGaramond-Italic.ttf
+]{EBGaramond-Regular.ttf}
+\setsansfont{EBGaramond-SemiBold.ttf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{0,0,0}
+
+%%%% Define New Commands
+
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+ \color{UI_blue} \scshape \raggedright \large \bfseries
+}{}{17.3em}{}[\vspace{-10pt} \hrulefill \vspace{-2pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+ \textit{ #1 \vspace{-0.2cm}} }
+ %%%
+\newcommand{\cps}{{\color{red} \quad \textbf{|}\quad}}
+\newcommand{\cpshalf}{{\color{red} \hspace{0.2em}\textbf{|}\hspace{0.2em}}}
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=10pt..2em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+%%%%%%
+
+%%%%%%% --------------------------------------------------------------------------------------
+\rfoot{{\par\fontfamily{ttf} \selectfont \footnotesize \emph{ \thepage \hspace{1pt} of \pageref{LastPage}}}}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0.5cm}
+%%%%%%% --------------------------------------------------------------------------------------
+
+\def\Vrulefill#1#2{
+    \vspace{-10pt}
+    \leavevmode%
+    %\hskip-.2in%
+    \leaders%
+    \vtop{\hsize=.0025in\vskip#1#2}%
+    \hfill%
+    %\hskip.3in%
+    \vspace{-2pt}
+}
+
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+{{\huge \scshape Statement of Purpose}}\\
+\large{Arman Asgharpoor Golroudbari} \hfill 
+\href{https://ArmanAsq.github.io}{\textbf{\small{https://ArmanAsq.github.io}}} \\ % \hfill { \small \textbf{10 March 2023}} \\
+%\hfill {Aeronautics and Astronautics}\\
+\Vrulefill{-.05in}{-}
+%\rule{10cm}{0.1em}
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Research Interest
+%%%%%%% --------------------------------------------------------------------------------------
+\justifying
+
+\begin{large} 
+
+\textbf{Introduction} \newline
+My academic passion is driven by a central question: How can AI be applied effectively in autonomous robot perception and navigation, particularly in dynamic and unstructured environments? I aspire to become a research scientist specializing in AI's practical applications for solving real-world problems. Graduate school is the crucial next phase in my journey, providing the essential knowledge, mentorship, and resources to achieve this goal. My ambition is to be a leading innovator in AI, focusing on addressing the challenges within autonomous space systems. I envision myself at the forefront of developing cutting-edge technologies for space robots, enabling them to navigate, perceive, and make decisions in dynamic, unstructured environments akin to planetary rovers' challenges. I believe that pursuing graduate studies at the University of Colorado Boulder is the ideal next step, offering advanced knowledge, specialized skills, and valuable mentorship. Through rigorous academic training, research involvement, and collaboration with esteemed faculty, I aim to prepare for a career dedicated to advancing autonomous space exploration.
+
+\textbf{Research Interests} \vspace{-0.35cm}
+
+\textbf{Robotic Perception}: My research focuses on addressing the challenges of autonomous perception in dynamic, unstructured environments, which closely resemble those encountered by planetary rovers. Conventional methods often rely on precise mathematical models, while data-driven approaches face limitations in terms of interpretability and generalization. Drawing from my research experience at the University of Colorado Boulder, where I utilized Physics-Informed Neural Networks (PINN) for inertial odometry, my goal is to bridge these two approaches. By harnessing advanced models like Transformers and PINN, I aim to capture the intrinsic physics, fostering adaptable and efficient navigation solutions for ever-changing terrains.\vspace{-0.35cm}
+
+
+\textbf{Astrodynamics}: My fascination with celestial mechanics and spacecraft dynamics drives my interest in the Astrodynamics research conducted at the CSML. Leveraging my expertise in deep learning, I am eager to explore novel applications of artificial intelligence in this domain. Specifically, I see the potential to employ deep learning techniques to enhance our understanding of orbital and rotational dynamics in strongly perturbed systems, which is of paramount importance in space science. This research aligns seamlessly with my academic background, particularly my work on attitude dynamics and determination, and my proficiency in programming languages like Python and MATLAB.\vspace{-0.35cm}
+
+Moreover, the Model-Based PINN-Deep Koopman Operator method, with its integration of transformers within the Koopman Operator framework and utilization of PINN, intrigues me deeply. Not only does it promise to optimize interplanetary trajectories, but it also offers the potential for addressing the pressing issue of space debris. By harnessing this approach, we can potentially reduce fuel consumption during interplanetary missions, elevating the sustainability and cost-effectiveness of space exploration. Furthermore, the method's application to space debris management introduces a solution for actively tracking and eliminating defunct satellites and debris, thus safeguarding the long-term sustainability of space environments and future space missions. My dedication to advancing these fields makes me enthusiastic about contributing to the CSML's research efforts and pushing the boundaries of astrodynamics.\vspace{-0.25cm}
+
+
+\textbf{Navigation}: My introduction to the field of navigation was profoundly influenced by Professor Schaub's book, "Analytical Mechanics of Space Systems," which significantly expanded my understanding of this domain. Subsequently, my participation in the "Spacecraft Dynamics and Control Specialization" MOOC solidified my interest in attitude dynamics, leading me to make it the focal point of my MSc studies. During this phase, I explored various attitude determination techniques, including TRIAD, QUEST, and FQA, utilizing Python for implementation. This hands-on experience paved the way for my decision to specialize in attitude estimation for my thesis. Throughout this project, I developed multiple deep learning models tailored for inertial attitude estimation, further igniting my passion for research within the Attitude, Determination, and Control Subsystem domain. \vspace{-0.35cm}
+
+Now, I am particularly captivated by the research project on "Visual Servoing of Aerospace Vehicles" at the AVS Lab. Given the increasing importance of unmanned space vehicles in diverse missions, from scientific exploration to surveillance, achieving the right level of autonomy is paramount. The lab's focus on semi-autonomous visual sensing, navigation, and control methods for aerospace vehicles operating in proximity to other spacecraft closely aligns with my academic background and research pursuits. My master's program equipped me with a profound understanding of space engineering, including spacecraft attitude dynamics and orbit determination, while also honing my proficiency in programming languages like MATLAB and Python. These technical skills have prepared me to contribute meaningfully to the development of visual sensing and control systems for aerospace vehicles. \vspace{-0.35cm}
+
+The lab's emphasis on passive visual sensing, a technique that employs cameras to track distinctive visual features on target spacecraft, is particularly appealing. This approach, which minimizes electronic signature emissions, resonates with my enthusiasm for innovative navigation solutions. I am eager to delve deeper into this field and actively participate in crafting an open visual spacecraft control software architecture, enabling the simulation of high-fidelity visual closed-loop control scenarios. Moreover, the lab's research into autonomous deep space navigation utilizing celestial objects perfectly aligns with my vision of advancing navigation solutions for space exploration.\vspace{-0.25cm}
+
+\textbf{Preparation for Graduate Study} \vspace{-0.35cm}
+
+During my master's program, I immersed myself in space-related projects, gaining a deep understanding of essential concepts such as Spacecraft Attitude Dynamics, n-Body Problems, Orbit Determination, and Orbit Transfer. My proficiency in Python and MATLAB allowed me to tackle complex problems in orbital mechanics, notably in determining orbits using Classical Orbital Elements. Additionally, I delved into computer vision using deep learning architectures like YOLO and U-Net for image segmentation and object detection. Notably, I achieved the top rank in the Oxford Machine Learning Summer School competition. In this competition, I applied techniques such as k-fold cross-validation, weighted sampling, and ensemble learning for the detection of cancer cells. \vspace{-0.35cm}
+
+Additionally, I gained valuable practical experience in programming and testing robotic systems using ROS and Python. I contributed to the development of autonomous navigation systems for a wheeled robot, which involved the use of an RGB-D camera and a laser range finder based on SLAM algorithms. Furthermore, I worked on visual-inertial odometry using the KITTI dataset, where I explored different feature extraction methods, including ORB, SIFT, and SURF. These experiences are poised to be beneficial in the fields of space debris detection and vision-based relative navigation. \vspace{-0.25cm}
+
+
+\textbf{Conclusion}  \vspace{-0.35cm}
+
+University of Colorado Boulder's interdisciplinary research across astodynamics, robotics, and aerospace engineering perfectly aligns with my multifaceted research interests. I have been particularly captivated by the innovative work conducted by Professor Holzinger, who employs a distinctive theory-to-hardware approach in his lab. This approach, combined with the utilization of assets like the GT-SORT and OmniSSA Array, offers a unique opportunity to integrate theoretical astrodynamics, controls, and sensor systems with empirical data. \vspace{-0.35cm}
+
+Moreover, the research of the AVS Lab, under the guidance of Professor Schaub, presents an exciting avenue for exploration. Their work in spacecraft kinematics, dynamics, and control aligns closely with my background in attitude dynamics and determination. The development of new attitude parameter sets and the versatile Basilisk astrodynamics simulation framework are particularly intriguing. I am eager to leverage this expertise and contribute to the lab's ongoing efforts in spacecraft dynamics and control. \vspace{-0.35cm}
+
+Furthermore, Professor Daniel J. Scheeres's research in celestial mechanics and astrodynamics, especially in the context of space domain awareness, resonates with my deep interest in these domains. His investigations into orbital and rotational dynamics of strongly perturbed systems and applications to defunct satellites and debris align perfectly with my research aspirations. The rigorous analytical and numerical methods employed in his research are compelling and hold great potential for advancing the field. \vspace{-0.35cm}
+
+In conclusion, my extensive review of the programs and faculty at University of Colorado Boulder assures me that this institution offers the ideal platform to pursue my academic and research objectives. The combination of interdisciplinary coursework, cutting-edge facilities, and collaborative opportunities will provide me with the necessary tools to address complex challenges in aerospace engineering. I am committed to expanding my knowledge and making substantial contributions to the realm of autonomous space systems. With a diverse skill set and unwavering dedication, I believe I am well-suited to thrive in this dynamic academic environment. I eagerly anticipate the opportunity to engage with and contribute to the esteemed academic community at University of Colorado Boulder. \vspace{-0.15cm}
+
+In advance, I appreciate your time and consideration. \par
+\vspace{-0.4cm} Sincerely Yours, \par
+\vspace{-0.4cm}Arman Asgharpoor Golroudbari \par
+\end{large}
+
+\end{document}

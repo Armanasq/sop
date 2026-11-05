@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+}
+
+\begin{document}
+\vspace{-0.3cm}
+{\Large\textbf{Arman Asgharpoor}} \hfill \textbf{Word Count:} 1,389\\
+DPhil in Engineering Science \hfill University of Oxford
+\rule[-0.2em]{\textwidth}{1pt}
+
+\section*{The Problem}
+
+A warehouse robot can navigate from point A to point B without hitting obstacles. But when a worker says ``\textit{bring this to the loading dock near the coffee machine,}'' the robot fails. It understands coordinates but not places. It avoids people but doesn't understand when someone blocking a doorway is waiting for it versus just passing through. It builds perfect geometric maps but can't tell you what's actually there or whether the pallet blocking the hallway is permanent or temporary.
+
+This disconnect between \textbf{geometric navigation and semantic understanding} limits how robots operate in human spaces. The challenge isn't just recognizing objects—computer vision does that well. The real problem is understanding environments the way humans do: as collections of meaningful places, objects, and relationships that change over time but retain semantic identity. When furniture moves, the meeting room is still the meeting room. When a hallway gets blocked temporarily, the robot should adapt without forgetting the underlying space.
+
+\textbf{My research addresses this challenge}: enabling legged robots to build and maintain semantic maps that persist as environments change, combining real-time localization with language-based scene understanding.
+
+\section*{How I Got Here}
+
+During my Master's at University of Tehran, I worked on a fundamental problem in robotics: how can autonomous systems estimate their orientation without GPS? Inertial sensors drift, traditional filters require constant retuning, and methods that work on one robot often fail on another with different sensor sampling rates.
+
+I developed a deep learning approach that processes raw IMU data and generalizes across different sensor configurations. The key insight was designing the architecture to naturally handle timing variations—the way integration in calculus automatically accounts for the spacing between measurements. \textbf{Publishing this work in \textit{Measurement}} showed me that the best solutions come from understanding both the mathematics and the practical constraints.
+
+At \textbf{Oxford Machine Learning Summer School 2023}, I encountered vision-language models like CLIP that can recognize objects without being explicitly trained on them. \textbf{Placing first} in their competition using transfer learning on limited data taught me about foundation models, but also raised a question: if these models understand images so well, could they help robots understand scenes?
+
+That question became concrete when I joined Fasta Robotics to work with \textbf{Unitree Go2 quadruped} robots in warehouse environments.
+
+\section*{Lessons from Real Robots}
+
+Warehouses present challenges that look simple on paper but prove difficult in practice. Poor lighting, repetitive structures, moving people and forklifts, changing layouts between shifts. I integrated visual-inertial odometry using \textbf{ORB-SLAM3 with ROS2}, combining camera data from RealSense and ZED sensors with IMU measurements. The system needed to maintain accurate localization when either sensor became unreliable—switching between visual tracking when available and inertial prediction when vision failed.
+
+\textbf{Achieving centimeter-level accuracy over 100-meter trajectories} validated the technical approach, but accurate localization wasn't enough.
+
+For human-aware navigation, I deployed \textbf{real-time pedestrian detection with tracking} to predict where people would move next. The robot could now avoid collisions, but watching it operate revealed a deeper limitation.
+
+It detected a person standing in a doorway and stopped. But was the person waiting for the robot to pass, or were they blocking the path intentionally? The robot couldn't tell. When told to ``go near the shipping area,'' it didn't know where that meant. When a pallet appeared in a previously open hallway, it couldn't distinguish temporary blockage from permanent layout change. \textit{The robot understood geometry but not meaning.}
+
+These experiences showed me that autonomous systems need semantic understanding integrated with localization, not as separate capabilities but as unified representations of space. They also need to maintain this understanding across time—mapping isn't a one-time problem but an ongoing process of building, updating, and reasoning about environments that change.
+
+\section*{Why Oxford and This Research Direction}
+
+Professor Fallon's recent work on \textbf{LEXIS}—Language-Extended Indoor SLAM—demonstrates exactly what I want to build toward. By integrating vision-language models with SLAM, LEXIS enables robots to understand spaces in terms of semantic meaning, not just geometric structure. A robot can answer ``where is the kitchen'' without being explicitly programmed with room definitions.
+
+Building on this foundation, recent work at Oxford on \textbf{semantic scene graphs}—including the DRS group's open-vocabulary scene graphs and Dr. De Martini's semantic scene graph localization—extends beyond just recognizing places to representing objects, their relationships, and properties in structured ways that enable reasoning. This is the key to solving the challenges I encountered: understanding that a blocked doorway is temporary, recognizing that ``near the coffee machine'' describes a spatial relationship, maintaining semantic identity as environments change.
+
+I want to extend these ideas specifically for \textbf{legged robots operating in dynamic, human-shared environments}. This involves three connected challenges:
+
+\vspace{0.3cm}
+\noindent\textbf{First: Real-time semantic understanding on dynamic platforms.}
+
+Legged robots move differently than wheeled platforms—their gait creates complex motion patterns, and they have proprioceptive information from leg contact that wheeled robots lack. Integrating semantic processing with real-time state estimation while maintaining the update rates needed for stable locomotion requires careful design. I'm interested in how semantic features can be processed in parallel with localization, and how leg contact information might inform understanding of terrain and object permanence.
+
+\vspace{0.2cm}
+\noindent\textbf{Second: Persistent mapping across sessions.}
+
+When a robot returns to an environment after hours or days, the space has changed. Doors are open or closed differently, temporary obstacles appear, furniture moves. The robot needs to recognize what's changed and what's stayed the same, updating its understanding efficiently without rebuilding maps from scratch. This requires representing scenes at the object level—tracking individual things and their properties—rather than just comparing geometric measurements.
+
+\vspace{0.2cm}
+\noindent\textbf{Third: Language as interface for understanding and planning.}
+
+Vision-language models enable open-vocabulary understanding, but integrating this with robot action remains challenging. When a robot hears ``bring this to the meeting room with the whiteboard,'' it needs to ground that description in its spatial representation, reason about which room matches, and plan accordingly. This requires connecting semantic understanding with geometric planning in ways that handle ambiguity and incomplete information.
+
+\vspace{0.2cm}
+Professors Fallon and Havoutis's combined expertise in legged robot state estimation, semantic scene representation, and language grounding is exactly what this research requires. The combination of rigorous theory with practical deployment, plus the group's collaborative and open-source culture, makes it the ideal place for this work.
+
+
+\section*{Research Approach}
+
+My approach builds directly on the LEXIS framework and scene graph representations. Initial work will involve extending LEXIS's topological SLAM to incorporate the dynamic motion characteristics of legged platforms, using simulation and the Unitree Go2 hardware I currently work with. The key technical challenge is maintaining real-time performance—CLIP feature extraction must not compromise the 30Hz update rates needed for stable locomotion.
+
+For persistent mapping, I'll investigate scene graph representations that distinguish object-level changes from geometric drift, drawing on my experience with multi-sensor fusion to develop probabilistic methods for detecting and reasoning about environmental changes. The physics-informed learning approaches I've developed—embedding constraints directly into neural network architectures—offer a complementary perspective to pure data-driven methods for ensuring robustness.
+
+My hands-on experience with the group's tools (ORB-SLAM3, ROS2, RealSense and ZED cameras, Unitree platforms) means I can contribute from day one while building on established methods. The work will progress from simulation experiments to controlled lab environments to field trials in dynamic spaces, with validation through both traditional SLAM benchmarks and novel metrics for semantic understanding.
+
+\section*{What I Bring}
+
+My experience connects directly to this research direction. At Fasta Robotics, I work daily with \textbf{legged platforms (Unitree Go2), ROS2, visual-inertial odometry, and the exact sensors DRS group uses (RealSense, ZED cameras)}. My Master's research demonstrated I can develop novel approaches, implement them rigorously, validate across multiple datasets, and publish results.
+
+Beyond technical skills, I've designed and taught graduate-level courses at University of Tehran and mentored early-career researchers through the Space Generation Advisory Council. I value clear communication, collaboration, and contributing to the broader research community through open-source work.
+
+My goal is an academic research career advancing autonomous systems for real-world environments. Oxford's culture of rigorous research with practical validation, combined with the DRS group's expertise and collaborative environment, provides the ideal setting to pursue these questions.
+
+\section*{Moving Forward}
+
+The convergence of vision-language models with robotics creates new possibilities: robots that understand human environments semantically, not just geometrically. The gap I discovered at Fasta—precise localization without semantic understanding—drives this research.
+
+This work will extend LEXIS and scene graphs to legged robots in dynamic environments, addressing real-time semantic processing, persistent mapping, and language-grounded spatial reasoning.
+
+\vspace{0.5cm}
+\noindent\textbf{Selected References:}
+
+\begin{itemize}
+\item Kassab, Christina, et al. "Language-extended indoor slam (lexis): A versatile system for real-time visual scene understanding." 2024 IEEE International Conference on Robotics and Automation (ICRA). IEEE, 2024.
+
+\item Kassab, Christina, et al. "The bare necessities: Designing simple, effective open-vocabulary scene graphs." arXiv preprint (2024).
+
+\item Golroudbari, Arman Asgharpoor, and Mohammad Hossein Sabour. "Generalizable end-to-end deep learning frameworks for real-time attitude estimation using 6DoF inertial measurement units." Measurement (2023).
+
+\item Asgharpoor Golroudbari, Arman. "TE-PINN: Quaternion-Based Orientation Estimation using Transformer-Enhanced Physics-Informed Neural Networks." arXiv e-prints (2024).
+
+\end{itemize}
+
+\end{document}
