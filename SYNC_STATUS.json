@@ -28,9 +28,9 @@
     },
     "2021": {
       "records": 36,
-      "downloaded": 29,
+      "downloaded": 30,
       "already_archived": 0,
-      "unresolved": 7
+      "unresolved": 6
     },
     "2022": {
       "records": 33,
@@ -76,8 +76,14 @@
     "method": "Google Drive folder listing and direct PDF retrieval",
     "note": "Kendall Nakai and Lakshika Rathi IDs returned readable metadata but raw downloads were forbidden."
   },
-  "total_downloaded_documents": 194,
-  "records_with_archived_documents": 190,
-  "unresolved_records": 26,
-  "last_manual_recovery_date": "2026-11-05"
+  "total_downloaded_documents": 214,
+  "records_with_archived_documents": 191,
+  "unresolved_records": 25,
+  "last_manual_recovery_date": "2026-11-05",
+  "github_sop_recovery": {
+    "applicant": "Sai Siddartha Maram",
+    "downloaded_files": 20,
+    "failed_files": 0,
+    "source": "https://github.com/siddu1998/Graduate-Admissions"
+  }
 }
