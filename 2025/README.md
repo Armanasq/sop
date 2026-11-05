@@ -1,17 +1,13 @@
-# 2025 CS PhD Statements of Purpose
+# 2025 CS PhD statements of purpose
 
-[View the 2025 index](index.csv).
+**21 original PDF files archived**, corresponding to **21 of 22 indexed records**.
 
-**Status: incomplete.** The 2025 classification follows the **By Year → 2025** column visible in the source Notion board. An initial set of 17 applicant references is in `index.csv`. This is **not an exhaustive collection** and the source PDFs have **not been downloaded to this repository**.
+- [Browse PDFs](files/)
+- [Source manifest](index.csv)
+- [Overall import status](../SYNC_STATUS.json)
 
-Two direct PDF URL candidates are recorded. A link in the CSV is not a successful file-download verification.
+Each filename links to a downloaded PDF in Git, rather than an external website. The source manifest also preserves original Notion entries and direct file URLs.
 
-Source: [CS PhD Statements of Purpose](https://cs-sop.notion.site/CS-PhD-Statements-of-Purpose-df39955313834889b7ac5411c37b958d).
+The remaining 2025 record, Marcelo Sartori Locatelli, points to a PDF URL that returned HTTP 404 at the time of the import. No substitute has been inserted.
 
-## Remaining work
-
-- Enumerate the complete 2025 column, including entries beyond the visible screenshot.
-- Resolve each original statement file and check the URL.
-- Record metadata and provenance, deduplicate by canonical document URL.
-- Publish original documents only where redistribution rights are established.
-- Continue through earlier application years in their own directories.
+The 2025 classification follows the public Notion collection's application-year metadata. The year denotes the application cycle, not the matriculation year.
