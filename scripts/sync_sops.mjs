@@ -88,7 +88,7 @@ async function prior2025() {
   } catch {return new Set()}
 }
 function propertiesFor(page,collectionMap) {
-  const schema = collectionMap[page.parent_id]?.value?.schema || {}
+  const schema = (collectionMap[page.parent_id]?.value || collectionMap[page.parent_id])?.schema || {}
   const props = {}
   for (const [key,value] of Object.entries(page.properties||{})) {
     const label = schema[key]?.name || key
@@ -118,7 +118,8 @@ function urlsForRecord(p,rm) {
 async function main() {
   const {api,page} = await fetchRoot()
   const known2025 = await prior2025()
-  const allBlocks = Object.values(page.block).map(x=>x?.value).filter(Boolean)
+  const allBlocks = Object.values(page.block).map(x=>x?.value?.type ? x.value : x).filter(Boolean)
+  console.log('First block keys',Object.keys(allBlocks[0]||{}),'first',JSON.stringify(allBlocks[0]).slice(0,300))
   console.log('Block kinds',Object.entries(allBlocks.reduce((a,x)=>{const k=x.type+'|'+x.parent_table;a[k]=(a[k]||0)+1;return a},{})).sort((a,b)=>b[1]-a[1]).slice(0,18))
   console.log('Titled examples',allBlocks.filter(x=>x.properties?.title).slice(-10).map(x=>({type:x.type,parent:x.parent_table,parent_id:x.parent_id,title:clean(flat(x.properties.title)).slice(0,70)})))
   const pages = allBlocks.filter(x=>x?.type==='page' && x?.properties?.title && x.id?.replaceAll('-','')!==ROOT)
