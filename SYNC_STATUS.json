@@ -1,0 +1,73 @@
+{
+  "run_utc": "2026-11-05T10:01:07.003Z",
+  "total": 216,
+  "years": {
+    "2017": {
+      "records": 5,
+      "downloaded": 5,
+      "already_archived": 0,
+      "unresolved": 0
+    },
+    "2018": {
+      "records": 6,
+      "downloaded": 4,
+      "already_archived": 0,
+      "unresolved": 2
+    },
+    "2019": {
+      "records": 12,
+      "downloaded": 9,
+      "already_archived": 0,
+      "unresolved": 3
+    },
+    "2020": {
+      "records": 11,
+      "downloaded": 9,
+      "already_archived": 0,
+      "unresolved": 2
+    },
+    "2021": {
+      "records": 36,
+      "downloaded": 29,
+      "already_archived": 0,
+      "unresolved": 7
+    },
+    "2022": {
+      "records": 33,
+      "downloaded": 31,
+      "already_archived": 0,
+      "unresolved": 2
+    },
+    "2023": {
+      "records": 36,
+      "downloaded": 31,
+      "already_archived": 0,
+      "unresolved": 5
+    },
+    "2024": {
+      "records": 53,
+      "downloaded": 47,
+      "already_archived": 0,
+      "unresolved": 6
+    },
+    "2025": {
+      "records": 22,
+      "downloaded": 19,
+      "already_archived": 1,
+      "unresolved": 2
+    },
+    "2026": {
+      "records": 1,
+      "downloaded": 1,
+      "already_archived": 0,
+      "unresolved": 0
+    },
+    "unclassified": {
+      "records": 1,
+      "downloaded": 0,
+      "already_archived": 0,
+      "unresolved": 1
+    }
+  },
+  "errors": []
+}
