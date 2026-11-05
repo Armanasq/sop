@@ -1,10 +1,6 @@
 name: Recover SOPs from linked author GitHub repository
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - .github/workflows/recover-linked-sops.yml
   workflow_dispatch:
 
 permissions:
@@ -46,7 +42,7 @@ jobs:
           for f in docs:
               original=f['path']
               slug=re.sub(r'[^A-Za-z0-9]+','_',original).strip('_')
-              dest=base / ('Sai_Siddartha_Maram_'+slug)
+              dest=base / ('Sai_Siddartha_Maram_'+slug+'.pdf')
               url='https://raw.githubusercontent.com/siddu1998/Graduate-Admissions/main/'+urllib.parse.quote(original,safe='/')
               try:
                   data=get(url)
@@ -64,6 +60,7 @@ jobs:
               raise SystemExit('No original SOP files recovered')
           with open('2021/index.csv',newline='',encoding='utf-8') as f:
               manifest=list(csv.DictReader(f))
+          was_archived=any(r['name']=='Sai Siddartha Maram' and r['status']=='downloaded' for r in manifest)
           for r in manifest:
               if r['name']=='Sai Siddartha Maram':
                   r['file']=success[0][1]
@@ -75,11 +72,13 @@ jobs:
               writer=csv.DictWriter(f,fieldnames=list(manifest[0]));writer.writeheader();writer.writerows(manifest)
           p=pathlib.Path('SYNC_STATUS.json')
           status=json.loads(p.read_text(encoding='utf-8'))
-          status['years']['2021']['downloaded']+=1
-          status['years']['2021']['unresolved']-=1
-          status['total_downloaded_documents']+=len(success)
-          status['records_with_archived_documents']+=1
-          status['unresolved_records']-=1
+          if not was_archived:
+              status['years']['2021']['downloaded']+=1
+              status['years']['2021']['unresolved']-=1
+          if not was_archived:
+              status['total_downloaded_documents']+=len(success)
+              status['records_with_archived_documents']+=1
+              status['unresolved_records']-=1
           status['github_sop_recovery']={'applicant':'Sai Siddartha Maram','downloaded_files':len(success),'failed_files':len(docs)-len(success),'source':'https://github.com/siddu1998/Graduate-Admissions'}
           p.write_text(json.dumps(status,indent=2)+'\n',encoding='utf-8')
           print(json.dumps(status['github_sop_recovery']))
