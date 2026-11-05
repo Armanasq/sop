@@ -5,9 +5,9 @@ A year-organized collection of original publicly shared SOP files referenced by 
 ## Import status (2026-11-05)
 
 - **216** source records indexed
-- **190** applicants with archived documents
-- **194** actual PDF files committed and verified in this repository
-- **26** unresolved records, including unavailable or access-restricted links
+- **191** applicants with archived documents
+- **214** actual PDF files committed and verified in this repository
+- **25** unresolved records, including unavailable or access-restricted links
 - Years: **2017–2026**, with an additional unclassified section
 
 | Application year | Archived PDF files | Index |
@@ -17,13 +17,13 @@ A year-organized collection of original publicly shared SOP files referenced by 
 | 2024 | 53 | [Index](2024/index.csv) |
 | 2023 | 32 | [Index](2023/index.csv) |
 | 2022 | 31 | [Index](2022/index.csv) |
-| 2021 | 29 | [Index](2021/index.csv) |
+| 2021 | 49 | [Index](2021/index.csv) |
 | 2020 | 9 | [Index](2020/index.csv) |
 | 2019 | 9 | [Index](2019/index.csv) |
 | 2018 | 4 | [Index](2018/index.csv) |
 | 2017 | 5 | [Index](2017/index.csv) |
 
-Each `YEAR/files/` directory contains the binary PDF documents, not merely URLs. Each `YEAR/index.csv` records the original Notion source, source document URL, local file path, retrieval status and SHA-256 checksum. A few applicants have multiple program-specific SOPs. For these, extra filenames are indicated in the index notes; see [2024 multi-document manifest](2024/extra_statements.csv).
+Each `YEAR/files/` directory contains the binary PDF documents, not merely URLs. Each `YEAR/index.csv` records the original Notion source, source document URL, local file path, retrieval status and SHA-256 checksum. A few applicants have multiple program-specific SOPs. For these, extra filenames are indicated in the index notes; see [2024 multi-document manifest](2024/extra_statements.csv) and [2021 multi-document manifest](2021/sai_siddartha_maram_documents.csv).
 
 ## Updating
 
