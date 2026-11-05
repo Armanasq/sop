@@ -1,21 +1,22 @@
-# CS PhD Statements of Purpose — Source Index
+# CS PhD SOP — year-organized source index
 
-An independently maintained, year-organized directory of references to statements of purpose linked from [cs-sop.org](https://cs-sop.org/).
+Independent directory of CS PhD Statements of Purpose indexed by application year, based on the public [CS SOP Notion collection](https://cs-sop.notion.site/CS-PhD-Statements-of-Purpose-df39955313834889b7ac5411c37b958d).
 
-## Collections
+## Years
 
-- [2025 application cycle](2025/README.md) — in progress; year assignments are explicitly qualified where the public Notion database does not expose its application-year property.
+- [2025 — applicant index](2025/index.csv) (initial 17 records; incomplete)
+- [2025 — notes](2025/README.md)
 
-## Curation standard
+## Data model
 
-- **Application year** is the year in which an application was submitted, not the year of admission or PhD enrollment. Never silently substitute one for the other.
-- Each record should link to the original Notion entry or author-maintained source and identify the institution, research area, year evidence, and verification status.
-- Entries are deduplicated by stable source and author identity; missing links and uncertain year assignments are not silently filled.
-- Full statements are **not mirrored** without evidence that redistribution is permitted by the individual copyright holder. The [source collection](https://cs-sop.notion.site/CS-PhD-Statements-of-Purpose-df39955313834889b7ac5411c37b958d) states that the authors retain copyright in their statements; its website's CC BY-NC-SA notice does not automatically establish redistribution rights for every linked document.
-- This repository is not affiliated with the cs-sop.org maintainers.
+Each year has an `index.csv` containing applicant name, institution, field, author website, original Notion entry, direct statement URL when identified, application year, year evidence, and statement availability.
 
-## Progress and provenance
+The Notion board has a visible **By Year** grouping. Applicant placement in that board is accepted as year evidence, distinct from a PhD admission or matriculation date. Records without such evidence remain unclassified.
 
-The publicly indexed collection exposes names, institutions, fields, and links to applicant records but not application-year properties or statement URLs for each entry. Individual Notion records were not retrievable through the available reader on 2026-11-05. The initial 2025 collection therefore distinguishes directly verified facts from **provisional 2025-cycle candidates** supported by 2026 matriculation evidence; it does not claim a complete 2025 export.
+## Status
 
-Original collection: https://cs-sop.notion.site/CS-PhD-Statements-of-Purpose-df39955313834889b7ac5411c37b958d
+This is a **partial index**, not a downloaded PDF archive. Original Notion records and attached statements have not been exhaustively fetched or verified. The current runtime cannot directly fetch arbitrary external files into its filesystem. Direct PDF URLs are candidates until individually checked for successful downloads.
+
+Copyright of original statements belongs to their authors. Links are indexed; complete statement texts and PDFs are not republished without a license or permission allowing redistribution.
+
+See [SOURCES.md](SOURCES.md). This repository is not affiliated with the original collection.
