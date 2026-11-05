@@ -68,7 +68,7 @@ async function fetchRoot() {
   for (const apiBaseUrl of ['https://cs-sop.notion.site/api/v3','https://www.notion.so/api/v3']) {
     try {
       const api = new NotionAPI({apiBaseUrl})
-      const page = await api.getPage(ROOT,{concurrency:3,fetchCollections:true,signFileUrls:true})
+      const page = await api.getPage(ROOT,{concurrency:3,fetchCollections:true,signFileUrls:false})
       if (!page?.block || Object.keys(page.block).length < 30) throw Error('Root record map unexpectedly small')
       console.log('Notion root read',apiBaseUrl,'blocks',Object.keys(page.block).length,'collections',Object.keys(page.collection||{}).length)
       return {api,page}
@@ -118,7 +118,10 @@ function urlsForRecord(p,rm) {
 async function main() {
   const {api,page} = await fetchRoot()
   const known2025 = await prior2025()
-  const pages = Object.values(page.block).map(x=>x?.value).filter(x=>x?.type==='page' && x?.parent_table==='collection' && x?.properties?.title)
+  const allBlocks = Object.values(page.block).map(x=>x?.value).filter(Boolean)
+  console.log('Block kinds',Object.entries(allBlocks.reduce((a,x)=>{const k=x.type+'|'+x.parent_table;a[k]=(a[k]||0)+1;return a},{})).sort((a,b)=>b[1]-a[1]).slice(0,18))
+  console.log('Titled examples',allBlocks.filter(x=>x.properties?.title).slice(-10).map(x=>({type:x.type,parent:x.parent_table,parent_id:x.parent_id,title:clean(flat(x.properties.title)).slice(0,70)})))
+  const pages = allBlocks.filter(x=>x?.type==='page' && x?.properties?.title && x.id?.replaceAll('-','')!==ROOT)
   const uniq = [...new Map(pages.map(p=>[p.id,p])).values()]
   if (uniq.length < 20) throw Error('Only ' + uniq.length + ' collection rows: refusing partial sync')
   console.log('Collection rows',uniq.length,'2025 fallback rows',known2025.size)
