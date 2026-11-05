@@ -1,0 +1,53 @@
+name: Import CS SOP documents
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/sync_sops.mjs
+      - package.json
+      - .github/workflows/import-sops.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sop-import
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: npm install --omit=dev --no-audit --no-fund
+      - name: Check importer syntax
+        run: node --check scripts/sync_sops.mjs
+      - name: Crawl Notion records and download documents
+        env:
+          SOP_WORKERS: '8'
+        run: npm run sync
+      - name: Commit downloaded files and manifests
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Import year-organized SOP documents from Notion"
+            git push origin HEAD:main
+          fi
+      - name: Upload run manifest
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sop-import-status
+          path: SYNC_STATUS.json
+          if-no-files-found: ignore
