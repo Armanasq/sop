@@ -1,0 +1,54 @@
+{
+  "verified_on": "2026-11-25",
+  "note": "Author-hosted sources observed in publicly indexed pages. PDF downloads must be validated by the importer; link-only records are not counted as archived. Public links do not independently establish redistribution rights. Do not bypass access restrictions.",
+  "records": [
+    {
+      "name": "Jason Wei",
+      "notion_id": "0c034fa47e584712b7a4f6e374820230",
+      "kind": "pdf",
+      "url": "https://jasonwei20.github.io/files/2021_Stanford_SoP.pdf"
+    },
+    {
+      "name": "Ken Ziyu Liu",
+      "notion_id": "9617e10243a848f691fa176116b71533",
+      "kind": "pdf",
+      "url": "https://ai.stanford.edu/~kzliu/files/sop_berkeley.pdf"
+    },
+    {
+      "name": "Zhengxuan Wu",
+      "notion_id": "a7da7e207dc3471285db3a6eb3af5d53",
+      "kind": "pdf",
+      "url": "https://nlp.stanford.edu/~wuzhengx/pdf/sop_cs_22.pdf"
+    },
+    {
+      "name": "Sanjay Subramanian",
+      "notion_id": "ab46030d4423430f860bf99fdca64e69",
+      "kind": "pdf",
+      "url": "https://people.eecs.berkeley.edu/~sanjayss/example_grad_school_statement.pdf"
+    },
+    {
+      "name": "Silvia Sellán",
+      "notion_id": "ae63e19604d54db9af948db329b0d1d2",
+      "kind": "web",
+      "url": "https://www.silviasellan.com/posts/research_statement/"
+    },
+    {
+      "name": "Zhiqiang Xie",
+      "notion_id": "4eb17881c455429db27be18caf53032d",
+      "kind": "web",
+      "url": "https://zhiqiangxie.com/2021/11/30/SoP.html"
+    },
+    {
+      "name": "Saul Shanabrook",
+      "notion_id": "1158b1bdf3c481f4803ac19567ee6042",
+      "kind": "web",
+      "url": "https://github.com/saulshanabrook/saulshanabrook/discussions/37"
+    },
+    {
+      "name": "Md Abrar Jahin",
+      "notion_id": "1cc8b1bdf3c48045b424f7f61eff9321",
+      "kind": "web",
+      "url": "https://abrar2652.github.io/blog/2025/phd-sop-ps/"
+    }
+  ]
+}
