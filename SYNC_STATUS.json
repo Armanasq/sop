@@ -53,10 +53,10 @@
     },
     "2024": {
       "records": 53,
-      "downloaded": 0,
+      "downloaded": 1,
       "already_archived": 49,
-      "unresolved": 4,
-      "archived_files": 53
+      "unresolved": 3,
+      "archived_files": 54
     },
     "2025": {
       "records": 23,
@@ -87,10 +87,10 @@
     "method": "Google Drive folder listing and direct PDF retrieval",
     "note": "Kendall Nakai and Lakshika Rathi IDs returned readable metadata but raw downloads were forbidden."
   },
-  "total_downloaded_documents": 218,
-  "records_with_archived_documents": 195,
-  "unresolved_records": 22,
-  "last_manual_recovery_date": "2026-11-05",
+  "total_downloaded_documents": 219,
+  "records_with_archived_documents": 196,
+  "unresolved_records": 21,
+  "last_manual_recovery_date": "2026-11-25",
   "github_sop_recovery": {
     "applicant": "Sai Siddartha Maram",
     "downloaded_files": 20,
@@ -99,5 +99,14 @@
   },
   "source_scan_records": 217,
   "source_scan_error": null,
-  "source_scan_complete": true
+  "source_scan_complete": true,
+  "manual_recovery_2026_11_25": {
+    "applicant": "Md Abrar Jahin",
+    "year": 2024,
+    "source": "https://abrar2652.github.io/assets/pdf/blogs/MAJ_SOP_USC.pdf",
+    "author_page": "https://abrar2652.github.io/blog/2025/phd-sop-ps/",
+    "git_blob_sha": "2b30693e93ef79ed4a0505baf4b77b184e201521",
+    "sha256": "fc5dd12d4e1e6766ca3ffa859a03430e15fe864d5c76ffc4a2ca587f4f0bcfef",
+    "files_added": 1
+  }
 }

@@ -2,21 +2,21 @@
 
 A year-organized collection of original publicly shared SOP files referenced by [CS PhD Statements of Purpose](https://cs-sop.notion.site/CS-PhD-Statements-of-Purpose-df39955313834889b7ac5411c37b958d).
 
-## Import status (2026-11-05)
+## Import status (2026-11-25)
 
-- **216** source records indexed
-- **191** applicants with archived documents
-- **214** actual PDF files committed and verified in this repository
-- **25** unresolved records, including unavailable or access-restricted links
+- **217** source records indexed
+- **196** applicants with archived documents
+- **219** actual PDF files committed and verified in this repository
+- **21** unresolved records, including unavailable or access-restricted links
 - Years: **2017–2026**, with an additional unclassified section
 
 | Application year | Archived PDF files | Index |
 |---|---:|---|
 | 2026 | 1 | [Index](2026/index.csv) |
-| 2025 | 21 | [Index](2025/index.csv) |
-| 2024 | 53 | [Index](2024/index.csv) |
-| 2023 | 32 | [Index](2023/index.csv) |
-| 2022 | 31 | [Index](2022/index.csv) |
+| 2025 | 23 | [Index](2025/index.csv) |
+| 2024 | 54 | [Index](2024/index.csv) |
+| 2023 | 33 | [Index](2023/index.csv) |
+| 2022 | 32 | [Index](2022/index.csv) |
 | 2021 | 49 | [Index](2021/index.csv) |
 | 2020 | 9 | [Index](2020/index.csv) |
 | 2019 | 9 | [Index](2019/index.csv) |

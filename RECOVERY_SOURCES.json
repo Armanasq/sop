@@ -47,8 +47,10 @@
     {
       "name": "Md Abrar Jahin",
       "notion_id": "1cc8b1bdf3c48045b424f7f61eff9321",
-      "kind": "web",
-      "url": "https://abrar2652.github.io/blog/2025/phd-sop-ps/"
+      "kind": "pdf",
+      "url": "https://abrar2652.github.io/assets/pdf/blogs/MAJ_SOP_USC.pdf",
+      "author_page": "https://abrar2652.github.io/blog/2025/phd-sop-ps/",
+      "verified_pdf_sha256": "fc5dd12d4e1e6766ca3ffa859a03430e15fe864d5c76ffc4a2ca587f4f0bcfef"
     }
   ]
 }
